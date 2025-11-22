@@ -1,20 +1,25 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-function StructuredData() {
+export default function StructuredData() {
     const pathname = usePathname();
     const baseUrl = "https://windly.dev";
 
-    // Monta a URL completa automaticamente
+    const [pageTitle, setPageTitle] = useState("Windly — Aprenda Tailwind, SEO e HTML Semântico");
+
+    // Garante que só usamos document.title no ambiente do cliente
+    useEffect(() => {
+        if (typeof document !== "undefined") {
+            setPageTitle(document.title);
+        }
+    }, []);
+
+    // Monta URL completa
     const currentUrl = `${baseUrl}${pathname === "/" ? "" : pathname}`;
 
-    // Monta título dinâmico conforme metadata
-    const pageTitle =
-        document.title || "Windly — Aprenda Tailwind, SEO e HTML Semântico";
-
-    // Gera breadcrumb automaticamente a partir da URL
+    // Gera breadcrumbs a partir das partes da URL
     const segments = pathname.split("/").filter(Boolean);
 
     const breadcrumbItems = [
@@ -32,6 +37,7 @@ function StructuredData() {
         }))
     ];
 
+    // Estrutura final do Graph Schema
     const data = {
         "@context": "https://schema.org",
         "@graph": [
@@ -73,18 +79,23 @@ function StructuredData() {
         ]
     };
 
+    // Insere o script JSON-LD no head
     useEffect(() => {
         const script = document.createElement("script");
         script.type = "application/ld+json";
-        script.innerHTML = JSON.stringify(data);
+        script.id = "structured-data-windly";
+        script.textContent = JSON.stringify(data);
+
+        // Remove versão antiga para evitar duplicações
+        const oldScript = document.getElementById("structured-data-windly");
+        if (oldScript) oldScript.remove();
+
         document.head.appendChild(script);
 
         return () => {
-            document.head.removeChild(script);
+            script.remove();
         };
-    }, [pathname]);
+    }, [pathname, pageTitle]);
 
     return null;
 }
-
-export default StructuredData;
