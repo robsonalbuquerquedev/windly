@@ -1,146 +1,224 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+import {
+    Home,
+    BookOpenText,
+    BookOpen,
+    Info,
+    Mail,
+    Sparkles,
+    Layers,
+    LayoutTemplate,
+    Search,
+    Accessibility,
+    Gauge
+} from "lucide-react";
 
-/* shadcn/ui accordion imports (assumed available in the project)
 import {
     Accordion,
     AccordionItem,
     AccordionTrigger,
-    AccordionContent,
-} from "@/components/ui/accordion"; */
+    AccordionContent
+} from "@/components/ui/accordion";
 
-const ROUTES = [
-    { title: "Início", href: "/" },
-    { title: "Tailwind", href: "/tailwind" },
-    { title: "Next.js", href: "/nextjs" },
-    { title: "HTML Semântico", href: "/html-semantico" },
-    { title: "SEO", href: "/seo" },
-    { title: "Acessibilidade", href: "/acessibilidade" },
-    { title: "Performance", href: "/performance" },
-    { title: "Blog", href: "/blog" },
-    { title: "Sobre", href: "/sobre" },
-    { title: "Termos de Uso", href: "/termos-de-uso" },
-    { title: "Política de Privacidade", href: "/politica-de-privacidade" },
-    { title: "Contato", href: "/contato" },
+import {
+    DropdownMenu,
+    DropdownMenuTrigger,
+    DropdownMenuContent,
+    DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
+
+// ---------------------------
+// 📌 Organização de Rotas + Ícones
+// ---------------------------
+
+const soloRoutes = [
+    { label: "Início", href: "/", icon: Home },
+    { label: "Blog", href: "/blog", icon: BookOpen },
+    { label: "Sobre", href: "/sobre", icon: Info },
+    { label: "Contato", href: "/contato", icon: Mail },
 ];
 
-export default function Navbar({ onNavigate }: { onNavigate?: () => void }) {
+const tutorialRoutes = [
+    { label: "Tailwind", href: "/tailwind", icon: Sparkles },
+    { label: "Next.js", href: "/nextjs", icon: Layers },
+    { label: "HTML Semântico", href: "/html-semantico", icon: LayoutTemplate },
+    { label: "SEO", href: "/seo", icon: Search },
+    { label: "Acessibilidade", href: "/acessibilidade", icon: Accessibility },
+    { label: "Performance", href: "/performance", icon: Gauge },
+];
+
+export default function Navbar() {
+    const pathname = usePathname();
+
+    // Estilo de rota ativa
+    const isActive = (href: string) =>
+        pathname === href
+            ? "text-sky-400 font-semibold"
+            : "text-white/80 hover:text-white";
+
     return (
-        <nav aria-label="Navegação principal" className="hidden md:flex items-center gap-6">
-            {ROUTES.slice(0, 8).map((route) => (
-                <Link
-                    key={route.href}
-                    href={route.href}
-                    onClick={onNavigate}
-                    className="text-gray-700 hover:text-sky-600 transition font-medium"
-                >
-                    {route.title}
+        <nav aria-label="Menu principal" className="flex items-center gap-6">
+            {/* ------------------------- */}
+            {/* 📌 DESKTOP */}
+            {/* ------------------------- */}
+            <div className="hidden md:flex items-center gap-6 text-sm">
+
+                {/* 🔹 Link sozinho: Início */}
+                <Link href="/" className={isActive("/")}>
+                    <Home className="w-4 h-4 mr-2 inline-block" />
+                    Início
                 </Link>
-            ))}
 
-            {/* Grouped menu for institucional */}
-            <div className="relative">
-                <details className="group">
-                    <summary className="list-none cursor-pointer flex items-center gap-2 text-gray-700 font-medium">
-                        Mais
-                        <ChevronDown className="w-4 h-4 text-gray-500 group-open:rotate-180 transition-transform" />
-                    </summary>
+                {/* 🔹 Dropdown — Guias & Tutoriais */}
+                <DropdownMenu>
+                    <DropdownMenuTrigger className="flex items-center gap-2 text-white/80 hover:text-white outline-none cursor-pointer">
+                        <BookOpenText className="w-4 h-4" />
+                        Guias & Tutoriais
+                    </DropdownMenuTrigger>
 
-                    <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-100 p-3 z-30">
-                        {ROUTES.slice(8).map((route) => (
-                            <Link
+                    <DropdownMenuContent
+                        align="start"
+                        className="w-56 bg-zinc-900/90 backdrop-blur-xl border border-white/10"
+                    >
+                        {tutorialRoutes.map((route) => {
+                            const Icon = route.icon;
+
+                            return (
+                                <DropdownMenuItem key={route.href} asChild>
+                                    <Link
+                                        href={route.href}
+                                        className={`flex items-center px-2 py-1.5 gap-2 ${isActive(route.href)} cursor-pointer`}
+                                    >
+                                        <Icon className="w-4 h-4" />
+                                        {route.label}
+                                    </Link>
+                                </DropdownMenuItem>
+                            );
+                        })}
+                    </DropdownMenuContent>
+                </DropdownMenu>
+
+                {/* 🔹 Solo: Blog, Sobre, Contato */}
+                {soloRoutes
+                    .filter((r) => r.href !== "/")
+                    .map((route) => {
+                        const Icon = route.icon; // 👈 pega o ícone correto
+
+                        return (
+                            <motion.li
                                 key={route.href}
-                                href={route.href}
-                                className="block px-3 py-2 rounded hover:bg-gray-50 text-gray-700"
+                                whileHover={{ scale: 1.08 }}
+                                whileTap={{ scale: 0.95 }}
+                                transition={{ type: "spring", stiffness: 220, damping: 14 }}
+                                className="list-none"
                             >
-                                {route.title}
-                            </Link>
-                        ))}
-                    </div>
-                </details>
+                                <Link
+                                    href={route.href}
+                                    className={`${isActive(route.href)} flex items-center gap-2`}
+                                >
+                                    {Icon && <Icon className="w-4 h-4 inline-block" />}
+                                    {route.label}
+                                </Link>
+                            </motion.li>
+                        );
+                    })}
+            </div>
+
+            {/* ------------------------- */}
+            {/* 📱 MOBILE */}
+            {/* ------------------------- */}
+            <div className="md:hidden w-full">
+                <Accordion
+                    type="single"
+                    collapsible
+                    className="w-full text-white bg-black/30 rounded-xl backdrop-blur-md border border-white/10"
+                >
+                    <AccordionItem value="menu">
+                        <AccordionTrigger className="px-4 py-3">
+                            Menu
+                        </AccordionTrigger>
+
+                        <AccordionContent>
+                            <ul className="flex flex-col gap-3 px-4 pb-4 text-sm">
+
+                                {/* 🔹 Início */}
+                                <motion.li
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.25 }}
+                                >
+                                    <Link href="/" className={`${isActive("/")} block py-1`}>
+                                        <Home className="w-4 h-4 mr-2 inline-block" />
+                                        Início
+                                    </Link>
+                                </motion.li>
+
+                                {/* 🔹 Acordeon interno — Guias & Tutoriais */}
+                                <Accordion type="single" collapsible className="w-full">
+                                    <AccordionItem value="tutorials">
+                                        <AccordionTrigger className="py-1 flex items-center gap-2">
+                                            <BookOpen className="w-4 h-4 text-sky-400" />
+                                            Guias & Tutoriais
+                                        </AccordionTrigger>
+
+                                        <AccordionContent>
+                                            <ul className="flex flex-col gap-2 pl-4 border-l border-white/10">
+                                                {tutorialRoutes.map((route) => {
+                                                    const Icon = route.icon;
+
+                                                    return (
+                                                        <motion.li
+                                                            key={route.href}
+                                                            initial={{ opacity: 0, x: -20 }}
+                                                            animate={{ opacity: 1, x: 0 }}
+                                                        >
+                                                            <Link
+                                                                href={route.href}
+                                                                className={`${isActive(route.href)} flex items-center gap-2 py-1`}
+                                                            >
+                                                                {Icon && <Icon className="w-4 h-4" />}
+                                                                {route.label}
+                                                            </Link>
+                                                        </motion.li>
+                                                    );
+                                                })}
+                                            </ul>
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                </Accordion>
+
+                                {/* 🔹 Restante das rotas (mobile) */}
+                                {soloRoutes
+                                    .filter((r) => r.href !== "/")
+                                    .map((route) => {
+                                        const Icon = route.icon; // 👈 pega o ícone correto
+
+                                        return (
+                                            <motion.li
+                                                key={route.href}
+                                                initial={{ opacity: 0, x: -20 }}
+                                                animate={{ opacity: 1, x: 0 }}
+                                                transition={{ duration: 0.25 }}
+                                            >
+                                                <Link
+                                                    href={route.href}
+                                                    className={`${isActive(route.href)} flex items-center gap-2 py-1`}
+                                                >
+                                                    {Icon && <Icon className="w-4 h-4" />}
+                                                    {route.label}
+                                                </Link>
+                                            </motion.li>
+                                        );
+                                    })}
+                            </ul>
+                        </AccordionContent>
+                    </AccordionItem>
+                </Accordion>
             </div>
         </nav>
-    );
-}
-
-function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
-    return (
-        <AnimatePresence>
-            {isOpen && (
-                <motion.aside
-                    key="mobile-menu"
-                    initial={{ opacity: 0, x: 40 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 40 }}
-                    transition={{ duration: 0.28 }}
-                    className="fixed inset-0 z-50 bg-white/90 backdrop-blur-md p-6 overflow-auto"
-                    aria-label="Menu móvel"
-                >
-                    <div className="max-w-md mx-auto">
-                        <div className="flex items-center justify-between mb-6">
-                            <Link href="/" onClick={onClose} aria-label="Ir para a página inicial">
-                                <Image src="/logo-windly.png" alt="Windly" width={120} height={40} />
-                            </Link>
-
-                            <button
-                                onClick={onClose}
-                                aria-label="Fechar menu"
-                                className="p-2 rounded-md hover:bg-gray-100"
-                            >
-                                <X />
-                            </button>
-                        </div>
-
-                        <div className="space-y-4">
-                            {/* Primary links */}
-                            {ROUTES.slice(0, 8).map((route) => (
-                                <Link
-                                    key={route.href}
-                                    href={route.href}
-                                    onClick={onClose}
-                                    className="block w-full rounded-md px-4 py-3 hover:bg-gray-50 text-gray-800 font-medium"
-                                >
-                                    {route.title}
-                                </Link>
-                            ))}
-
-                            {/* Accordion for institucional */}
-                            <Accordion type="single" collapsible>
-                                <AccordionItem value="institucional">
-                                    <AccordionTrigger className="w-full text-left px-4 py-3">Institucional</AccordionTrigger>
-                                    <AccordionContent className="space-y-2 px-4 py-2">
-                                        {ROUTES.slice(8).map((route) => (
-                                            <Link
-                                                key={route.href}
-                                                href={route.href}
-                                                onClick={onClose}
-                                                className="block rounded-md px-3 py-2 hover:bg-gray-50 text-gray-700"
-                                            >
-                                                {route.title}
-                                            </Link>
-                                        ))}
-                                    </AccordionContent>
-                                </AccordionItem>
-                            </Accordion>
-
-                            {/* CTA */}
-                            <div className="mt-6">
-                                <Link
-                                    href="#comece-agora"
-                                    onClick={onClose}
-                                    className="w-full block text-center px-4 py-3 rounded-lg bg-sky-600 text-white font-semibold hover:bg-sky-700 transition"
-                                >
-                                    Começar Agora
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </motion.aside>
-            )}
-        </AnimatePresence>
     );
 }
