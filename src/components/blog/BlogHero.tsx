@@ -23,12 +23,12 @@ export default function BlogHero() {
 
                 {/* Título principal */}
                 <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-                    Blog da Windly
+                    Blog do Windly
                 </h1>
 
                 {/* Subtítulo */}
                 <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto">
-                    Artigos sobre desenvolvimento, boas práticas, arquitetura e tecnologia para evoluir seu código e sua carreira.
+                    Um espaço em constante expansão, trazendo conteúdos variados sobre tecnologia, desenvolvimento e tudo que ajuda você a evoluir continuamente.
                 </p>
 
                 {/* CTA opcional */}
