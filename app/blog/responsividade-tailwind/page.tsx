@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import ResponsividadeTailwindContent from "@/components/blog/ResponsividadeTailwindContent";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: {
