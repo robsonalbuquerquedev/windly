@@ -22,24 +22,31 @@ export default function ResponsividadeTailwindContent() {
             >
 
                 {/* SEÇÃO — HERO DO ARTIGO */}
-                <motion.section className="space-y-6">
-                    <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-sky-300 to-indigo-400 bg-clip-text text-transparent">
+                <motion.header className="space-y-6">
+                    <motion.h1 initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="text-4xl md:text-5xl font-bold text-gray-900"
+                    >
                         Como pensar responsividade no mundo real com Tailwind
-                    </h1>
+                    </motion.h1>
 
-                    <p className="text-lg opacity-90">
+                    <motion.p initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.2, duration: 0.5 }}
+                        className="text-lg md:text-xl text-gray-600 max-w-3xl">
                         Criar layouts responsivos é como organizar uma mochila
                         que precisa funcionar em diferentes viagens: no mobile levamos só o essencial,
                         e em telas maiores usamos todo o espaço disponível.
                         O Tailwind facilita essa adaptação — basta entender como cada peça se encaixa.
-                    </p>
+                    </motion.p>
 
                     <div className="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm shadow-lg">
                         <p className="text-sky-200 font-semibold">
                             🎒 Dica inicial: design responsivo começa na menor tela possível.
                         </p>
                     </div>
-                </motion.section>
+                </motion.header>
 
                 {/* MOBILE FIRST */}
                 <motion.section className="space-y-6">
@@ -86,7 +93,7 @@ export default function ResponsividadeTailwindContent() {
                         <h3 className="text-2xl font-semibold">1. Zona de Conteúdo</h3>
 
                         <motion.pre
-                            className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto"
+                            className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto text-sm"
                         >
                             <code className="language-html text-sm">
                                 {`<section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -104,7 +111,7 @@ export default function ResponsividadeTailwindContent() {
                         <h3 className="text-2xl font-semibold">2. Zona de Imagens</h3>
 
                         <motion.pre
-                            className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto"
+                            className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto text-sm"
                         >
                             <code className="language-html text-sm">
                                 {`<img
@@ -121,7 +128,7 @@ export default function ResponsividadeTailwindContent() {
                         <h3 className="text-2xl font-semibold">3. Zona de Ações (CTA)</h3>
 
                         <motion.pre
-                            className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto"
+                            className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto text-sm"
                         >
                             <code className="language-html text-sm">
                                 {`<div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center">
@@ -157,13 +164,17 @@ export default function ResponsividadeTailwindContent() {
                 </motion.section>
 
                 {/* EXEMPLO COMPLETO */}
-                <motion.section  className="space-y-6">
+                <motion.section initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6 }}
+                    className="space-y-6">
+
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-indigo-400 bg-clip-text text-transparent">
                         ⚡ Exemplo completo
                     </h2>
 
                     <motion.pre
-                        className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto"
+                        className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto text-sm"
                     >
                         <code className="language-html text-sm">
                             {`<section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
@@ -191,7 +202,11 @@ export default function ResponsividadeTailwindContent() {
                 </motion.section>
 
                 {/* CONCLUSÃO */}
-                <motion.section className="space-y-4">
+                <motion.section initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.7 }}
+                    className="space-y-6 border-t pt-6">
+
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-300 to-sky-300 bg-clip-text text-transparent">
                         🏁 Conclusão
                     </h2>
@@ -205,7 +220,7 @@ export default function ResponsividadeTailwindContent() {
                 </motion.section>
 
                 {/* NAVEGAÇÃO ENTRE ARTIGOS */}
-                <motion.section
+                <motion.footer
                     className="mt-16 border-t border-white/10 pt-10"
                 >
                     <h2 className="text-3xl font-bold">Quer aprender mais?</h2>
@@ -214,7 +229,7 @@ export default function ResponsividadeTailwindContent() {
                     </p>
 
                     <ButtonBlog previous={previous} next={next} />
-                </motion.section>
+                </motion.footer>
             </motion.div>
         </article>
     );
