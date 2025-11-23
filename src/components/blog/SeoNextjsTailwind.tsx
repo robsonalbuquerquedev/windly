@@ -218,7 +218,7 @@ export default function SeoNextjsTailwindContent() {
                 <motion.footer className="mt-16 border-t border-white/10 pt-10">
                     <h2 className="text-3xl font-bold">Quer aprender mais?</h2>
                     <p className="mt-4 text-lg">
-                        Explore novos conteúdos sobre Next.js, SEO e desenvolvimento moderno.
+                        Explore novos conteúdos publicados regularmente sobre desenvolvimento, tecnologia e boas práticas modernas.
                     </p>
 
                     <ButtonBlog previous={previous} next={next} />
