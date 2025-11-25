@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://windly.dev/sitemap.xml
+Sitemap: https://windly.com.br/sitemap.xml

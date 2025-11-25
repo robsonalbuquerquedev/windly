@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://windly.dev";
+    const baseUrl = "https://windly.com.br";
 
     // Lista centralizada de páginas — basta adicionar ou remover aqui
     const pages = [
