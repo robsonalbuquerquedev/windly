@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     ],
 
     alternates: {
-        canonical: "https://windly.dev/blog/classname-na-pratica",
+        canonical: "https://windly.com.br/blog/classname-na-pratica",
     },
 
     openGraph: {
         title: "className na prática para páginas reais — Windly",
         description:
             "Guia completo sobre organização inteligente de className com TailwindCSS, técnicas profissionais, exemplos reais e boas práticas para deixar seu layout moderno e escalável.",
-        url: "https://windly.dev/blog/classname-na-pratica",
+        url: "https://windly.com.br/blog/classname-na-pratica",
         siteName: "Windly",
         images: [
             {
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function ResponsividadeTailwindPage() {
+export default function ClassnameNaPraticaContentPage() {
     return (
         <ClassnameNaPraticaContent />
     );
