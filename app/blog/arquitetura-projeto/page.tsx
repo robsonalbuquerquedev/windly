@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     ],
 
     alternates: {
-        canonical: "https://windly.dev/blog/arquitetura-de-projeto",
+        canonical: "https://windly.com.br/blog/arquitetura-de-projeto",
     },
 
     openGraph: {
         title: "Como montar sua arquitetura de projeto moderna — Windly",
         description:
             "Aprenda como montar uma arquitetura de projeto moderna e profissional, com padrões de organização usados em aplicações reais e escaláveis.",
-        url: "https://windly.dev/blog/arquitetura-de-projeto",
+        url: "https://windly.com.br/blog/arquitetura-de-projeto",
         siteName: "Windly",
         images: [
             {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function ResponsividadeTailwindPage() {
+export default function ArquiteturaProjetoPage() {
     return (
         <ArquiteturaProjeto />
     );
