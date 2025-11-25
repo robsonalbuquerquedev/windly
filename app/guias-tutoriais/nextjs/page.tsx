@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     ],
 
     alternates: {
-        canonical: "https://windly.dev/guias-tutoriais/nextjs",
+        canonical: "https://windly.com.br/guias-tutoriais/nextjs",
     },
 
     openGraph: {
         title: "Guia de Boas Práticas em Next.js — Windly",
         description:
             "Um guia completo para estruturar projetos em Next.js de forma sólida e moderna: rotas, layouts, organização de componentes e padrões que aumentam qualidade e velocidade no desenvolvimento.",
-        url: "https://windly.dev/guias-tutoriais/nextjs",
+        url: "https://windly.com.br/guias-tutoriais/nextjs",
         siteName: "Windly",
         images: [
             {
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function ResponsividadeTailwindPage() {
+export default function NextjsPage() {
     return (
         <Nextjs />
     );
