@@ -26,14 +26,14 @@ export const metadata: Metadata = {
     ],
 
     alternates: {
-        canonical: "https://windly.dev/blog/performance-web",
+        canonical: "https://windly.com.br/blog/performance-web",
     },
 
     openGraph: {
         title: "Guia de Performance Web Moderna — Windly",
         description:
             "Um guia completo e prático sobre como melhorar a performance do seu site com técnicas reais usadas em produção: imagens responsivas, lazy loading, formatos modernos e muito mais.",
-        url: "https://windly.dev/blog/performance-web",
+        url: "https://windly.com.br/blog/performance-web",
         siteName: "Windly",
         images: [
             {
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function ResponsividadeTailwindPage() {
+export default function PerformacePage() {
     return (
         <Performace />
     );
