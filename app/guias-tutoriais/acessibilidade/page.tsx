@@ -26,14 +26,14 @@ export const metadata: Metadata = {
     ],
 
     alternates: {
-        canonical: "https://windly.dev/guias-tutoriais/acessibilidade",
+        canonical: "https://windly.com.br/guias-tutoriais/acessibilidade",
     },
 
     openGraph: {
         title: "Guia Completo de Acessibilidade Web (A11y) — Windly",
         description:
             "Um guia essencial e prático para desenvolver interfaces inclusivas e acessíveis com foco em navegação por teclado, foco visível, ARIA, semântica e padrões modernos.",
-        url: "https://windly.dev/guias-tutoriais/acessibilidade",
+        url: "https://windly.com.br/guias-tutoriais/acessibilidade",
         siteName: "Windly",
         images: [
             {
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function ResponsividadeTailwindPage() {
+export default function AcessibilidadePage() {
     return (
         <Acessibilidade />
     );
