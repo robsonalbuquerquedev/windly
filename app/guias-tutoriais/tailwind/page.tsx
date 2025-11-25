@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     ],
 
     alternates: {
-        canonical: "https://windly.dev/guias-tutoriais/tailwind",
+        canonical: "https://windly.com.br/guias-tutoriais/tailwind",
     },
 
     openGraph: {
         title: "Guia Completo de TailwindCSS — Windly",
         description:
             "Aprenda como usar TailwindCSS para criar interfaces modernas com velocidade, clareza e organização. Um guia prático cheio de exemplos reais usados em produção.",
-        url: "https://windly.dev/guias-tutoriais/tailwind",
+        url: "https://windly.com.br/guias-tutoriais/tailwind",
         siteName: "Windly",
         images: [
             {
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function ResponsividadeTailwindPage() {
+export default function TailwindPage() {
     return (
         <Tailwind />
     );
