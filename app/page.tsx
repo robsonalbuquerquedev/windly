@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical: "https://windly.dev/",
+    canonical: "https://windly.com.br/",
   },
 
   openGraph: {
     title: "Windly — Aprenda Tailwind, Semântica e SEO",
     description:
       "Crie interfaces modernas e profissionais com TailwindCSS e Next.js usando componentes elegantes e práticas reais de SEO.",
-    url: "https://windly.dev/",
+    url: "https://windly.com.br/",
     siteName: "Windly",
     images: [
       {
