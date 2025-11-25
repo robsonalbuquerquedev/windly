@@ -24,14 +24,14 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical: "https://windly.dev/sobre",
+    canonical: "https://windly.com.br/sobre",
   },
 
   openGraph: {
     title: "Sobre o Windly — Origem, Propósito e Projetos",
     description:
       "Entenda a origem do Windly, seu propósito e os projetos que moldaram sua construção. Uma plataforma criada com foco em organização, clareza e boas práticas com Next.js e TailwindCSS.",
-    url: "https://windly.dev/sobre",
+    url: "https://windly.com.br/sobre",
     siteName: "Windly",
     images: [
       {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function About() {
+export default function Sobre() {
   return (
     <>
       <HeroSplitAbout />
