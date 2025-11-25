@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     ],
 
     alternates: {
-        canonical: "https://windly.dev/blog/seo-nextjs-tailwind",
+        canonical: "https://windly.com.br/blog/seo-nextjs-tailwind",
     },
 
     openGraph: {
         title: "SEO para Next.js explicado com Tailwind — Windly",
         description:
             "Guia definitivo sobre como usar metadata, JSON-LD e semântica para potencializar o SEO em projetos Next.js com Tailwind. Aprenda técnicas reais aplicadas ao App Router.",
-        url: "https://windly.dev/blog/seo-nextjs-tailwind",
+        url: "https://windly.com.br/blog/seo-nextjs-tailwind",
         siteName: "Windly",
         images: [
             {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function ResponsividadeTailwindPage() {
+export default function SeoNextjsTailwindPage() {
     return (
         <SeoNextjsTailwind />
     );
