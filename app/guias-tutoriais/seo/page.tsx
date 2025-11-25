@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     ],
 
     alternates: {
-        canonical: "https://windly.dev/guias-tutoriais/seo",
+        canonical: "https://windly.com.br/guias-tutoriais/seo",
     },
 
     openGraph: {
         title: "Guia Prático de SEO Moderno — Windly",
         description:
             "Aprenda como aplicar SEO técnico e estruturado na prática: semântica, metadados, estrutura hierárquica, acessibilidade e estratégias usadas em projetos profissionais.",
-        url: "https://windly.dev/guias-tutoriais/seo",
+        url: "https://windly.com.br/guias-tutoriais/seo",
         siteName: "Windly",
         images: [
             {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function ResponsividadeTailwindPage() {
+export default function SeoPage() {
     return (
         <Seo />
     );
