@@ -25,14 +25,14 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical: "https://windly.dev/politica-de-privacidade",
+    canonical: "https://windly.com.br/politica-de-privacidade",
   },
 
   openGraph: {
     title: "Política de Privacidade — Seus Dados e Segurança | Windly",
     description:
       "Saiba como seus dados são tratados no Windly, incluindo cookies, anúncios, links de afiliados e políticas de proteção e transparência.",
-    url: "https://windly.dev/politica-de-privacidade",
+    url: "https://windly.com.br/politica-de-privacidade",
     siteName: "Windly",
     images: [
       {
