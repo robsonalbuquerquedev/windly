@@ -1,4 +1,4 @@
-# 🌬️ Windly — Tailwind, SEO e Semântica com Classe
+# 🌬️ Windly — Tailwind, SEO e Semântica com excelência
 
 [![Status](https://img.shields.io/badge/Status-Ativo-blue)]()
 [![Next.js](https://img.shields.io/badge/Next.js-14-black)]()
