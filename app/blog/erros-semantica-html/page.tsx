@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     ],
 
     alternates: {
-        canonical: "https://windly.dev/blog/erros-semantica-html",
+        canonical: "https://windly.com.br/blog/erros-semantica-html",
     },
 
     openGraph: {
         title: "Erros que iniciantes cometem ao usar Semântica HTML — Windly",
         description:
             "Um guia profundo revelando os erros mais comuns de quem está aprendendo HTML e como aplicar semântica da forma correta para melhorar SEO, acessibilidade e organização do código.",
-        url: "https://windly.dev/blog/erros-semantica-html",
+        url: "https://windly.com.br/blog/erros-semantica-html",
         siteName: "Windly",
         images: [
             {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function ResponsividadeTailwindPage() {
+export default function ErrosSemanticaHtmlPage() {
     return (
         <ErrosSemanticaHtml />
     );
