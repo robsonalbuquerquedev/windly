@@ -140,7 +140,7 @@ Nenhuma parte deste repositório pode ser:
 
 sem permissão por escrito.
 
-Veja o arquivo **LICENSE.md** para detalhes completos.
+Veja o arquivo **[LICENSE.md](LICENSE.md)** para detalhes completos.
 
 © 2025 — Robson Albuquerque. Todos os direitos reservados.
 
