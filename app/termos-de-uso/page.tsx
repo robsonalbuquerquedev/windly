@@ -24,14 +24,14 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical: "https://windly.dev/termos-de-uso",
+    canonical: "https://windly.com.br/termos-de-uso",
   },
 
   openGraph: {
     title: "Termos de Uso — Regras e Condições | Windly",
     description:
       "Conheça as condições de utilização do Windly, incluindo responsabilidade do usuário, direitos autorais, anúncios, políticas de afiliados e regras de navegação.",
-    url: "https://windly.dev/termos-de-uso",
+    url: "https://windly.com.br/termos-de-uso",
     siteName: "Windly",
     images: [
       {
