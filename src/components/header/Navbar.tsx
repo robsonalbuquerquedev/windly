@@ -42,13 +42,15 @@ const soloRoutes = [
     { label: "Contato", href: "/contato", icon: Mail },
 ];
 
+const prefix = "/guias-tutoriais/";
+
 const tutorialRoutes = [
-    { label: "Tailwind", href: "guias-tutoriais/tailwind", icon: Sparkles },
-    { label: "Next.js", href: "guias-tutoriais/nextjs", icon: Layers },
-    { label: "HTML Semântico", href: "guias-tutoriais/html-semantico", icon: LayoutTemplate },
-    { label: "SEO", href: "guias-tutoriais/seo", icon: Search },
-    { label: "Acessibilidade", href: "guias-tutoriais/acessibilidade", icon: Accessibility },
-    { label: "Performance", href: "guias-tutoriais/performance", icon: Gauge },
+    { label: "Tailwind", href: `${prefix}tailwind`, icon: Sparkles },
+    { label: "Next.js", href: `${prefix}nextjs`, icon: Layers },
+    { label: "HTML Semântico", href: `${prefix}html-semantico`, icon: LayoutTemplate },
+    { label: "SEO", href: `${prefix}seo`, icon: Search },
+    { label: "Acessibilidade", href: `${prefix}acessibilidade`, icon: Accessibility },
+    { label: "Performance", href: `${prefix}performance`, icon: Gauge },
 ];
 
 export default function Navbar() {

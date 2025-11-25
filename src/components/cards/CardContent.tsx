@@ -1,6 +1,8 @@
 import { BookOpen, Code, Globe, Layers, Accessibility, Zap } from "lucide-react";
 import Link from "next/link";
 
+const prefix = "/guias-tutoriais/";
+
 export default function CardContent() {
     const items = [
         {
@@ -9,7 +11,7 @@ export default function CardContent() {
             title: "TailwindCSS",
             description:
                 "Aprenda a criar interfaces modernas usando classes utilitárias que deixam tudo rápido, leve e fácil de manter.",
-            link: "/tailwind",
+            link: `${prefix}tailwind`,
         },
         {
             id: 2,
@@ -17,7 +19,7 @@ export default function CardContent() {
             title: "Boas Práticas em Next.js",
             description:
                 "Aprenda como organizar rotas, componentes e layouts para ganhar velocidade e clareza no desenvolvimento.",
-            link: "/nextjs",
+            link: `${prefix}nextjs`,
         },
         {
             id: 3,
@@ -25,7 +27,7 @@ export default function CardContent() {
             title: "HTML Semântico",
             description:
                 "Entenda como usar tags modernas para melhorar acessibilidade, SEO, estrutura e a importante clareza do seu código.",
-            link: "/html-semantico",
+            link: `${prefix}html-semantico`,
         },
         {
             id: 4,
@@ -33,7 +35,7 @@ export default function CardContent() {
             title: "SEO na Prática",
             description:
                 "Aprenda técnicas reais para otimizar páginas e aumentar sua presença nos buscadores de forma consistente.",
-            link: "/seo",
+            link: `${prefix}seo`,
         },
         {
             id: 5,
@@ -41,7 +43,7 @@ export default function CardContent() {
             title: "Acessibilidade Web (A11y)",
             description:
                 "Aprenda como tornar sua interface inclusiva com práticas simples que ajudam todos os usuários a navegar melhor.",
-            link: "/acessibilidade",
+            link: `${prefix}acessibilidade`,
         },
         {
             id: 6,
@@ -49,7 +51,7 @@ export default function CardContent() {
             title: "Performance em Front-end",
             description:
                 "Entenda como otimizar imagens, scripts e carregamento para deixar seu site ainda mais leve, rápido e eficiente.",
-            link: "guias-tutoriais/performance",
+            link: `${prefix}performance`,
         }
     ];
 
