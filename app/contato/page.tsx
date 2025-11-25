@@ -23,14 +23,14 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical: "https://windly.dev/contato",
+    canonical: "https://windly.com.br/contato",
   },
 
   openGraph: {
     title: "Contato — Fale Diretamente Comigo | Windly",
     description:
       "Envie sua mensagem diretamente para mim. Tire dúvidas, compartilhe ideias ou envie sugestões sobre Next.js, TailwindCSS e o projeto Windly.",
-    url: "https://windly.dev/contato",
+    url: "https://windly.com.br/contato",
     siteName: "Windly",
     images: [
       {
