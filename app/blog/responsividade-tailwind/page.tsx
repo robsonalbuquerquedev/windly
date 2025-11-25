@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     ],
 
     alternates: {
-        canonical: "https://windly.dev/blog/responsividade-tailwind",
+        canonical: "https://windly.com.br/blog/responsividade-tailwind",
     },
 
     openGraph: {
         title: "Responsividade no TailwindCSS — Windly",
         description:
             "Guia completo sobre breakpoints, classes responsivas e técnicas modernas para criar interfaces adaptáveis com TailwindCSS.",
-        url: "https://windly.dev/blog/responsividade-tailwind",
+        url: "https://windly.com.br/blog/responsividade-tailwind",
         siteName: "Windly",
         images: [
             {
