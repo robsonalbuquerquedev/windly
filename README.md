@@ -7,6 +7,10 @@
 [![SEO](https://img.shields.io/badge/SEO-Otimizado-brightgreen)]()
 [![Hospedado na Vercel](https://img.shields.io/badge/Vercel-Deploy-black)]()
 
+<p align="center">
+  <img src="./public/banner.png" alt="Banner do Projeto">
+</p>
+
 Aprenda **TailwindCSS**, **SEO moderno**, **HTML Semântico** e **boas práticas de Next.js** criando interfaces elegantes, rápidas e profissionais.  
 O Windly é um projeto educacional e prático, feito para quem deseja construir páginas modernas seguindo padrões reais do mercado.
 
