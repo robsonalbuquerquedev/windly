@@ -49,7 +49,7 @@ export default function CardContent() {
             title: "Performance em Front-end",
             description:
                 "Entenda como otimizar imagens, scripts e carregamento para deixar seu site ainda mais leve, rápido e eficiente.",
-            link: "/performance",
+            link: "guias-tutoriais/performance",
         }
     ];
 
