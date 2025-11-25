@@ -175,9 +175,9 @@ export default function Performance() {
                     <nav className="bg-white/60 p-4 rounded-2xl border" aria-label="related-guides">
                         <h4 className="font-semibold">Guias Relacionados</h4>
                         <ul className="mt-3 space-y-2 text-sm">
-                            <li><a href="/seo" className="underline">Fundamentos de SEO</a></li>
-                            <li><a href="/accessibility" className="underline">Acessibilidade Web</a></li>
-                            <li><a href="/tailwind" className="underline">Padrões com Tailwind</a></li>
+                            <li><a href="/guias-tutoriais/seo" className="underline">Fundamentos de SEO</a></li>
+                            <li><a href="/guias-tutoriais/acessibilidade" className="underline">Acessibilidade Web</a></li>
+                            <li><a href="/guias-tutoriais/tailwind" className="underline">Padrões com Tailwind</a></li>
                         </ul>
                     </nav>
                 </aside>
