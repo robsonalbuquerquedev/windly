@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     ],
 
     alternates: {
-        canonical: "https://windly.dev/guias-tutoriais/html-semantico",
+        canonical: "https://windly.com.br/guias-tutoriais/html-semantico",
     },
 
     openGraph: {
         title: "Guia Completo de HTML Semântico — Windly",
         description:
             "Aprenda a construir páginas claras, acessíveis e otimizadas usando HTML semântico moderno. Um guia prático com estrutura, exemplos, checklist e boas práticas reais.",
-        url: "https://windly.dev/guias-tutoriais/html-semantico",
+        url: "https://windly.com.br/guias-tutoriais/html-semantico",
         siteName: "Windly",
         images: [
             {
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function ResponsividadeTailwindPage() {
+export default function HtmlSemanticoPage() {
     return (
         <HtmlSemantico />
     );
