@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     ],
 
     alternates: {
-        canonical: "https://windly.dev/blog"
+        canonical: "https://windly.com.br/blog"
     },
 
     openGraph: {
         title: "Blog — Windly",
         description:
             "Artigos completos sobre Tailwind, Next.js, arquitetura, SEO e boas práticas para desenvolvedores modernos.",
-        url: "https://windly.dev/blog",
+        url: "https://windly.com.br/blog",
         siteName: "Windly",
         locale: "pt_BR",
         type: "website",
