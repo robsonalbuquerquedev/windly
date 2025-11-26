@@ -84,11 +84,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        {/* ✅ Tag de verificação do Google AdSense */}
+        <meta name="google-adsense-account" content="ca-pub-9360124149047745"></meta>
+      </head>
       <body>
         <StructuredData />
         <MainLayout>
           <main>{children}</main>
         </MainLayout>
+
+        {/* ✅ Google AdSense */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9360124149047745"
+          crossOrigin="anonymous"
+        ></script>
       </body>
     </html>
   );
