@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ButtonBlog } from "@/components/buttons/ButtonBlog";
 import { staggerContainer } from "@/utils/animations";
 import { posts } from "@/data/posts";
+import CTA from "@/components/cta/CTA";
 
 const currentIndex = posts.findIndex((p) => p.href === "/blog/classname-na-pratica");
 const previous = posts[currentIndex - 1];
@@ -175,6 +176,16 @@ const buttonClass = clsx(
 </section>`}
                     </motion.pre>
                 </motion.section>
+
+                <p className="text-gray-700">
+                    Para organizar classes com clareza, a estrutura do HTML precisa ser forte. É ela que dá suporte para qualquer padrão de className realmente funcionar.
+                </p>
+
+                <CTA
+                    title="Aprenda HTML5 em Poucas Horas e Crie Sites Profissionais Sem Enrolação"
+                    description="Se você sempre quis criar seus próprios sites, entrar no mercado de desenvolvimento web ou finalmente começar no Front-End (CSS, JavaScript e muito mais), este eBook é exatamente o que você precisava."
+                    href="https://go.hotmart.com/T103137279S"
+                />
 
                 {/* Conclusão */}
                 <motion.section
