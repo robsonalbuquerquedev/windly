@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { Instagram, Mail, Github } from "lucide-react";
+import RevisarCookies from "@/components/buttons/RevisarCookies";
 
 export default function Footer() {
     const pathname = usePathname();
@@ -17,7 +18,8 @@ export default function Footer() {
         { label: "Sobre", href: "/sobre" },
         { label: "Contato", href: "/contato" },
         { label: "Política de Privacidade", href: "/politica-de-privacidade" },
-        { label: "Termos de Uso", href: "/termos-de-uso" }
+        { label: "Termos de Uso", href: "/termos-de-uso" },
+        { label: "Política de Cookies", href: "/politica-de-cookies" }
     ];
 
     return (
@@ -56,6 +58,11 @@ export default function Footer() {
                     </ul>
                 </nav>
 
+                {/* Revisar cookies */}
+                <div className="mt-6 flex justify-center">
+                    <RevisarCookies />
+                </div>
+                
                 {/* Social */}
                 <div className="flex justify-center gap-6 mt-10 text-white/70">
                     <Link href="https://instagram.com" target="_blank" aria-label="Instagram do Windly">
