@@ -52,6 +52,12 @@ export const metadata: Metadata = {
     canonical: "https://windly.com.br/"
   },
 
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png"
+  },
+
   openGraph: {
     title: "Windly — Tailwind, SEO e Semântica",
     description:
