@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ButtonBlog } from "@/components/buttons/ButtonBlog";
 import { staggerContainer } from "@/utils/animations";
 import { posts } from "@/data/posts";
+import CTA from "@/components/cta/CTA";
 
 const currentIndex = posts.findIndex((p) => p.href === "/blog/seo-nextjs-tailwind");
 const previous = posts[currentIndex - 1];
@@ -191,6 +192,16 @@ export default function SeoNextjsTailwindContent() {
 </article>`}
                     </motion.pre>
                 </motion.section>
+
+                <p className="text-gray-700">
+                    Quando entendemos SEO no Next.js, percebemos que tudo começa no HTML. A estrutura semântica correta é o alicerce para que o metadata, o JSON-LD e todos os sinais de relevância façam sentido para os buscadores. Sem isso, qualquer estratégia de otimização perde força — mas com uma base sólida, tudo se encaixa de forma natural e eficiente.
+                </p>
+
+                <CTA
+                    title="Template Profissional: Tela de Login e Cadastro em HTML, CSS e JavaScript"
+                    description="Um template moderno, responsivo e pronto para uso. Ideal para projetos reais, estudos práticos e para fortalecer sua base em HTML e semântica — exatamente o que reforça um SEO técnico bem-feito."
+                    href="https://go.hotmart.com/Q103138000O"
+                />
 
                 {/* CONCLUSÃO */}
                 <motion.section

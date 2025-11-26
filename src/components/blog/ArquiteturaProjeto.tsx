@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ButtonBlog } from "@/components/buttons/ButtonBlog";
 import { staggerContainer } from "@/utils/animations";
 import { posts } from "@/data/posts";
+import CTA from "@/components/cta/CTA";
 
 const currentIndex = posts.findIndex((p) => p.href === "/blog/arquitetura-projeto");
 const previous = posts[currentIndex - 1];
@@ -199,6 +200,16 @@ export async function loginService(credentials) {
 </section>`}
                     </motion.pre>
                 </motion.section>
+
+                <p className="text-gray-700">
+                    Quando você domina a arquitetura de um projeto, tudo muda: seu código fica mais limpo, suas decisões ficam mais rápidas e trabalhar em equipe se torna muito mais natural. É essa organização que separa projetos amadores de aplicações realmente prontas para o mundo real. E se você já está confortável com os fundamentos, este é o momento ideal para avançar para tecnologias profissionais usadas no mercado.
+                </p>
+
+                <CTA
+                    title="Curso de Node.js, React e React Native"
+                    description="Se você quer evoluir para o próximo nível e construir aplicações modernas, completas e preparadas para produção, este curso une Node.js, React e React Native em um único caminho de aprendizado sólido."
+                    href="https://go.hotmart.com/M29939303X"
+                />
 
                 {/* Conclusão */}
                 <motion.section
