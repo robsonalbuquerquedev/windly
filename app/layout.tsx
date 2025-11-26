@@ -3,6 +3,7 @@ import "./globals.css";
 import StructuredData from "@/components/seo/StructuredData";
 import MainLayout from "@/components/layout/MainLayout";
 import Script from "next/script";
+import Cookies from "@/components/cookies/Cookies";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://windly.com.br"),
@@ -107,12 +108,27 @@ export default function RootLayout({
     });
   `}
         </Script>
+
+        {/* 🧠 Google Consent Mode */}
+        <Script id="consent-mode" strategy="beforeInteractive">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+  `}
+        </Script>
       </head>
       <body>
         <StructuredData />
         <MainLayout>
           <main>{children}</main>
         </MainLayout>
+        <Cookies />
 
         {/* ✅ Google AdSense */}
         <script
