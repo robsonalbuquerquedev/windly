@@ -7,6 +7,7 @@ import {
     Home,
     BookOpenText,
     BookOpen,
+    Heart,
     Info,
     Mail,
     Sparkles,
@@ -38,6 +39,7 @@ import {
 const soloRoutes = [
     { label: "Início", href: "/", icon: Home },
     { label: "Blog", href: "/blog", icon: BookOpen },
+    { label: "Meus Favoritos", href: "/meus-favoritos", icon: Heart },
     { label: "Sobre", href: "/sobre", icon: Info },
     { label: "Contato", href: "/contato", icon: Mail },
 ];
