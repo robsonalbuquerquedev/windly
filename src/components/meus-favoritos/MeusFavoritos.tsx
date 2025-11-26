@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { PRODUCTS } from "@/data/products";
 import CardProduct from "@/components/cards/CardProduct";
-import { RefreshCw } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 export default function MeusFavoritos() {
     const groupSize = 6;
@@ -16,12 +16,12 @@ export default function MeusFavoritos() {
     };
 
     // Auto-loop suave (a cada 10 segundos troca)
-    useEffect(() => {
-        const interval = setInterval(() => {
-            nextGroup();
-        }, 10000);
-        return () => clearInterval(interval);
-    }, []);
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         nextGroup();
+    //     }, 10000);
+    //     return () => clearInterval(interval);
+    // }, []);
 
     // Produtos visíveis
     const visibleProducts = PRODUCTS.slice(
@@ -53,7 +53,7 @@ export default function MeusFavoritos() {
                 ))}
             </div>
 
-            {/* Botão opcional (caso queira troca manual também) */}
+            {/* Botão para troca manual */}
             <div className="flex justify-end pr-2">
                 <button
                     onClick={nextGroup}
@@ -64,7 +64,7 @@ export default function MeusFavoritos() {
     "
                     aria-label="Mostrar mais produtos"
                 >
-                    <RefreshCw className="w-5 h-5" />
+                    <ChevronRight className="w-5 h-5" />
                 </button>
             </div>
         </section>
