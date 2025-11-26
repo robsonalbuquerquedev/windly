@@ -14,7 +14,7 @@ export default function CardProduct({ product }: CardProductProps) {
                         src={product.image}
                         alt={product.name}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                     />
                 </div>
             )}
