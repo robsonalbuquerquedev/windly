@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import StructuredData from "@/components/seo/StructuredData";
 import MainLayout from "@/components/layout/MainLayout";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://windly.com.br"),
@@ -87,6 +88,25 @@ export default function RootLayout({
       <head>
         {/* ✅ Tag de verificação do Google AdSense */}
         <meta name="google-adsense-account" content="ca-pub-9360124149047745"></meta>
+
+        {/* 📊 Google Analytics 4 */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-CN90517B1X"
+          strategy="afterInteractive"
+        />
+
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CN90517B1X', {
+      'anonymize_ip': true,
+      'allow_ad_personalization_signals': false
+    });
+  `}
+        </Script>
       </head>
       <body>
         <StructuredData />
