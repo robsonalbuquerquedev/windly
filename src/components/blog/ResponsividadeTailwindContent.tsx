@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ButtonBlog } from "@/components/buttons/ButtonBlog";
 import { staggerContainer } from "@/utils/animations";
 import { posts } from "@/data/posts";
+import CTA from "@/components/cta/CTA";
 
 const currentIndex = posts.findIndex((p) => p.href === "/blog/responsividade-tailwind");
 const previous = posts[currentIndex - 1];
@@ -200,6 +201,17 @@ export default function ResponsividadeTailwindContent() {
                         </code>
                     </motion.pre>
                 </motion.section>
+
+                <p className="text-gray-700">
+                    Antes de dominar responsividade com Tailwind, é essencial ter uma base sólida de HTML.
+                </p>
+
+                <CTA
+                    title="HTML Descomplicado"
+                    description="Quer aprender HTML de forma prática e descomplicada? Este eBook é o guia perfeito para iniciantes e para quem deseja consolidar seus conhecimentos."
+                    href="https://go.hotmart.com/I103136264W"
+                    image="/images/cta-tailwind.png"
+                />
 
                 {/* CONCLUSÃO */}
                 <motion.section initial={{ opacity: 0 }}
