@@ -45,6 +45,11 @@ export default function MeusFavoritos() {
                 <p className="text-gray-600 max-w-2xl mx-auto">
                     Recomendações pessoais de produtos que considero úteis no dia a dia.
                 </p>
+
+                <p className="text-xs text-gray-500 max-w-xl mx-auto">
+                    Todos os links desta seção são afiliados, o que significa que podemos ganhar
+                    uma pequena comissão caso você realize uma compra — sem custo adicional para você.
+                </p>
             </header>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-700 ease-in-out">
