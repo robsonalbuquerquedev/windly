@@ -26,7 +26,7 @@ export const PRODUCTS: Product[] = [
     {
         id: 4,
         name: "Hub Usb 3.0 Baseus",
-        description: "Transforme sua conexão com alta velocidade.",
+        description: "Transforme sua conexão com alta velocidade, praticidade e eficiência.",
         image: "/images/baseus.jpg",
         url: "https://amzn.to/484JQPi"
     },
