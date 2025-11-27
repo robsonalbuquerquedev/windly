@@ -4,18 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import {
-    Home,
-    BookOpenText,
-    BookOpen,
-    Heart,
-    Info,
-    Mail,
-    Sparkles,
-    Layers,
-    LayoutTemplate,
-    Search,
-    Accessibility,
-    Gauge
+    Home, BookOpen, Info, Mail, Heart, Library,
+    Sparkles, Layers, LayoutTemplate, Search, Accessibility, Gauge, BookOpenText
 } from "lucide-react";
 
 import {
@@ -36,14 +26,20 @@ import {
 // 📌 Organização de Rotas + Ícones
 // ---------------------------
 
-const soloRoutes = [
-    { label: "Início", href: "/", icon: Home },
+// 🔹 Rotas institucionais (Blog, Sobre, Contato)
+const institutionalRoutes = [
     { label: "Blog", href: "/blog", icon: BookOpen },
-    { label: "Meus Favoritos", href: "/meus-favoritos", icon: Heart },
     { label: "Sobre", href: "/sobre", icon: Info },
     { label: "Contato", href: "/contato", icon: Mail },
 ];
 
+// 🔹 Rotas de conteúdo extra (curadoria)
+const contentExtraRoutes = [
+    { label: "Meus Favoritos", href: "/meus-favoritos", icon: Heart },
+    { label: "Amantes da Leitura", href: "/amantes-da-leitura", icon: Library },
+];
+
+// 🔹 Guias & Tutoriais
 const prefix = "/guias-tutoriais/";
 
 const tutorialRoutes = [
@@ -66,9 +62,9 @@ export default function Navbar() {
 
     return (
         <nav aria-label="Menu principal" className="flex items-center gap-6">
-            {/* ------------------------- */}
-            {/* 📌 DESKTOP */}
-            {/* ------------------------- */}
+            {/* ---------------------------------------------------- */}
+            {/* 📌 DESKTOP NAVBAR — Organização visual aplicada */}
+            {/* ---------------------------------------------------- */}
             <div className="hidden md:flex items-center gap-6 text-sm">
 
                 {/* 🔹 Link sozinho: Início */}
@@ -106,30 +102,51 @@ export default function Navbar() {
                     </DropdownMenuContent>
                 </DropdownMenu>
 
-                {/* 🔹 Solo: Blog, Sobre, Contato */}
-                {soloRoutes
-                    .filter((r) => r.href !== "/")
-                    .map((route) => {
-                        const Icon = route.icon; // 👈 pega o ícone correto
+                {/* 🔹 Institucional: Blog, Sobre, Contato */}
+                {institutionalRoutes.map((route) => {
+                    const Icon = route.icon;
 
-                        return (
-                            <motion.li
-                                key={route.href}
-                                whileHover={{ scale: 1.08 }}
-                                whileTap={{ scale: 0.95 }}
-                                transition={{ type: "spring", stiffness: 220, damping: 14 }}
-                                className="list-none"
+                    return (
+                        <motion.li
+                            key={route.href}
+                            whileHover={{ scale: 1.08 }}
+                            whileTap={{ scale: 0.95 }}
+                            transition={{ type: "spring", stiffness: 220, damping: 14 }}
+                            className="list-none"
+                        >
+                            <Link
+                                href={route.href}
+                                className={`${isActive(route.href)} flex items-center gap-2`}
                             >
-                                <Link
-                                    href={route.href}
-                                    className={`${isActive(route.href)} flex items-center gap-2`}
-                                >
-                                    {Icon && <Icon className="w-4 h-4 inline-block" />}
-                                    {route.label}
-                                </Link>
-                            </motion.li>
-                        );
-                    })}
+                                <Icon className="w-4 h-4 inline-block" />
+                                {route.label}
+                            </Link>
+                        </motion.li>
+                    );
+                })}
+
+                {/* 🔹 Conteúdo Extra: Favoritos + Leitura */}
+                {contentExtraRoutes.map((route) => {
+                    const Icon = route.icon;
+
+                    return (
+                        <motion.li
+                            key={route.href}
+                            whileHover={{ scale: 1.08 }}
+                            whileTap={{ scale: 0.95 }}
+                            transition={{ type: "spring", stiffness: 220, damping: 14 }}
+                            className="list-none"
+                        >
+                            <Link
+                                href={route.href}
+                                className={`${isActive(route.href)} flex items-center gap-2`}
+                            >
+                                <Icon className="w-4 h-4 inline-block" />
+                                {route.label}
+                            </Link>
+                        </motion.li>
+                    );
+                })}
             </div>
 
             {/* ------------------------- */}
@@ -161,7 +178,7 @@ export default function Navbar() {
                                     </Link>
                                 </motion.li>
 
-                                {/* 🔹 Acordeon interno — Guias & Tutoriais */}
+                                {/* 🔹 Guias & Tutoriais */}
                                 <Accordion type="single" collapsible className="w-full">
                                     <AccordionItem value="tutorials">
                                         <AccordionTrigger className="py-1 flex items-center gap-2">
@@ -184,7 +201,7 @@ export default function Navbar() {
                                                                 href={route.href}
                                                                 className={`${isActive(route.href)} flex items-center gap-2 py-1`}
                                                             >
-                                                                {Icon && <Icon className="w-4 h-4" />}
+                                                                <Icon className="w-4 h-4" />
                                                                 {route.label}
                                                             </Link>
                                                         </motion.li>
@@ -195,29 +212,49 @@ export default function Navbar() {
                                     </AccordionItem>
                                 </Accordion>
 
-                                {/* 🔹 Restante das rotas (mobile) */}
-                                {soloRoutes
-                                    .filter((r) => r.href !== "/")
-                                    .map((route) => {
-                                        const Icon = route.icon; // 👈 pega o ícone correto
+                                {/* 🔹 Institucional — Blog, Sobre, Contato */}
+                                {institutionalRoutes.map((route) => {
+                                    const Icon = route.icon;
 
-                                        return (
-                                            <motion.li
-                                                key={route.href}
-                                                initial={{ opacity: 0, x: -20 }}
-                                                animate={{ opacity: 1, x: 0 }}
-                                                transition={{ duration: 0.25 }}
+                                    return (
+                                        <motion.li
+                                            key={route.href}
+                                            initial={{ opacity: 0, x: -20 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ duration: 0.25 }}
+                                        >
+                                            <Link
+                                                href={route.href}
+                                                className={`${isActive(route.href)} flex items-center gap-2 py-1`}
                                             >
-                                                <Link
-                                                    href={route.href}
-                                                    className={`${isActive(route.href)} flex items-center gap-2 py-1`}
-                                                >
-                                                    {Icon && <Icon className="w-4 h-4" />}
-                                                    {route.label}
-                                                </Link>
-                                            </motion.li>
-                                        );
-                                    })}
+                                                <Icon className="w-4 h-4" />
+                                                {route.label}
+                                            </Link>
+                                        </motion.li>
+                                    );
+                                })}
+
+                                {/* 🔹 Conteúdo Extra — Favoritos + Leitura */}
+                                {contentExtraRoutes.map((route) => {
+                                    const Icon = route.icon;
+
+                                    return (
+                                        <motion.li
+                                            key={route.href}
+                                            initial={{ opacity: 0, x: -20 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ duration: 0.25 }}
+                                        >
+                                            <Link
+                                                href={route.href}
+                                                className={`${isActive(route.href)} flex items-center gap-2 py-1`}
+                                            >
+                                                <Icon className="w-4 h-4" />
+                                                {route.label}
+                                            </Link>
+                                        </motion.li>
+                                    );
+                                })}
                             </ul>
                         </AccordionContent>
                     </AccordionItem>
