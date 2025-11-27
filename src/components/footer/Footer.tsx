@@ -19,7 +19,8 @@ export default function Footer() {
         { label: "Contato", href: "/contato" },
         { label: "Política de Privacidade", href: "/politica-de-privacidade" },
         { label: "Termos de Uso", href: "/termos-de-uso" },
-        { label: "Política de Cookies", href: "/politica-de-cookies" }
+        { label: "Política de Cookies", href: "/politica-de-cookies" },
+        { label: "Política de Afiliados", href: "/politica-de-afiliados" }
     ];
 
     return (
