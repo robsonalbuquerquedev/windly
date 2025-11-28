@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import StructuredData from "@/components/seo/StructuredData";
-import MainLayout from "@/components/layout/MainLayout";
 import Script from "next/script";
 import Cookies from "@/components/cookies/Cookies";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://windly.com.br"),
+  metadataBase: new URL("https://windly.com.br/pt"),
 
   title: {
     default: "Windly — Aprenda Tailwind, SEO e HTML Semântico",
@@ -31,7 +30,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Robson Albuquerque",
-      url: "https://windly.com.br"
+      url: "https://windly.com.br/pt"
     }
   ],
 
@@ -51,7 +50,11 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://windly.com.br/"
+    canonical: "https://windly.com.br/pt/",
+    languages: {
+      "pt-BR": "https://windly.com.br/pt",
+      "en-US": "https://windly.com.br/en",
+    },
   },
 
   icons: {
@@ -64,7 +67,7 @@ export const metadata: Metadata = {
     title: "Windly — Tailwind, SEO e Semântica",
     description:
       "Domine TailwindCSS, HTML Semântico, SEO moderno e boas práticas em Next.js para criar interfaces modernas e profissionais.",
-    url: "https://windly.com.br/",
+    url: "https://windly.com.br/pt/",
     siteName: "Windly",
     locale: "pt_BR",
     type: "website",
