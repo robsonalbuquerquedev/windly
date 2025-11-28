@@ -125,9 +125,7 @@ export default function RootLayout({
       </head>
       <body>
         <StructuredData />
-        <MainLayout>
-          <main>{children}</main>
-        </MainLayout>
+        <main>{children}</main>
         <Cookies />
 
         {/* ✅ Google AdSense */}
