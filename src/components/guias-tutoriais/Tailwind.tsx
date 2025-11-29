@@ -207,17 +207,17 @@ export default function Tailwind() {
                         <h4 className="font-semibold">Guias Relacionados</h4>
                         <ul className="mt-3 space-y-2 text-sm">
                             <li>
-                                <a href="/guias-tutoriais/nextjs" className="underline">
+                                <a href="/pt/guias-tutoriais/nextjs" className="underline">
                                     Boas práticas em Next.js
                                 </a>
                             </li>
                             <li>
-                                <a href="/guias-tutoriais/html-semantico" className="underline">
+                                <a href="/pt/guias-tutoriais/html-semantico" className="underline">
                                     HTML Semântico
                                 </a>
                             </li>
                             <li>
-                                <a href="/guias-tutoriais/seo" className="underline">
+                                <a href="/pt/guias-tutoriais/seo" className="underline">
                                     SEO na Prática
                                 </a>
                             </li>

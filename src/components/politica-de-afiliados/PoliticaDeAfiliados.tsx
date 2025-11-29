@@ -59,6 +59,7 @@ export default function PoliticaDeAfiliados() {
                 <li>Mercado Livre Afiliados</li>
                 <li>Shopee Afiliados</li>
                 <li>Hotmart Afiliados</li>
+                <li>ClickBank Afiliados</li>
             </ul>
 
             <h2 className="text-xl font-semibold">5. Independência editorial</h2>

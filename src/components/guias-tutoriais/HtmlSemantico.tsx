@@ -174,17 +174,17 @@ export default function HtmlSemantico() {
                         <h4 className="font-semibold">Guias Relacionados</h4>
                         <ul className="mt-3 space-y-2 text-sm">
                             <li>
-                                <a href="/guias-tutoriais/acessibilidade" className="underline">
+                                <a href="/pt/guias-tutoriais/acessibilidade" className="underline">
                                     Acessibilidade Web
                                 </a>
                             </li>
                             <li>
-                                <a href="/guias-tutoriais/seo" className="underline">
+                                <a href="/pt/guias-tutoriais/seo" className="underline">
                                     SEO na Prática
                                 </a>
                             </li>
                             <li>
-                                <a href="/guias-tutoriais/performance" className="underline">
+                                <a href="/pt/guias-tutoriais/performance" className="underline">
                                     Performance Front-end
                                 </a>
                             </li>

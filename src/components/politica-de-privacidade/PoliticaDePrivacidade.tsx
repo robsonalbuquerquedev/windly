@@ -76,8 +76,7 @@ export default function PoliticaDePrivacidade() {
                     4. Links para Sites Externos e Programas de Afiliados
                 </h2>
                 <p>
-                    O Windly participa de programas de afiliados, como Hotmart, Monetizze,
-                    Eduzz, Amazon, Mercado Livre e Shopee. Isso significa que podemos
+                    O Windly participa de programas de afiliados, como Hotmart, Amazon, Mercado Livre, Shopee e ClickBank. Isso significa que podemos
                     receber uma comissão quando você compra por meio dos links que
                     disponibilizamos.
                 </p>

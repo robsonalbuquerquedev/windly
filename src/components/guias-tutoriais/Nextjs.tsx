@@ -204,17 +204,17 @@ export default function Nextjs() {
                         <h4 className="font-semibold">Guias Relacionados</h4>
                         <ul className="mt-3 space-y-2 text-sm">
                             <li>
-                                <a href="/guias-tutoriais/html-semantico" className="underline">
+                                <a href="/pt/guias-tutoriais/html-semantico" className="underline">
                                     HTML Semântico
                                 </a>
                             </li>
                             <li>
-                                <a href="/guias-tutoriais/seo" className="underline">
+                                <a href="/pt/guias-tutoriais/seo" className="underline">
                                     SEO na Prática
                                 </a>
                             </li>
                             <li>
-                                <a href="/guias-tutoriais/acessibilidade" className="underline">
+                                <a href="/pt/guias-tutoriais/acessibilidade" className="underline">
                                     Acessibilidade Web
                                 </a>
                             </li>

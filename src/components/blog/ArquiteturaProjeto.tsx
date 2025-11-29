@@ -6,7 +6,7 @@ import { staggerContainer } from "@/utils/animations";
 import { posts } from "@/data/posts";
 import CTA from "@/components/cta/CTA";
 
-const currentIndex = posts.findIndex((p) => p.href === "/blog/arquitetura-projeto");
+const currentIndex = posts.findIndex((p) => p.href === "/pt/blog/arquitetura-projeto");
 const previous = posts[currentIndex - 1];
 const next = posts[currentIndex + 1];
 

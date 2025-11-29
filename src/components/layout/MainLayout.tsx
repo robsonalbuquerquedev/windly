@@ -1,6 +1,4 @@
 import React from "react";
-import Header from "@/components/header/Header";
-import Footer from "@/components/footer/Footer";
 
 /**
  * MainLayout
@@ -22,7 +20,6 @@ interface MainLayoutProps {
 export default function MainLayout({ children }: MainLayoutProps) {
     return (
         <>
-            <Header />
             <div
                 className="
         min-h-screen
@@ -51,7 +48,6 @@ export default function MainLayout({ children }: MainLayoutProps) {
                     {children}
                 </div>
             </div>
-            <Footer />
         </>
     );
 }

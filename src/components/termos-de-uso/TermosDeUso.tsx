@@ -63,8 +63,7 @@ export default function TermosDeUso() {
                     4. Programas de Afiliados
                 </h2>
                 <p>
-                    Participamos de programas de afiliados como Hotmart, Monetizze,
-                    Eduzz, Amazon, Mercado Livre e Shopee. Ao clicar em nossos links e
+                    Participamos de programas de afiliados como Hotmart, Amazon, Mercado Livre, Shopee e ClickBank. Ao clicar em nossos links e
                     realizar uma compra, podemos receber uma comissão, sem custo adicional
                     para você.
                 </p>
