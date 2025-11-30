@@ -1,4 +1,4 @@
-import Seo from "@/components/guias-tutoriais/Seo";
+import SeoPT from "@/components/guias-tutoriais/SeoPT";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         canonical: "https://windly.com.br/pt/guias-tutoriais/seo",
         languages: {
             "pt-BR": "https://windly.com.br/pt/guias-tutoriais/seo",
-            "en-US": "https://windly.com.br/en/guias-tutoriais/seo",
+            "en-US": "https://windly.com.br/en/guides-tutorials/seo",
         },
     },
 
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         siteName: "Windly",
         images: [
             {
-                url: "/guias-tutoriais/seo/og-seo.png",
+                url: "/seo/og-seo.png",
                 width: 1200,
                 height: 630,
                 alt: "Capa do guia de SEO moderno e técnico",
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
     },
 };
 
-export default function SeoPage() {
+export default function SeoPagePT() {
     return (
-        <Seo />
+        <SeoPT />
     );
 }
