@@ -1,5 +1,6 @@
 import HeaderEN from "@/components/header/HeaderEN";
 import FooterEN from "@/components/footer/FooterEN";
+import CookiesEN from "@/components/cookies/CookiesEN";
 
 export default function EnLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -31,8 +32,8 @@ export default function EnLayout({ children }: { children: React.ReactNode }) {
                     <main>{children}</main>
                 </div>
             </div>
-
             <FooterEN />
+            <CookiesEN />
         </>
     );
 }
