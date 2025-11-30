@@ -2,6 +2,7 @@
 
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
+import { routeMap } from "@/lib/routeMap";
 
 export default function LanguageSwitcher() {
     const pathname = usePathname();
@@ -11,20 +12,28 @@ export default function LanguageSwitcher() {
     const isPT = pathname?.startsWith("/pt");
     const isEN = pathname?.startsWith("/en");
 
+    function findBaseRoute(path: string) {
+        // Remove '/pt' ou '/en'
+        const cleaned = path.replace(/^\/(pt|en)/, "");
+
+        // Se ficar vazio, significa que é só "/pt" ou "/en"
+        return cleaned === "" ? "/" : cleaned;
+    }
+
     function toggle() {
         if (!pathname) return;
 
-        if (isPT) {
-            router.push(pathname.replace("/pt", "/en"));
+        const base = findBaseRoute(pathname);
+
+        const entry = routeMap[base];
+
+        if (!entry) {
+            // fallback seguro
+            router.push(isPT ? "/en" : "/pt");
             return;
         }
 
-        if (isEN) {
-            router.push(pathname.replace("/en", "/pt"));
-            return;
-        }
-
-        router.push("/en"); // fallback para visitantes da raiz
+        router.push(isPT ? entry.en : entry.pt);
     }
 
     return (
@@ -38,20 +47,16 @@ export default function LanguageSwitcher() {
                 aria-label="Trocar idioma"
                 className="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all cursor-pointer"
             >
-                {/* Flag atual */}
                 <img
                     src={isPT ? "/flags/br.svg" : "/flags/us.svg"}
                     alt={isPT ? "Português (Brasil)" : "English (United States)"}
                     className="w-5 h-5 rounded-sm shadow"
                 />
-
-                {/* Label explícito */}
                 <span className="text-xs opacity-80">
                     {isPT ? "EN" : "PT"}
                 </span>
             </button>
 
-            {/* Tooltip Premium */}
             {hovered && (
                 <div className="absolute left-1/2 top-full mt-2 -translate-x-1/2 whitespace-nowrap px-3 py-1.5 rounded-md bg-black/80 text-white text-xs shadow-lg backdrop-blur-sm animate-fadeIn">
                     {isPT ? "Switch to English" : "Trocar para Português"}
