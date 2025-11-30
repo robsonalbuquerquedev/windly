@@ -1,4 +1,4 @@
-import Performace from "@/components/guias-tutoriais/Performace";
+import PerformacePT from "@/components/guias-tutoriais/PerformacePT";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         canonical: "https://windly.com.br/pt/guias-tutoriais/performance",
         languages: {
             "pt-BR": "https://windly.com.br/pt/guias-tutoriais/performance",
-            "en-US": "https://windly.com.br/en/guias-tutoriais/performance",
+            "en-US": "https://windly.com.br/en/guides-tutorials/performance",
         },
     },
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         siteName: "Windly",
         images: [
             {
-                url: "/blog/performance-web/og-performance.png",
+                url: "/performance-web/og-performance.png",
                 width: 1200,
                 height: 630,
                 alt: "Capa do guia de performance web moderna",
@@ -53,6 +53,6 @@ export const metadata: Metadata = {
 
 export default function PerformacePage() {
     return (
-        <Performace />
+        <PerformacePT />
     );
 }
