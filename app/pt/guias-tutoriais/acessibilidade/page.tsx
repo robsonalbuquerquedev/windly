@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         canonical: "https://windly.com.br/pt/guias-tutoriais/acessibilidade",
         languages: {
             "pt-BR": "https://windly.com.br/pt/guias-tutoriais/acessibilidade",
-            "en-US": "https://windly.com.br/en/guias-tutoriais/acessibilidade",
+            "en-US": "https://windly.com.br/en/guides-tutorials/acessibilidade",
         },
     },
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         siteName: "Windly",
         images: [
             {
-                url: "/guias-tutoriais/acessibilidade/og-acessibilidade.png",
+                url: "/acessibilidade/og-acessibilidade.png",
                 width: 1200,
                 height: 630,
                 alt: "Capa do guia de acessibilidade web (A11y)",
