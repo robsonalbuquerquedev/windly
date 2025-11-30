@@ -1,6 +1,6 @@
-import HeroSplitAbout from "@/components/hero/HeroSplitAbout";
+import HeroSplitSobrePT from "@/components/hero/HeroSplitSobrePT";
 import CardLayout from "@/components/layout/CardLayout";
-import CardProject from "@/components/cards/CardProject";
+import CardProjectPT from "@/components/cards/CardProjectPT";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -52,9 +52,9 @@ export const metadata: Metadata = {
 export default function Sobre() {
   return (
     <>
-      <HeroSplitAbout />
+      <HeroSplitSobrePT />
       <CardLayout id="ver-projetos">
-        <CardProject />
+        <CardProjectPT />
       </CardLayout>
     </>
   );
