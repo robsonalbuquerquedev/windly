@@ -1,4 +1,4 @@
-import HeroSplitContato from "@/components/hero/HeroSplitContato";
+import HeroSplitContatoPT from "@/components/hero/HeroSplitContatoPT";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -50,6 +50,6 @@ export const metadata: Metadata = {
 
 export default function ContatoPage() {
     return (
-        <HeroSplitContato />
+        <HeroSplitContatoPT />
     );
 }
