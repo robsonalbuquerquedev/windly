@@ -1,4 +1,4 @@
-import TermosDeUso from "@/components/termos-de-uso/TermosDeUso";
+import TermosDeUsoPT from "@/components/termos-de-uso/TermosDeUsoPT";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -51,6 +51,6 @@ export const metadata: Metadata = {
 
 export default function TermosDeUsoPage() {
     return (
-        <TermosDeUso />
+        <TermosDeUsoPT />
     );
 }
