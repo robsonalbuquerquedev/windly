@@ -71,7 +71,7 @@ export default function CTA({ title, description, href, image }: CTAProps) {
                     Quero saber mais →
                 </Link>
                 <p className="text-xs text-gray-500 mt-2">
-                    Este link é afiliado: podemos ganhar uma pequena comissão, sem custo extra para você.
+                    Link afiliado, conforme nossas políticas.
                 </p>
             </div>
         </section>

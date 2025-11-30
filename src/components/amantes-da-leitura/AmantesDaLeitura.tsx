@@ -41,8 +41,7 @@ export default function AmantesDaLeitura() {
                 </p>
 
                 <p className="text-xs text-gray-500 max-w-xl mx-auto">
-                    Todos os links desta seção são afiliados, o que significa que podemos ganhar
-                    uma pequena comissão caso você realize uma compra — sem custo adicional para você.
+                    Todos os links desta seção são afiliados e seguem nossas políticas — sem qualquer impacto para você.
                 </p>
             </header>
 

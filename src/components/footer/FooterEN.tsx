@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { Instagram, Mail, Github } from "lucide-react";
-import RevisarCookies from "@/components/buttons/RevisarCookies";
+import RevisarCookiesEN from "@/components/buttons/RevisarCookiesEN";
 
 export default function FooterEn() {
     const pathname = usePathname();
@@ -61,7 +61,7 @@ export default function FooterEn() {
 
                 {/* Review Cookies */}
                 <div className="mt-6 flex justify-center">
-                    <RevisarCookies />
+                    <RevisarCookiesEN />
                 </div>
 
                 {/* Social */}
