@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import StructuredData from "@/components/seo/StructuredData";
 import Script from "next/script";
-import Cookies from "@/components/cookies/Cookies";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://windly.com.br/pt"),
@@ -129,7 +128,6 @@ export default function RootLayout({
       <body>
         <StructuredData />
         <main>{children}</main>
-        <Cookies />
 
         {/* ✅ Google AdSense */}
         <script
