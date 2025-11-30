@@ -1,5 +1,6 @@
 import HeaderPT from "@/components/header/HeaderPT";
 import FooterPT from "@/components/footer/FooterPT";
+import CookiesPT from "@/components/cookies/CookiesPT";
 
 export default function EnLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -31,8 +32,8 @@ export default function EnLayout({ children }: { children: React.ReactNode }) {
                     <main>{children}</main>
                 </div>
             </div>
-
             <FooterPT />
+            <CookiesPT />
         </>
     );
 }
