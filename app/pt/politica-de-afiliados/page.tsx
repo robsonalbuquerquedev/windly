@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PoliticaDeAfiliados from "@/components/politica-de-afiliados/PoliticaDeAfiliados";
+import PoliticaDeAfiliadosPT from "@/components/politica-de-afiliados/PoliticaDeAfiliadosPT";
 
 export const metadata: Metadata = {
     title: {
@@ -53,5 +53,5 @@ export const metadata: Metadata = {
 };
 
 export default function PoliticaDeCookiesPage() {
-    return <PoliticaDeAfiliados />;
+    return <PoliticaDeAfiliadosPT />;
 }
