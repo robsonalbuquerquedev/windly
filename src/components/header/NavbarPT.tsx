@@ -172,7 +172,7 @@ export default function NavbarPT() {
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.25 }}
                                 >
-                                    <Link href="/" className={`${isActive("/")} block py-1`}>
+                                    <Link href="/pt" className={`${isActive("/pt")} block py-1`}>
                                         <Home className="w-4 h-4 mr-2 inline-block" />
                                         Início
                                     </Link>

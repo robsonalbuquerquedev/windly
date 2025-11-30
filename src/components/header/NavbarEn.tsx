@@ -40,7 +40,7 @@ const contentExtraRoutes = [
 ];
 
 // 🔹 Guides & Tutorials
-const prefix = "/en/guias-tutoriais/";
+const prefix = "/en/guides-tutorials/";
 
 const tutorialRoutes = [
     { label: "Tailwind", href: `${prefix}tailwind`, icon: Sparkles },
@@ -90,8 +90,8 @@ export default function NavbarEN() {
                             return (
                                 <DropdownMenuItem key={route.href} asChild>
                                     <Link
-                                        href={`/en${route.href}`}
-                                        className={`flex items-center px-2 py-1.5 gap-2 ${isActive(`/en${route.href}`)} cursor-pointer`}
+                                        href={route.href}
+                                        className={`flex items-center px-2 py-1.5 gap-2 ${isActive(route.href)} cursor-pointer`}
                                     >
                                         <Icon className="w-4 h-4" />
                                         {route.label}
@@ -198,8 +198,8 @@ export default function NavbarEN() {
                                                             animate={{ opacity: 1, x: 0 }}
                                                         >
                                                             <Link
-                                                                href={`/en${route.href}`}
-                                                                className={`${isActive(`/en${route.href}`)} flex items-center gap-2 py-1`}
+                                                                href={route.href}
+                                                                className={`${isActive(route.href)} flex items-center gap-2 py-1`}
                                                             >
                                                                 <Icon className="w-4 h-4" />
                                                                 {route.label}
