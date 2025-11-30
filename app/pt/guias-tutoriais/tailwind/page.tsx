@@ -1,4 +1,4 @@
-import Tailwind from "@/components/guias-tutoriais/Tailwind";
+import TailwindPT from "@/components/guias-tutoriais/TailwindPT";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         siteName: "Windly",
         images: [
             {
-                url: "/guias-tutoriais/tailwind/og-tailwind.png",
+                url: "/tailwind/og-tailwind.png",
                 width: 1200,
                 height: 630,
                 alt: "Capa do guia completo de TailwindCSS",
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
     },
 };
 
-export default function TailwindPage() {
+export default function TailwindPagePT() {
     return (
-        <Tailwind />
+        <TailwindPT />
     );
 }
