@@ -61,8 +61,70 @@ export const routeMap: Record<string, { pt: string; en: string }> = {
     },
 
     // =======================
+    // Guides & Tutorials
+    // =======================
+    "/guias-tutoriais/performance": {
+        pt: "/pt/guias-tutoriais/performance",
+        en: "/en/guides-tutorials/performance",
+    },
+
+    "/guides-tutorials/performance": {
+        pt: "/pt/guias-tutoriais/performance",
+        en: "/en/guides-tutorials/performance",
+    },
+
+    "/guias-tutoriais/acessibilidade": {
+        pt: "/pt/guias-tutoriais/acessibilidade",
+        en: "/en/guides-tutorials/accessibility",
+    },
+
+    "/guides-tutorials/accessibility": {
+        pt: "/pt/guias-tutoriais/acessibilidade",
+        en: "/en/guides-tutorials/accessibility",
+    },
+
+    "/guias-tutoriais/seo": {
+        pt: "/pt/guias-tutoriais/seo",
+        en: "/en/guides-tutorials/seo",
+    },
+
+    "/guides-tutorials/seo": {
+        pt: "/pt/guias-tutoriais/seo",
+        en: "/en/guides-tutorials/seo",
+    },
+
+    "/guias-tutoriais/html-semantico": {
+        pt: "/pt/guias-tutoriais/html-semantico",
+        en: "/en/guides-tutorials/semantic-html",
+    },
+
+    "/guides-tutorials/semantic-html": {
+        pt: "/pt/guias-tutoriais/html-semantico",
+        en: "/en/guides-tutorials/semantic-html",
+    },
+
+    "/guias-tutoriais/nextjs": {
+        pt: "/pt/guias-tutoriais/nextjs",
+        en: "/en/guides-tutorials/nextjs",
+    },
+
+    "/guides-tutorials/nextjs": {
+        pt: "/pt/guias-tutoriais/nextjs",
+        en: "/en/guides-tutorials/nextjs",
+    },
+
+    "/guias-tutoriais/tailwind": {
+        pt: "/pt/guias-tutoriais/tailwind",
+        en: "/en/guides-tutorials/tailwind",
+    },
+
+    "/guides-tutorials/tailwind": {
+        pt: "/pt/guias-tutoriais/tailwind",
+        en: "/en/guides-tutorials/tailwind",
+    },
+
+    // =======================
     // Artigos e Blog
-    // (adicione conforme o Windly crescer)
     // =======================
 
     "/blog": { pt: "/pt/blog", en: "/en/blog" },
