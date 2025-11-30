@@ -1,4 +1,4 @@
-import Nextjs from "@/components/guias-tutoriais/Nextjs";
+import NextjsPT from "@/components/guias-tutoriais/NextjsPT";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         canonical: "https://windly.com.br/pt/guias-tutoriais/nextjs",
         languages: {
             "pt-BR": "https://windly.com.br/pt/guias-tutoriais/nextjs",
-            "en-US": "https://windly.com.br/en/guias-tutoriais/nextjs",
+            "en-US": "https://windly.com.br/en/guides-tutorials/nextjs",
         },
     },
 
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         siteName: "Windly",
         images: [
             {
-                url: "/guias-tutoriais/nextjs/og-nextjs.png",
+                url: "/nextjs/og-nextjs.png",
                 width: 1200,
                 height: 630,
                 alt: "Capa do guia de boas práticas em Next.js",
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
     },
 };
 
-export default function NextjsPage() {
+export default function NextjsPagePT() {
     return (
-        <Nextjs />
+        <NextjsPT />
     );
 }
