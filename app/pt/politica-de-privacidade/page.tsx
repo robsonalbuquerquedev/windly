@@ -1,4 +1,4 @@
-import PoliticaDePrivacidade from "@/components/politica-de-privacidade/PoliticaDePrivacidade";
+import PoliticaDePrivacidadePT from "@/components/politica-de-privacidade/PoliticaDePrivacidadePT";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -52,6 +52,6 @@ export const metadata: Metadata = {
 
 export default function PoliticaDePrivacidadePage() {
     return (
-        <PoliticaDePrivacidade />
+        <PoliticaDePrivacidadePT />
     );
 }
