@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         canonical: "https://windly.com.br/pt/guias-tutoriais/html-semantico",
         languages: {
             "pt-BR": "https://windly.com.br/pt/guias-tutoriais/html-semantico",
-            "en-US": "https://windly.com.br/en/guias-tutoriais/html-semantico",
+            "en-US": "https://windly.com.br/en/guides-tutorials/html-semantico",
         },
     },
 
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         siteName: "Windly",
         images: [
             {
-                url: "/guias-tutoriais/html-semantico/og-html-semantico.png",
+                url: "/html-semantico/og-html-semantico.png",
                 width: 1200,
                 height: 630,
                 alt: "Capa do guia completo de HTML semântico",
