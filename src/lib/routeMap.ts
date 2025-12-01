@@ -60,6 +60,16 @@ export const routeMap: Record<string, { pt: string; en: string }> = {
         en: "/en/affiliate-policy",
     },
 
+    "/my-favorites": {
+        pt: "/pt/meus-favoritos",
+        en: "/en/my-favorites",
+    },
+
+    "/meus-favoritos": {
+        pt: "/pt/meus-favoritos",
+        en: "/en/my-favorites",
+    },
+
     "/book-lovers": {
         pt: "/pt/amantes-da-leitura",
         en: "/en/book-lovers",
