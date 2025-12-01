@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         canonical: "https://windly.com.br/pt/blog/arquitetura-de-projeto",
         languages: {
             "pt-BR": "https://windly.com.br/pt/blog/arquitetura-de-projeto",
-            "en-US": "https://windly.com.br/en/blog/arquitetura-de-projeto",
+            "en-US": "https://windly.com.br/en/blog/project-architecture",
         },
     },
 
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         siteName: "Windly",
         images: [
             {
-                url: "/blog/arquitetura-de-projeto/og-arquitetura.png",
+                url: "/arquitetura-de-projeto/og-arquitetura.png",
                 width: 1200,
                 height: 630,
                 alt: "Capa do artigo sobre arquitetura moderna de projetos",
