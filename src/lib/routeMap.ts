@@ -140,4 +140,54 @@ export const routeMap: Record<string, { pt: string; en: string }> = {
         pt: "/pt/blog/tailwind-semantica",
         en: "/en/blog/tailwind-semantics",
     },
+
+    "/blog/responsiveness-tailwind": {
+        pt: "/pt/blog/responsividade-tailwind",
+        en: "/en/blog/responsiveness-tailwind",
+    },
+
+    "/blog/responsividade-tailwind": {
+        pt: "/pt/blog/responsividade-tailwind",
+        en: "/en/blog/responsiveness-tailwind",
+    },
+
+    "/blog/classname-in-practice": {
+        pt: "/pt/blog/classname-na-pratica",
+        en: "/en/blog/classname-in-practice",
+    },
+
+    "/blog/classname-na-pratica": {
+        pt: "/pt/blog/classname-na-pratica",
+        en: "/en/blog/classname-in-practice",
+    },
+
+    "/blog/seo-nextjs-tailwind": {
+        pt: "/pt/blog/seo-nextjs-tailwind",
+        en: "/en/blog/seo-nextjs-tailwindcss",
+    },
+
+    "/blog/seo-nextjs-tailwindcss": {
+        pt: "/pt/blog/seo-nextjs-tailwind",
+        en: "/en/blog/seo-nextjs-tailwindcss",
+    },
+
+    "/blog/html-semantics-mistakes": {
+        pt: "/pt/blog/erros-semantica-html",
+        en: "/en/blog/html-semantics-mistakes",
+    },
+
+    "/blog/erros-semantica-html": {
+        pt: "/pt/blog/erros-semantica-html",
+        en: "/en/blog/html-semantics-mistakes",
+    },
+
+    "/blog/project-architecture": {
+        pt: "/pt/blog/arquitetura-projeto",
+        en: "/en/blog/project-architecture",
+    },
+
+    "/blog/arquitetura-projeto": {
+        pt: "/pt/blog/arquitetura-projeto",
+        en: "/en/blog/project-architecture",
+    },
 };
