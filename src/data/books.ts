@@ -3,44 +3,44 @@ import type { Book } from "@/types/book";
 export const BOOKS: Book[] = [
     {
         id: 1,
-        title: "Código Limpo",
-        description: "Um guia essencial para escrever códigos claros, eficientes e fáceis de manter.",
-        image: "/images/books/clean-code.jpg",
-        url: "https://amzn.to/3LVJeD3"
+        title: "Clean Code",
+        description: "An essential guide to writing clear, efficient, and maintainable code.",
+        image: "/images/books/cleancode.jpg",
+        url: "https://amzn.to/44sRGjm"
     },
     {
         id: 2,
-        title: "Arquitetura Limpa",
-        description: "Aprenda como organizar projetos de forma profissional e sustentável.",
-        image: "/images/books/clean-architecture.jpg",
-        url: "https://amzn.to/49Jv7KU"
+        title: "Clean Architecture",
+        description: "Learn how to organize projects in a professional and sustainable way.",
+        image: "/images/books/cleanarchitecture.jpg",
+        url: "https://amzn.to/4pA0NqA"
     },
     {
         id: 3,
-        title: "O Programador Pragmático",
-        description: "Um clássico moderno que mostra princípios práticos para evoluir como desenvolvedor.",
-        image: "/images/books/pragmatic-programmer.jpg",
-        url: "https://amzn.to/43PDwsn"
+        title: "The Pragmatic Programmer",
+        description: "A modern classic that teaches practical principles to grow as a developer.",
+        image: "/images/books/pragmaticprogrammer.jpg",
+        url: "https://amzn.to/4rsDCQT"
     },
     {
         id: 4,
-        title: "Estruturas de Dados e Algoritmos com JavaScript",
-        description: "O livro perfeito para dominar lógica, estruturas e algoritmos na prática.",
-        image: "/images/books/algorithms-js.jpg",
-        url: "https://amzn.to/3Xohfya"
+        title: "Data Structures and Algorithms with JavaScript",
+        description: "The perfect book to master logic, structures, and algorithms in practice.",
+        image: "/images/books/algorithmsjs.jpg",
+        url: "https://amzn.to/3XXvhXF"
     },
     {
         id: 5,
-        title: "HTML e CSS: Projete e Construa Websites",
-        description: "Uma introdução visual e extremamente clara ao desenvolvimento web moderno.",
-        image: "/images/books/html-css.jpg",
-        url: "https://amzn.to/49Hg8kD"
+        title: "HTML & CSS: Design and Build Websites",
+        description: "A visual and extremely clear introduction to modern web development.",
+        image: "/images/books/htmlcss.jpg",
+        url: "https://amzn.to/3M7ufWA"
     },
     {
         id: 6,
-        title: "JavaScript e JQuery — Desenvolvimento de Interfaces",
-        description: "Um livro visual e didático para entender interatividade e front-end de verdade.",
-        image: "/images/books/js-jquery.jpg",
-        url: "https://amzn.to/48pli2h"
+        title: "JavaScript & JQuery — Interactive Front-End Development",
+        description: "A visual and didactic book to truly understand interactivity and real front-end development.",
+        image: "/images/books/jsjquery.jpg",
+        url: "https://amzn.to/441Qu6t"
     },
 ];
