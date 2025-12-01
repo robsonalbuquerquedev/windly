@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { PRODUCTS } from "@/data/produtos";
-import CardProduct from "@/components/cards/CardProduto";
+import { PRODUCTS } from "@/data/products";
+import CardProduct from "@/components/cards/CardProduct";
 import { ChevronRight } from "lucide-react";
 
-export default function MeusFavoritos() {
+export default function MyFavorites() {
     const groupSize = 6;
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -15,21 +15,13 @@ export default function MeusFavoritos() {
         );
     };
 
-    // Auto-loop suave (a cada 10 segundos troca)
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         nextGroup();
-    //     }, 10000);
-    //     return () => clearInterval(interval);
-    // }, []);
-
-    // Produtos visíveis
+    // Visible products
     const visibleProducts = PRODUCTS.slice(
         currentIndex,
         currentIndex + groupSize
     );
 
-    // Caso o slice ultrapasse o tamanho da lista: faz wrap
+    // Wrap if needed
     const wrapNeeded = visibleProducts.length < groupSize;
     const finalProducts = wrapNeeded
         ? [
@@ -41,13 +33,14 @@ export default function MeusFavoritos() {
     return (
         <section className="space-y-10">
             <header className="text-center space-y-2">
-                <h1 className="text-3xl font-bold text-gray-900">Meus Favoritos</h1>
+                <h1 className="text-3xl font-bold text-gray-900">My Favorites</h1>
+
                 <p className="text-gray-600 max-w-2xl mx-auto">
-                    Recomendações pessoais de produtos que considero úteis no dia a dia.
+                    Personal recommendations of products I consider useful in daily life.
                 </p>
 
                 <p className="text-xs text-gray-500 max-w-xl mx-auto">
-                    Todos os links desta seção são afiliados e seguem nossas políticas — sem qualquer impacto para você.
+                    All links in this section are affiliate links and follow our policies — with no impact on you.
                 </p>
             </header>
 
@@ -57,16 +50,16 @@ export default function MeusFavoritos() {
                 ))}
             </div>
 
-            {/* Botão para troca manual */}
+            {/* Manual switch button */}
             <div className="flex justify-end pr-2">
                 <button
                     onClick={nextGroup}
                     className="
-      p-2 rounded-full bg-gray-800 text-white
-      hover:bg-gray-900 hover:scale-110
-      transition-all shadow-md cursor-pointer
-    "
-                    aria-label="Mostrar mais produtos"
+                        p-2 rounded-full bg-gray-800 text-white
+                        hover:bg-gray-900 hover:scale-110
+                        transition-all shadow-md cursor-pointer
+                    "
+                    aria-label="Show more products"
                 >
                     <ChevronRight className="w-5 h-5" />
                 </button>

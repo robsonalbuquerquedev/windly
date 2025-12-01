@@ -31,15 +31,15 @@ export default function CardProduct({ product }: CardProductProps) {
                     rel="noopener noreferrer"
                     target="_blank"
                     className="
-                        inline-block
-                        px-4 py-2
-                        bg-indigo-600 text-white text-sm font-medium
-                        rounded-lg shadow-md
-                        hover:bg-indigo-700
-                        transition
-                    "
+            inline-block
+            px-4 py-2
+            bg-indigo-600 text-white text-sm font-medium
+            rounded-lg shadow-md
+            hover:bg-indigo-700
+            transition
+          "
                 >
-                    View Product
+                    Ver Produto
                 </a>
             </div>
         </article>
