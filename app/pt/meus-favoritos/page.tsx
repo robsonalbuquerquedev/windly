@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         canonical: "https://windly.com.br/pt/meus-favoritos",
         languages: {
             "pt-BR": "https://windly.com.br/pt/meus-favoritos",
-            "en-US": "https://windly.com.br/en/meus-favoritos",
+            "en-US": "https://windly.com.br/en/my-favorites",
         },
     },
 
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function MeusFavoritosage() {
+export default function MeusFavoritosPage() {
     return (
         <MeusFavoritos />
     );
