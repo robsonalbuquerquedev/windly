@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import BlogHero from "@/components/blog/BlogHero";
-import BlogContent from "@/components/blog/BlogContent";
+import BlogHeroPT from "@/components/blog/BlogHeroPT";
+import BlogContentPT from "@/components/blog/BlogContentPT";
 
 export const metadata: Metadata = {
     title: {
@@ -51,14 +51,14 @@ export const metadata: Metadata = {
     }
 };
 
-export default function BlogPage() {
+export default function BlogPagePT() {
     return (
         <main>
-            <BlogHero />
+            <BlogHeroPT />
 
             {/* O ID conecta com o CTA */}
             <div id="posts">
-                <BlogContent />
+                <BlogContentPT />
             </div>
         </main>
     );
