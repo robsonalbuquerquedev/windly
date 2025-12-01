@@ -1,32 +1,33 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-interface RequestWithGeo extends NextRequest {
+// Extensão de tipo para suportar `geo` mesmo em dev
+type RequestWithGeo = NextRequest & {
     geo?: {
         country?: string;
     };
-}
+};
 
-export default function proxy(request: RequestWithGeo) {
+export default function proxy(req: NextRequest) {
+    const request = req as RequestWithGeo;
+
     const url = request.nextUrl;
 
-    // Evita loop se usuário já estiver em /pt ou /en
+    // Evita loop se já estiver dentro das rotas de idioma
     if (url.pathname.startsWith("/pt") || url.pathname.startsWith("/en")) {
         return NextResponse.next();
     }
 
-    // Geo da Vercel (funciona apenas em produção)
-    const country = request.geo?.country || "US";
+    // Geo disponível apenas na Vercel (produção). Em dev = undefined → fallback BR.
+    const country = request.geo?.country ?? "BR";
 
-    if (country === "BR") {
-        url.pathname = "/pt";
-        return NextResponse.redirect(url);
-    }
+    // Lógica de idioma
+    const lang = country === "BR" || country === "PT" ? "pt" : "en";
 
-    url.pathname = "/en";
+    url.pathname = `/${lang}`;
+
     return NextResponse.redirect(url);
 }
 
 export const config = {
-    matcher: ["/"], // roda apenas na raiz
+    matcher: ["/"], // Executa apenas na raiz
 };

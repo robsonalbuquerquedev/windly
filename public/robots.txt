@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+# Sitemap index principal
 Sitemap: https://windly.com.br/sitemap.xml

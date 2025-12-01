@@ -1,23 +1,17 @@
+// app/sitemap.ts
 import { MetadataRoute } from "next";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://windly.com.br";
+export default function sitemapIndex(): MetadataRoute.Sitemap {
+  const baseUrl = "https://windly.com.br";
 
-    // Lista centralizada de páginas — basta adicionar ou remover aqui
-    const pages = [
-        "",
-        "tailwind",
-        "nextjs",
-        "html-semantico",
-        "seo",
-        "acessibilidade",
-        "performance",
-    ];
-
-    return pages.map((page) => ({
-        url: `${baseUrl}/${page}`,
-        lastModified: new Date(),
-        changeFrequency: "weekly",
-        priority: page === "" ? 1.0 : 0.9,
-    }));
+  return [
+    {
+      url: `${baseUrl}/sitemap-pt.xml`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/sitemap-en.xml`,
+      lastModified: new Date(),
+    },
+  ];
 }

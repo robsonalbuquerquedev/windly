@@ -4,7 +4,7 @@ import StructuredData from "@/components/seo/StructuredData";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://windly.com.br/pt"),
+  metadataBase: new URL("https://windly.com.br/"),
 
   title: {
     default: "Windly — Aprenda Tailwind, SEO e HTML Semântico",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Robson Albuquerque",
-      url: "https://windly.com.br/pt"
+      url: "https://windly.com.br/"
     }
   ],
 
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://windly.com.br/pt/",
+    canonical: "https://windly.com.br/",
     languages: {
       "pt-BR": "https://windly.com.br/pt",
       "en-US": "https://windly.com.br/en",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "Windly — Tailwind, SEO e Semântica",
     description:
       "Domine TailwindCSS, HTML Semântico, SEO moderno e boas práticas em Next.js para criar interfaces modernas e profissionais.",
-    url: "https://windly.com.br/pt/",
+    url: "https://windly.com.br/",
     siteName: "Windly",
     locale: "pt_BR",
     type: "website",
