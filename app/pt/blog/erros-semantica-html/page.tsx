@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         canonical: "https://windly.com.br/pt/blog/erros-semantica-html",
         languages: {
             "pt-BR": "https://windly.com.br/pt/blog/erros-semantica-html",
-            "en-US": "https://windly.com.br/en/blog/erros-semantica-html",
+            "en-US": "https://windly.com.br/en/blog/html-semantics-mistakes",
         },
     },
 
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         siteName: "Windly",
         images: [
             {
-                url: "/blog/erros-semantica-html/og-erros-semantica-html.png",
+                url: "/erros-semantica-html/og-erros-semantica-html.png",
                 width: 1200,
                 height: 630,
                 alt: "Capa do artigo sobre erros comuns ao usar semântica HTML",
