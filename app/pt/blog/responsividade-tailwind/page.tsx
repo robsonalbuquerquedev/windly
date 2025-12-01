@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         canonical: "https://windly.com.br/pt/blog/responsividade-tailwind",
         languages: {
             "pt-BR": "https://windly.com.br/pt/blog/responsividade-tailwind",
-            "en-US": "https://windly.com.br/en/blog/responsividade-tailwind",
+            "en-US": "https://windly.com.br/en/blog/responsiveness-tailwind",
         },
     },
 
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         siteName: "Windly",
         images: [
             {
-                url: "/blog/responsividade-tailwind/og-responsividade.png",
+                url: "/responsividade-tailwind/og-responsividade.png",
                 width: 1200,
                 height: 630,
                 alt: "Capa do artigo sobre responsividade no TailwindCSS",
