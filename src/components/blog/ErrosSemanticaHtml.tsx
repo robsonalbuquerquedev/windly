@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ButtonBlog } from "@/components/buttons/ButtonBlog";
 import { staggerContainer } from "@/utils/animations";
 import { posts } from "@/data/postsPT";
+import CTA from "@/components/cta/CTA";
 
 const currentIndex = posts.findIndex((p) => p.href === "/pt/blog/erros-semantica-html");
 const previous = posts[currentIndex - 1];
@@ -240,6 +241,16 @@ export default function ErrosSemanticaHtml() {
 <img src="/banner.png" alt="Banner promocional do evento XPTO">`}
                     </motion.pre>
                 </motion.section>
+
+                <p className="text-gray-700">
+                    Evitar esses erros semânticos não é só uma questão de organização — é dominar a base que sustenta toda a experiência do usuário, a acessibilidade e até o SEO. Quando você entende HTML com profundidade, cada tag passa a ter um propósito claro, e criar páginas sólidas se torna muito mais natural. É esse domínio que separa quem apenas “monta páginas” de quem realmente desenvolve com consistência.
+                </p>
+
+                <CTA
+                    title="Curso HTML, CSS, JavaScript e TypeScript | 2024"
+                    description="Antes de se aventurar em ferramentas avançadas como React ou Next.js, é essencial dominar HTML, CSS, JavaScript e TypeScript. Este curso reúne tudo o que você precisa para construir bases fortes e evoluir como desenvolvedor."
+                    href="https://go.hotmart.com/B103136031E"
+                />
 
                 {/* CONCLUSÃO */}
                 <motion.section
