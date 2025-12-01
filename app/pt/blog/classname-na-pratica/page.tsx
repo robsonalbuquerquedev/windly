@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         canonical: "https://windly.com.br/pt/blog/classname-na-pratica",
         languages: {
             "pt-BR": "https://windly.com.br/pt/blog/classname-na-pratica",
-            "en-US": "https://windly.com.br/en/blog/classname-na-pratica",
+            "en-US": "https://windly.com.br/en/blog/classname-in-practice",
         },
     },
 
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         siteName: "Windly",
         images: [
             {
-                url: "/blog/classname-na-pratica/og-classname.png",
+                url: "/classname-na-pratica/og-classname.png",
                 width: 1200,
                 height: 630,
                 alt: "Capa do artigo sobre organização de className no TailwindCSS",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function ClassnameNaPraticaContentPage() {
+export default function ClassnameNaPraticaPage() {
     return (
         <ClassnameNaPraticaContent />
     );
