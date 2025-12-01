@@ -1,11 +1,11 @@
 import Image from "next/image";
 import type { Book } from "@/types/book";
 
-export interface CardReadProps {
+export interface CardLeituraProps {
     book: Book;
 }
 
-export default function CardRead({ book }: CardReadProps) {
+export default function CardLeitura({ book }: CardLeituraProps) {
     return (
         <article className="bg-white shadow-lg rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all">
             {book.image && (
@@ -39,7 +39,7 @@ export default function CardRead({ book }: CardReadProps) {
                         transition
                     "
                 >
-                    View Book
+                    Ver Livro
                 </a>
             </div>
         </article>
