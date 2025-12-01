@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         canonical: "https://windly.com.br/pt/amantes-da-leitura",
         languages: {
             "pt-BR": "https://windly.com.br/pt/amantes-da-leitura",
-            "en-US": "https://windly.com.br/en/amantes-da-leitura",
+            "en-US": "https://windly.com.br/en/book-lovers",
         },
     },
 
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function AmantesDaLeiturasage() {
+export default function AmantesDaLeituraPage() {
     return (
         <AmantesDaLeitura />
     );
