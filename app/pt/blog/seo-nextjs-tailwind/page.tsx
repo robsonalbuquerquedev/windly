@@ -1,4 +1,4 @@
-import SeoNextjsTailwind from "@/components/blog/SeoNextjsTailwind";
+import SeoNextjsTailwindPT from "@/components/blog/SeoNextjsTailwindPT";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         canonical: "https://windly.com.br/pt/blog/seo-nextjs-tailwind",
         languages: {
             "pt-BR": "https://windly.com.br/pt/blog/seo-nextjs-tailwind",
-            "en-US": "https://windly.com.br/en/blog/seo-nextjs-tailwind",
+            "en-US": "https://windly.com.br/en/blog/seo-nextjs-tailwindcss",
         },
     },
 
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         siteName: "Windly",
         images: [
             {
-                url: "/blog/seo-nextjs-tailwind/og-seo-nextjs.png",
+                url: "/seo-nextjs-tailwind/og-seo-nextjs.png",
                 width: 1200,
                 height: 630,
                 alt: "Capa do artigo sobre SEO com Next.js e TailwindCSS",
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
     },
 };
 
-export default function SeoNextjsTailwindPage() {
+export default function SeoNextjsTailwindPagePT() {
     return (
-        <SeoNextjsTailwind />
+        <SeoNextjsTailwindPT />
     );
 }
