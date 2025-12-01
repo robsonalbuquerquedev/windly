@@ -3,24 +3,23 @@
 import { motion } from "framer-motion";
 import { ButtonBlog } from "@/components/buttons/ButtonBlog";
 import { staggerContainer } from "@/utils/animations";
-import { posts } from "@/data/postsPT";
-import CTA from "@/components/cta/CTA";
+import { posts } from "@/data/postsEN";
 
-const currentIndex = posts.findIndex((p) => p.href === "/pt/blog/classname-na-pratica");
+const currentIndex = posts.findIndex((p) => p.href === "/en/blog/classname-in-practice");
 const previous = posts[currentIndex - 1];
 const next = posts[currentIndex + 1];
 
-export default function ClassnameNaPraticaContent() {
+export default function ClassnameInPracticeContent() {
     return (
         <article className="prose prose-invert prose-lg max-w-none text-balance leading-relaxed">
-            {/* CONTAINER COM ANIMAÇÃO DE ENTRADA DO ARTIGO INTEIRO */}
+            {/* ANIMATED CONTAINER FOR THE WHOLE ARTICLE */}
             <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={staggerContainer}
                 className="space-y-20"
             >
-                {/* Título */}
+                {/* Title */}
                 <motion.header className="space-y-6">
                     <motion.h1
                         initial={{ opacity: 0, y: -20 }}
@@ -28,7 +27,7 @@ export default function ClassnameNaPraticaContent() {
                         transition={{ duration: 0.5 }}
                         className="text-4xl md:text-5xl font-bold text-gray-900"
                     >
-                        className na prática para páginas reais
+                        className in practice for real pages
                     </motion.h1>
 
                     <motion.p
@@ -37,11 +36,11 @@ export default function ClassnameNaPraticaContent() {
                         transition={{ delay: 0.2, duration: 0.5 }}
                         className="text-lg md:text-xl text-gray-600 max-w-3xl"
                     >
-                        Organização inteligente de classes Tailwind sem bagunça, repetição ou confusão.
+                        Smart Tailwind class organization without mess, repetition, or confusion.
                     </motion.p>
                 </motion.header>
 
-                {/* Introdução */}
+                {/* Introduction */}
                 <motion.section
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -49,57 +48,60 @@ export default function ClassnameNaPraticaContent() {
                     className="space-y-6"
                 >
                     <p>
-                        Quando começamos a construir páginas reais com Tailwind, uma das primeiras dúvidas é:
-                        "Como organizar minhas classes sem virar uma sopa de palavras?". Tailwind é poderoso, mas se
-                        não soubermos estruturar, o código rapidamente perde legibilidade.
+                        When we start building real pages with Tailwind, one of the first questions is:
+                        “How do I organize my classes without turning everything into a word soup?” Tailwind is
+                        powerful, but without structure, your code quickly loses readability.
                     </p>
 
                     <p>
-                        Neste artigo, vamos explorar como estruturar <strong>className</strong> de maneira limpa e
-                        moderna, seguindo boas práticas que realmente funcionam em projetos profissionais. Além disso,
-                        você verá exemplos reais de organização, animações com Framer Motion e tags semânticas que ajudam
-                        tanto no SEO quanto na experiência do usuário.
+                        In this article, we explore how to structure <strong>className</strong> cleanly and
+                        professionally, following modern practices that actually work in real projects. You’ll also
+                        see examples of organization, Framer Motion animations, and semantic tags that help both SEO
+                        and user experience.
                     </p>
                 </motion.section>
 
-                {/* Seção: Por que organização importa */}
+                {/* Why organization matters */}
                 <motion.section
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
                     className="space-y-6"
                 >
-                    <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-300 to-sky-300 bg-clip-text text-transparent">🧠 Por que organizar o className importa?</h2>
+                    <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-300 to-sky-300 bg-clip-text text-transparent">
+                        🧠 Why className organization matters
+                    </h2>
 
                     <p>
-                        Em projetos pequenos, é fácil acreditar que organização é opcional. Entretanto, quando a página
-                        começa a crescer, cada minuto perdido tentando entender classes bagunçadas se transforma em
-                        problemas de manutenção e retrabalho.
+                        In small projects, it's easy to believe organization is optional. But as a page grows,
+                        every minute wasted trying to understand messy classes becomes a maintenance problem.
                     </p>
 
                     <ul className="list-disc pl-6 space-y-2">
-                        <li>Código mais limpo e fácil de manter;</li>
-                        <li>Redução de classes repetidas desnecessariamente;</li>
-                        <li>Melhor experiência de onboarding para novos desenvolvedores;</li>
-                        <li>Alta compatibilidade com patterns modernos como componentes reutilizáveis.</li>
+                        <li>Cleaner and easier-to-maintain code</li>
+                        <li>Reduction of unnecessary repeated classes</li>
+                        <li>Better onboarding experience for new developers</li>
+                        <li>High compatibility with modern reusable component patterns</li>
                     </ul>
                 </motion.section>
 
-                {/* Seção: Técnicas eficazes */}
+                {/* Effective techniques */}
                 <motion.section
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 }}
                     className="space-y-8"
                 >
-                    <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-300 to-sky-300 bg-clip-text text-transparent">🛠️ Técnicas eficazes para organizar classes</h2>
+                    <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-300 to-sky-300 bg-clip-text text-transparent">
+                        🛠️ Effective techniques for class organization
+                    </h2>
 
                     {/* CARD 1 */}
                     <div className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm shadow-lg space-y-6">
-                        <h3 className="text-2xl font-semibold">1. Agrupe por responsabilidade visual</h3>
+                        <h3 className="text-2xl font-semibold">1. Group by visual responsibility</h3>
                         <p>
-                            Uma técnica extremamente útil é ordenar classes por "categorias": layout, espaçamento,
-                            tipografia, cores, e assim por diante. Isso cria um padrão visual claro.
+                            A very useful technique is to order classes by category: layout, spacing, typography,
+                            colors, and so on. This creates a clear visual pattern.
                         </p>
 
                         <motion.pre className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto text-sm">
@@ -114,10 +116,12 @@ export default function ClassnameNaPraticaContent() {
 
                     {/* CARD 2 */}
                     <div className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm shadow-lg space-y-6">
-                        <h3 className="text-2xl font-semibold">2. Use condicionais com libraries como clsx</h3>
+                        <h3 className="text-2xl font-semibold">
+                            2. Use conditionals with libraries like clsx
+                        </h3>
                         <p>
-                            Em páginas reais, elementos mudam de aparência conforme estado, props ou tamanho da tela.
-                            Evite montar strings gigantes usando ternários dentro do className.
+                            In real pages, elements change appearance based on state, props, or screen size.
+                            Avoid building giant strings with ternaries directly inside className.
                         </p>
 
                         <motion.pre className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto text-sm">
@@ -133,10 +137,10 @@ const buttonClass = clsx(
 
                     {/* CARD 3 */}
                     <div className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm shadow-lg space-y-6">
-                        <h3 className="text-2xl font-semibold">3. Crie componentes reutilizáveis</h3>
+                        <h3 className="text-2xl font-semibold">3. Create reusable components</h3>
                         <p>
-                            Quando notar que um conjunto de classes aparece repetidamente, isso é um sinal de que deve virar
-                            um componente. Isso reduz bugs e evita repetição.
+                            When you notice the same group of classes appearing repeatedly, it's a sign that it
+                            should become a component. This reduces bugs and avoids repetition.
                         </p>
 
                         <motion.pre className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto text-sm">
@@ -151,16 +155,21 @@ const buttonClass = clsx(
                     </div>
                 </motion.section>
 
-                {/* EXEMPLO COMPLETO */}
+                {/* Full Example */}
                 <motion.section
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 }}
                     className="space-y-6"
                 >
-                    <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">⚡ Exemplo final aplicado</h2>
+                    <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">
+                        ⚡ Final applied example
+                    </h2>
 
-                    <p>Aqui está um trecho que demonstra organização clara, animação e semântica moderna:</p>
+                    <p>
+                        Here’s a snippet that showcases clear organization, animation, and modern semantic
+                        structure:
+                    </p>
 
                     <motion.pre className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto text-sm">
                         {`<section className="max-w-4xl mx-auto space-y-6">
@@ -170,24 +179,14 @@ const buttonClass = clsx(
     className="p-6 rounded-2xl shadow-lg bg-white/80 backdrop-blur-md
                space-y-4 border border-white/50"
   >
-    <h2 className="text-2xl font-bold text-gray-900">Título do bloco</h2>
-    <p className="text-gray-700">Conteúdo explicativo organizado e elegante.</p>
+    <h2 className="text-2xl font-bold text-gray-900">Block title</h2>
+    <p className="text-gray-700">Organized and elegant explanatory content.</p>
   </motion.div>
 </section>`}
                     </motion.pre>
                 </motion.section>
 
-                <p className="text-gray-700">
-                    Para organizar classes com clareza, a estrutura do HTML precisa ser forte. É ela que dá suporte para qualquer padrão de className realmente funcionar.
-                </p>
-
-                <CTA
-                    title="Aprenda HTML5 em Poucas Horas e Crie Sites Profissionais Sem Enrolação"
-                    description="Se você sempre quis criar seus próprios sites, entrar no mercado de desenvolvimento web ou finalmente começar no Front-End (CSS, JavaScript e muito mais), este eBook é exatamente o que você precisava."
-                    href="https://go.hotmart.com/T103137279S"
-                />
-
-                {/* Conclusão */}
+                {/* Conclusion */}
                 <motion.section
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -195,25 +194,24 @@ const buttonClass = clsx(
                     className="space-y-6 border-t pt-6"
                 >
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-300 to-sky-300 bg-clip-text text-transparent">
-                        🏁 Conclusão
+                        🏁 Conclusion
                     </h2>
 
                     <p>
-                        Organizar classes não é frescura — é um passo essencial para criar interfaces profissionais,
-                        modernas e escaláveis. Ao seguir essas técnicas, seu código ganha clareza, seu layout ganha vida
-                        e sua performance como desenvolvedor cresce.
+                        Organizing classes isn’t unnecessary — it's essential to build professional, modern,
+                        scalable interfaces. By using these techniques, your code becomes clearer, your layout comes
+                        alive, and your performance as a developer grows.
                     </p>
 
-                    <p>Use Tailwind a seu favor. Deixe a bagunça para trás, abrace a elegância.</p>
+                    <p>Use Tailwind to your advantage. Leave the mess behind and embrace elegance.</p>
                 </motion.section>
 
-                {/* NAVEGAÇÃO ENTRE ARTIGOS */}
-                <motion.footer
-                    className="mt-16 border-t border-white/10 pt-10"
-                >
-                    <h2 className="text-3xl font-bold">Quer aprender mais?</h2>
+                {/* Navigation */}
+                <motion.footer className="mt-16 border-t border-white/10 pt-10">
+                    <h2 className="text-3xl font-bold">Want to learn more?</h2>
                     <p className="mt-4 text-lg">
-                        Explore novos conteúdos publicados regularmente sobre desenvolvimento, tecnologia e boas práticas modernas.
+                        Explore new content published regularly about development, technology, and modern best
+                        practices.
                     </p>
 
                     <ButtonBlog previous={previous} next={next} />

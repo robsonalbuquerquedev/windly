@@ -3,13 +3,13 @@
 import { motion } from "framer-motion";
 import { ButtonBlog } from "@/components/buttons/ButtonBlog";
 import { staggerContainer } from "@/utils/animations";
-import { posts } from "@/data/postsPT";
+import { posts } from "@/data/postsEN";
 
-const currentIndex = posts.findIndex((p) => p.href === "/pt/blog/erros-semantica-html");
+const currentIndex = posts.findIndex((p) => p.href === "/en/blog/html-semantics-mistakes");
 const previous = posts[currentIndex - 1];
 const next = posts[currentIndex + 1];
 
-export default function ErrosSemanticaHtml() {
+export default function HtmlSemanticsMistakes() {
     return (
         <article className="prose prose-invert prose-lg max-w-none text-balance leading-relaxed">
             <motion.div
@@ -18,7 +18,7 @@ export default function ErrosSemanticaHtml() {
                 variants={staggerContainer}
                 className="space-y-20"
             >
-                {/* TÍTULO */}
+                {/* TITLE */}
                 <motion.header className="space-y-6">
                     <motion.h1
                         initial={{ opacity: 0, y: -20 }}
@@ -26,7 +26,7 @@ export default function ErrosSemanticaHtml() {
                         transition={{ duration: 0.5 }}
                         className="text-4xl md:text-5xl font-bold text-gray-900"
                     >
-                        Erros que iniciantes cometem ao usar semântica HTML
+                        Common Mistakes Beginners Make with HTML Semantics
                     </motion.h1>
 
                     <motion.p
@@ -35,11 +35,11 @@ export default function ErrosSemanticaHtml() {
                         transition={{ delay: 0.2, duration: 0.5 }}
                         className="text-lg md:text-xl text-gray-600 max-w-3xl"
                     >
-                        Os maiores deslizes na hora de estruturar páginas e como evitar problemas reais de acessibilidade e SEO.
+                        The most common pitfalls when structuring pages and how to avoid real accessibility and SEO issues.
                     </motion.p>
                 </motion.header>
 
-                {/* INTRODUÇÃO */}
+                {/* INTRODUCTION */}
                 <motion.section
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -47,24 +47,25 @@ export default function ErrosSemanticaHtml() {
                     className="space-y-6"
                 >
                     <p>
-                        Apesar de parecer apenas um detalhe técnico, a semântica HTML define o verdadeiro
-                        significado de cada parte da sua página. Ela ajuda o navegador, o Google e tecnologias assistivas
-                        a entenderem o conteúdo — e isso afeta diretamente acessibilidade, SEO e até a manutenção do código.
+                        Although it may seem like a small technical detail, HTML semantics define
+                        the true meaning of each part of your page. It helps the browser, Google,
+                        and assistive technologies understand the content — and this directly
+                        affects accessibility, SEO, and even code maintenance.
                     </p>
 
                     <p>
-                        O problema é que iniciantes acabam repetindo padrões confusos, usando divs para tudo e
-                        ignorando tags essenciais. Isso gera páginas desestruturadas, difíceis de navegar e mal avaliadas
-                        por mecanismos de busca.
+                        The problem is that beginners often repeat confusing patterns, use divs
+                        for everything, and ignore essential tags. This results in unstructured
+                        pages that are hard to navigate and poorly evaluated by search engines.
                     </p>
 
                     <p>
-                        Neste artigo, você vai aprender de forma clara os erros mais comuns e como corrigi-los com
-                        semântica moderna e consciente.
+                        In this article, you'll learn clearly the most common mistakes and how to
+                        fix them using modern and meaningful semantics.
                     </p>
                 </motion.section>
 
-                {/* ERRO 1 */}
+                {/* MISTAKE 1 */}
                 <motion.section
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -72,42 +73,42 @@ export default function ErrosSemanticaHtml() {
                     className="space-y-8"
                 >
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-sky-300 to-violet-300 bg-clip-text text-transparent">
-                        ❌ 1. Usar div para tudo (divsoup)
+                        ❌ 1. Using divs for everything (div soup)
                     </h2>
 
                     <p>
-                        Um dos erros mais conhecidos: transformar a página inteira em uma sopa de
-                        <code>&lt;div&gt;</code>. O código até funciona, mas perde completamente o significado.
+                        One of the most well-known mistakes: turning the entire page into a bowl
+                        of <code>&lt;div&gt;</code>. The code works, but it completely loses meaning.
                     </p>
 
                     <div className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm shadow-lg space-y-6">
-                        <h3 className="text-2xl font-semibold">Por que isso é um problema?</h3>
+                        <h3 className="text-2xl font-semibold">Why is this a problem?</h3>
 
                         <ul className="list-disc pl-6 space-y-2">
-                            <li>Leitores de tela não entendem o propósito dos blocos.</li>
-                            <li>Google tem mais dificuldade de mapear hierarquia.</li>
-                            <li>Manutenções futuras ficam confusas e lentas.</li>
+                            <li>Screen readers don't understand the purpose of the blocks.</li>
+                            <li>Google has a harder time mapping hierarchy.</li>
+                            <li>Future maintenance becomes confusing and slow.</li>
                         </ul>
 
                         <motion.pre className="p-4 rounded-xl bg-black/30 border border-white/10 overflow-x-auto text-sm">
-                            {`<!-- ERRADO -->
+                            {`<!-- WRONG -->
 <div>
   <div>
-    <div>Meu título</div>
+    <div>My title</div>
   </div>
 </div>`}
                         </motion.pre>
 
                         <motion.pre className="p-4 rounded-xl bg-black/30 border border-white/10 overflow-x-auto text-sm">
-                            {`<!-- CORRETO -->
+                            {`<!-- CORRECT -->
 <header>
-  <h1>Meu título</h1>
+  <h1>My title</h1>
 </header>`}
                         </motion.pre>
                     </div>
                 </motion.section>
 
-                {/* ERRO 2 */}
+                {/* MISTAKE 2 */}
                 <motion.section
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -115,32 +116,32 @@ export default function ErrosSemanticaHtml() {
                     className="space-y-8"
                 >
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text text-transparent">
-                        ❌ 2. Usar heading tags fora de ordem (pular de h1 para h4)
+                        ❌ 2. Using heading tags out of order (jumping from h1 to h4)
                     </h2>
 
                     <p>
-                        Headings criam a hierarquia lógica da página. Quando você “pula níveis”, leitores de tela
-                        e motores de busca interpretam que o conteúdo está quebrado.
+                        Headings create the logical hierarchy of the page. When you “skip levels,”
+                        screen readers and search engines interpret that the structure is broken.
                     </p>
 
                     <div className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm shadow-lg space-y-6">
-                        <h3 className="text-2xl font-semibold">Como muitos iniciantes fazem:</h3>
+                        <h3 className="text-2xl font-semibold">How many beginners do it:</h3>
 
                         <motion.pre className="p-4 rounded-xl bg-black/30 border border-white/10 overflow-x-auto text-sm">
-                            {`<h1>Título principal</h1>
-<h4>Subseção importante</h4>`}
+{`<h1>Main title</h1>
+<h4>Important subsection</h4>`}
                         </motion.pre>
 
-                        <h3 className="text-2xl font-semibold">Como deveria ser:</h3>
+                        <h3 className="text-2xl font-semibold">How it should be:</h3>
 
                         <motion.pre className="p-4 rounded-xl bg-black/30 border border-white/10 overflow-x-auto text-sm">
-                            {`<h1>Título principal</h1>
-<h2>Subseção importante</h2>`}
+{`<h1>Main title</h1>
+<h2>Important subsection</h2>`}
                         </motion.pre>
                     </div>
                 </motion.section>
 
-                {/* ERRO 3 */}
+                {/* MISTAKE 3 */}
                 <motion.section
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -148,34 +149,34 @@ export default function ErrosSemanticaHtml() {
                     className="space-y-8"
                 >
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-300 to-sky-300 bg-clip-text text-transparent">
-                        ❌ 3. Ignorar tags essenciais como main, nav, article, section
+                        ❌ 3. Ignoring essential tags like main, nav, article, section
                     </h2>
 
                     <p>
-                        Essas tags não servem apenas para organização visual, mas para declarar o papel de cada bloco
-                        dentro da página. É o mapa que o Google usa para entender o contexto.
+                        These tags don't just organize visually — they declare the role of each
+                        block on the page. They’re the map Google uses to understand context.
                     </p>
 
                     <div className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm shadow-lg space-y-6">
                         <ul className="list-disc pl-6 space-y-2">
-                            <li><strong>&lt;main&gt;</strong>: conteúdo principal da página;</li>
-                            <li><strong>&lt;nav&gt;</strong>: navegação;</li>
-                            <li><strong>&lt;article&gt;</strong>: conteúdo independente;</li>
-                            <li><strong>&lt;section&gt;</strong>: agrupamento de conteúdo com propósito.</li>
+                            <li><strong>&lt;main&gt;</strong>: main content;</li>
+                            <li><strong>&lt;nav&gt;</strong>: navigation;</li>
+                            <li><strong>&lt;article&gt;</strong>: independent content;</li>
+                            <li><strong>&lt;section&gt;</strong>: grouped content with purpose.</li>
                         </ul>
 
                         <motion.pre className="p-4 rounded-xl bg-black/30 border border-white/10 overflow-x-auto text-sm">
-                            {`<!-- CERTO -->
+{`<!-- RIGHT -->
 <main>
   <article>
-    <h1>Guia completo de semântica HTML</h1>
+    <h1>Complete guide to HTML semantics</h1>
   </article>
 </main>`}
                         </motion.pre>
                     </div>
                 </motion.section>
 
-                {/* ERRO 4 */}
+                {/* MISTAKE 4 */}
                 <motion.section
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -183,33 +184,33 @@ export default function ErrosSemanticaHtml() {
                     className="space-y-8"
                 >
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                        ❌ 4. Usar section apenas para "dividir visualmente"
+                        ❌ 4. Using section just to “visually divide” content
                     </h2>
 
                     <p>
-                        Section não é uma “div estilizada”. Ela precisa ter um propósito claro, geralmente iniciado por
-                        um heading representando o conteúdo daquele bloco.
+                        A section is not a “styled div.” It needs a clear purpose, usually starting
+                        with a heading that represents its content.
                     </p>
 
                     <div className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm shadow-lg space-y-6">
                         <motion.pre className="p-4 rounded-xl bg-black/30 border border-white/10 overflow-x-auto text-sm">
-                            {`<!-- ERRADO -->
+{`<!-- WRONG -->
 <section class="mb-10">
-  <div>Texto aleatório sem título</div>
+  <div>Random text without a title</div>
 </section>`}
                         </motion.pre>
 
                         <motion.pre className="p-4 rounded-xl bg-black/30 border border-white/10 overflow-x-auto text-sm">
-                            {`<!-- CERTO -->
+{`<!-- RIGHT -->
 <section>
-  <h2>Sobre o projeto</h2>
-  <p>Esse bloco tem significado real.</p>
+  <h2>About the project</h2>
+  <p>This block has real meaning.</p>
 </section>`}
                         </motion.pre>
                     </div>
                 </motion.section>
 
-                {/* ERRO 5 */}
+                {/* MISTAKE 5 */}
                 <motion.section
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -217,31 +218,32 @@ export default function ErrosSemanticaHtml() {
                     className="space-y-8"
                 >
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-300 to-indigo-300 bg-clip-text text-transparent">
-                        ❌ 5. Não usar corretamente listas, tabelas e figuras
+                        ❌ 5. Misusing lists, tables, and images
                     </h2>
 
                     <p>
-                        Muita gente usa listas apenas para criar indentação, tabelas para layout ou imagens sem texto alternativo.
+                        Many people use lists just to create indentation, tables for layout,
+                        or images without alternative text.
                     </p>
 
                     <ul className="list-disc pl-6 space-y-2">
-                        <li>Listas servem para itens relacionados.</li>
-                        <li>Tabelas estruturam dados tabulares.</li>
-                        <li>Imagens sem <code>alt</code> prejudicam acessibilidade.</li>
+                        <li>Lists are for related items.</li>
+                        <li>Tables structure tabular data.</li>
+                        <li>Images without <code>alt</code> harm accessibility.</li>
                     </ul>
 
                     <motion.pre className="p-4 rounded-xl bg-black/30 border border-white/10 overflow-x-auto text-sm">
-                        {`<!-- ERRADO -->
+{`<!-- WRONG -->
 <img src="/banner.png">`}
                     </motion.pre>
 
                     <motion.pre className="p-4 rounded-xl bg-black/30 border border-white/10 overflow-x-auto text-sm">
-                        {`<!-- CORRETO -->
-<img src="/banner.png" alt="Banner promocional do evento XPTO">`}
+{`<!-- RIGHT -->
+<img src="/banner.png" alt="Promotional banner for XPTO event">`}
                     </motion.pre>
                 </motion.section>
 
-                {/* CONCLUSÃO */}
+                {/* CONCLUSION */}
                 <motion.section
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -249,26 +251,27 @@ export default function ErrosSemanticaHtml() {
                     className="space-y-6 border-t pt-6"
                 >
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-300 to-sky-300 bg-clip-text text-transparent">
-                        🏁 Conclusão
+                        🏁 Conclusion
                     </h2>
 
                     <p>
-                        A semântica HTML é uma das formas mais eficientes de melhorar SEO, acessibilidade e organização
-                        do seu código. Pequenas mudanças no uso das tags trazem grandes resultados e impactam diretamente
-                        na forma como usuários e motores de busca interpretam sua aplicação.
+                        HTML semantics are one of the most effective ways to improve SEO,
+                        accessibility, and code organization. Small improvements can create
+                        meaningful impact on how users and search engines understand your page.
                     </p>
 
                     <p>
-                        Quanto mais você domina semântica, mais profissionais e acessíveis se tornam suas páginas —
-                        e maiores as chances de destaque em SEO e aprovação em plataformas como Adsence.
+                        The more you master semantics, the more professional, accessible, and
+                        optimized your pages become — increasing your chances of ranking well
+                        and succeeding with platforms like AdSense.
                     </p>
                 </motion.section>
 
-                {/* NAVEGAÇÃO */}
+                {/* NAVIGATION */}
                 <motion.footer className="mt-16 border-t border-white/10 pt-10">
-                    <h2 className="text-3xl font-bold">Quer aprender mais?</h2>
+                    <h2 className="text-3xl font-bold">Want to learn more?</h2>
                     <p className="mt-4 text-lg">
-                        Explore novos conteúdos publicados regularmente sobre desenvolvimento, tecnologia e boas práticas modernas.
+                        Explore new content published regularly about development, technology, and modern best practices.
                     </p>
 
                     <ButtonBlog previous={previous} next={next} />

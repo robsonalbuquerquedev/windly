@@ -3,18 +3,17 @@
 import { motion } from "framer-motion";
 import { ButtonBlog } from "@/components/buttons/ButtonBlog";
 import { staggerContainer } from "@/utils/animations";
-import { posts } from "@/data/postsPT";
-import CTA from "@/components/cta/CTA";
+import { posts } from "@/data/postsEN";
 
-const currentIndex = posts.findIndex((p) => p.href === "/pt/blog/responsividade-tailwind");
+const currentIndex = posts.findIndex((p) => p.href === "/en/blog/responsiveness-tailwind");
 const previous = posts[currentIndex - 1];
 const next = posts[currentIndex + 1];
 
-export default function ResponsividadeTailwindContent() {
+export default function ResponsivenessTailwindContent() {
     return (
         <article className="prose prose-invert prose-lg max-w-none text-balance leading-relaxed">
 
-            {/* CONTAINER COM ANIMAÇÃO DE ENTRADA DO ARTIGO INTEIRO */}
+            {/* MAIN ARTICLE CONTAINER WITH ENTRY ANIMATION */}
             <motion.div
                 initial="hidden"
                 animate="visible"
@@ -22,29 +21,32 @@ export default function ResponsividadeTailwindContent() {
                 className="space-y-20"
             >
 
-                {/* SEÇÃO — HERO DO ARTIGO */}
+                {/* HERO SECTION */}
                 <motion.header className="space-y-6">
-                    <motion.h1 initial={{ opacity: 0, y: -20 }}
+                    <motion.h1
+                        initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                         className="text-4xl md:text-5xl font-bold text-gray-900"
                     >
-                        Como pensar responsividade no mundo real com Tailwind
+                        How to Think About Real-World Responsiveness with Tailwind
                     </motion.h1>
 
-                    <motion.p initial={{ opacity: 0 }}
+                    <motion.p
+                        initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2, duration: 0.5 }}
-                        className="text-lg md:text-xl text-gray-600 max-w-3xl">
-                        Criar layouts responsivos é como organizar uma mochila
-                        que precisa funcionar em diferentes viagens: no mobile levamos só o essencial,
-                        e em telas maiores usamos todo o espaço disponível.
-                        O Tailwind facilita essa adaptação — basta entender como cada peça se encaixa.
+                        className="text-lg md:text-xl text-gray-600 max-w-3xl"
+                    >
+                        Creating responsive layouts is like packing a backpack for different trips:
+                        on mobile, you bring only the essentials, and on larger screens you use
+                        all the available space. Tailwind makes this adaptation simple — you just
+                        need to understand how each piece fits together.
                     </motion.p>
 
                     <div className="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm shadow-lg">
                         <p className="text-sky-200 font-semibold">
-                            🎒 Dica inicial: design responsivo começa na menor tela possível.
+                            🎒 Quick tip: responsive design always starts from the smallest screen.
                         </p>
                     </div>
                 </motion.header>
@@ -52,18 +54,16 @@ export default function ResponsividadeTailwindContent() {
                 {/* MOBILE FIRST */}
                 <motion.section className="space-y-6">
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-300 to-sky-300 bg-clip-text text-transparent">
-                        📱 Mobile First como filosofia
+                        📱 Mobile First as a Philosophy
                     </h2>
 
                     <p>
-                        Tudo no Tailwind nasce para o mobile. Esse é o tamanho padrão.
-                        A partir dele, aumentamos o layout conforme a tela cresce.
-                        Isso deixa tudo mais consistente, previsível e fácil de manter.
+                        In Tailwind, everything begins with mobile. That's the default size.
+                        From there, you scale the layout as the screen grows.
+                        This keeps everything consistent, predictable, and easy to maintain.
                     </p>
 
-                    <motion.pre
-                        className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto"
-                    >
+                    <motion.pre className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto">
                         <code className="language-html text-sm">
                             {`<div className="p-4 md:p-8 lg:p-12 bg-blue-500 text-white">
   Responsive content
@@ -73,25 +73,25 @@ export default function ResponsividadeTailwindContent() {
 
                     <ul className="list-disc list-inside space-y-1">
                         <li><strong>p-4</strong>: base (mobile)</li>
-                        <li><strong>md:p-8</strong>: telas médias</li>
-                        <li><strong>lg:p-12</strong>: desktops grandes</li>
+                        <li><strong>md:p-8</strong>: medium screens</li>
+                        <li><strong>lg:p-12</strong>: large desktops</li>
                     </ul>
                 </motion.section>
 
-                {/* ZONAS RESPONSIVAS */}
+                {/* RESPONSIVE ZONES */}
                 <motion.section className="space-y-10">
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-sky-300 to-violet-300 bg-clip-text text-transparent">
-                        📐 Dividindo o layout em Zonas Responsivas
+                        📐 Splitting the Layout into Responsive Zones
                     </h2>
 
                     <p>
-                        Um layout bem planejado é dividido em áreas que se adaptam conforme a tela muda.
-                        Isso melhora a clareza visual, evita ruídos e organiza a experiência.
+                        A well-planned layout is divided into areas that adapt as the screen size changes.
+                        This improves visual clarity, reduces noise, and organizes the experience.
                     </p>
 
                     {/* CARD 1 */}
                     <div className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm shadow-lg space-y-6">
-                        <h3 className="text-2xl font-semibold">1. Zona de Conteúdo</h3>
+                        <h3 className="text-2xl font-semibold">1. Content Zone</h3>
 
                         <motion.pre
                             className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto text-sm"
@@ -109,7 +109,7 @@ export default function ResponsividadeTailwindContent() {
 
                     {/* CARD 2 */}
                     <div className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm shadow-lg space-y-6">
-                        <h3 className="text-2xl font-semibold">2. Zona de Imagens</h3>
+                        <h3 className="text-2xl font-semibold">2. Image Zone</h3>
 
                         <motion.pre
                             className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto text-sm"
@@ -126,13 +126,12 @@ export default function ResponsividadeTailwindContent() {
 
                     {/* CARD 3 */}
                     <div className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm shadow-lg space-y-6">
-                        <h3 className="text-2xl font-semibold">3. Zona de Ações (CTA)</h3>
+                        <h3 className="text-2xl font-semibold">3. Action Zone (CTA)</h3>
 
                         <motion.pre
                             className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto text-sm"
                         >
-                            <code className="language-html text-sm">
-                                {`<div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center">
+                            {`<div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center">
   <a href="#" className="px-6 py-3 bg-sky-600 text-white rounded-lg font-semibold">
     Get Started
   </a>
@@ -140,38 +139,39 @@ export default function ResponsividadeTailwindContent() {
     Learn More
   </a>
 </div>`}
-                            </code>
                         </motion.pre>
                     </div>
                 </motion.section>
 
-                {/* BOAS PRÁTICAS */}
+                {/* BEST PRACTICES */}
                 <motion.section className="space-y-6">
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">
-                        🎯 O que realmente importa na responsividade moderna
+                        🎯 What Really Matters in Modern Responsiveness
                     </h2>
 
                     <p>
-                        Ser responsivo não é apenas “caber na tela”.
-                        É sobre equilíbrio visual, ritmo, hierarquia e leitura confortável.
+                        Being responsive is not just “fitting on the screen” —
+                        it’s about visual balance, rhythm, hierarchy,
+                        and comfortable reading.
                     </p>
 
                     <ul className="list-disc list-inside space-y-1">
-                        <li>Escalas tipográficas proporcionais</li>
-                        <li>Espaçamento com lógica consistente</li>
-                        <li>Evite duplicar estilos desnecessariamente</li>
-                        <li>Expandir é melhor do que quebrar o layout</li>
+                        <li>Proportional typographic scales</li>
+                        <li>Consistent spacing logic</li>
+                        <li>Avoid duplicating unnecessary styles</li>
+                        <li>Expanding is better than breaking the layout</li>
                     </ul>
                 </motion.section>
 
-                {/* EXEMPLO COMPLETO */}
-                <motion.section initial={{ opacity: 0, y: 20 }}
+                {/* FULL EXAMPLE */}
+                <motion.section
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 }}
-                    className="space-y-6">
-
+                    className="space-y-6"
+                >
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-indigo-400 bg-clip-text text-transparent">
-                        ⚡ Exemplo completo
+                        ⚡ Full Example
                     </h2>
 
                     <motion.pre
@@ -202,42 +202,32 @@ export default function ResponsividadeTailwindContent() {
                     </motion.pre>
                 </motion.section>
 
-                <p className="text-gray-700">
-                    Antes de dominar responsividade com Tailwind, é essencial ter uma base sólida de HTML.
-                </p>
-
-                <CTA
-                    title="HTML Descomplicado"
-                    description="Quer aprender HTML de forma prática e descomplicada? Este eBook é o guia perfeito para iniciantes e para quem deseja consolidar seus conhecimentos."
-                    href="https://go.hotmart.com/I103136264W"
-                    image="/images/cta-tailwind.png"
-                />
-
-                {/* CONCLUSÃO */}
-                <motion.section initial={{ opacity: 0 }}
+                {/* CONCLUSION */}
+                <motion.section
+                    initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.7 }}
-                    className="space-y-6 border-t pt-6">
-
+                    className="space-y-6 border-t pt-6"
+                >
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-300 to-sky-300 bg-clip-text text-transparent">
-                        🏁 Conclusão
+                        🏁 Conclusion
                     </h2>
 
                     <p>
-                        Responsividade é sobre pessoas: seus ritmos, telas e hábitos.
-                        Com Tailwind, esse processo fica leve, rápido e intuitivo.
-                        Quando você une boa organização, tipografia e microanimações,
-                        cria interfaces agradáveis de navegar em qualquer dispositivo.
+                        Responsiveness is about people — their habits, screens, and rhythms.
+                        With Tailwind, this process becomes light, fast, and intuitive.
+                        When you combine good organization, typography,
+                        and micro-animations, you create interfaces that feel pleasant
+                        on any device.
                     </p>
                 </motion.section>
 
-                {/* NAVEGAÇÃO ENTRE ARTIGOS */}
-                <motion.footer
-                    className="mt-16 border-t border-white/10 pt-10"
-                >
-                    <h2 className="text-3xl font-bold">Quer aprender mais?</h2>
+                {/* NAVIGATION BETWEEN ARTICLES */}
+                <motion.footer className="mt-16 border-t border-white/10 pt-10">
+                    <h2 className="text-3xl font-bold">Want to learn more?</h2>
                     <p className="mt-4 text-lg">
-                        Explore novos conteúdos publicados regularmente sobre desenvolvimento, tecnologia e boas práticas modernas.
+                        Explore new content published regularly about development,
+                        technology, and modern best practices.
                     </p>
 
                     <ButtonBlog previous={previous} next={next} />
