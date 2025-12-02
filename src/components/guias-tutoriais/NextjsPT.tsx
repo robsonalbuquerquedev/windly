@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FolderTree, Layers, GitBranch, Component, Boxes, Workflow, } from "lucide-react";
+import { FolderTree, Layers, GitBranch, Component, Boxes, Workflow, LayoutTemplate, Grid, CheckCircle, Package } from "lucide-react";
+import InitialSetup from "@/components/InitialSetup";
 
 export default function NextjsPT() {
     return (
@@ -34,6 +35,18 @@ export default function NextjsPT() {
                 </div>
             </header>
 
+            <InitialSetup
+                sections={[
+                    { id: "estrutura-de-pastas-eficiente", label: "Estrutura de pastas eficiente" },
+                    { id: "layouts-reutilizaveis", label: "Layouts reutilizáveis" },
+                    { id: "componentizacao-inteligente", label: "Componentização inteligente" },
+                    { id: "fluxo-de-desenvolvimento", label: "Fluxo de desenvolvimento (Git Flow)" },
+                    { id: "beneficios-de-projeto-estruturado", label: "Benefícios de um projeto bem estruturado" },
+                    { id: "padroes-de-componentizacao", label: "Padrões de Componentização" },
+                    { id: "dependencias-essenciais", label: "Dependências essenciais" },
+                ]}
+            />
+
             <motion.section
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -46,6 +59,7 @@ export default function NextjsPT() {
 
                     {/* Seção 1 */}
                     <section
+                        id="estrutura-de-pastas-eficiente"
                         aria-labelledby="estrutura-pastas"
                         className="bg-white/60 p-6 rounded-2xl border"
                     >
@@ -83,6 +97,7 @@ export default function NextjsPT() {
 
                     {/* Seção 2 */}
                     <section
+                        id="layouts-reutilizaveis"
                         aria-labelledby="layouts"
                         className="bg-white/60 p-6 rounded-2xl border"
                     >
@@ -105,6 +120,7 @@ export default function NextjsPT() {
 
                     {/* Seção 3 */}
                     <section
+                        id="componentizacao-inteligente"
                         aria-labelledby="componentizacao"
                         className="bg-white/60 p-6 rounded-2xl border"
                     >
@@ -127,6 +143,7 @@ export default function NextjsPT() {
 
                     {/* Seção 4 */}
                     <section
+                        id="fluxo-de-desenvolvimento"
                         aria-labelledby="git-flow"
                         className="bg-white/60 p-6 rounded-2xl border"
                     >
@@ -147,6 +164,7 @@ export default function NextjsPT() {
 
                     {/* Seção 5 */}
                     <section
+                        id="beneficios-de-projeto-estruturado"
                         aria-labelledby="beneficios"
                         className="bg-white/60 p-6 rounded-2xl border"
                     >
@@ -162,6 +180,229 @@ export default function NextjsPT() {
                             <li>Layout consistente.</li>
                             <li>Melhor escalabilidade.</li>
                         </ul>
+                    </section>
+
+                    {/* Seção 6 */}
+                    <section
+                        id="padroes-de-componentizacao"
+                        aria-labelledby="padroes-componentizacao"
+                        className="bg-white/60 p-6 rounded-2xl border"
+                    >
+                        <h3
+                            id="padroes-componentizacao"
+                            className="text-xl font-semibold flex items-center gap-2"
+                        >
+                            <Layers size={18} /> Padrões de Componentização
+                        </h3>
+
+                        <p>
+                            Uma interface profissional começa com componentes bem definidos e separados entre
+                            estrutura (layout) e conteúdo. Isso garante organização, semântica correta e
+                            escalabilidade. Abaixo você encontra três padrões essenciais usados em projetos
+                            modernos.
+                        </p>
+
+                        {/* HeroSplit */}
+                        <div className="mt-6 space-y-3">
+                            <h4 className="text-lg font-medium flex items-center gap-2">
+                                <LayoutTemplate size={16} /> HeroSplit
+                            </h4>
+
+                            <p>
+                                O bloco visual mais marcante da página. Ele apresenta o propósito da interface,
+                                cria identidade e define o tom do site logo no topo.
+                            </p>
+
+                            <ul className="list-disc pl-5">
+                                <li>Divide o conteúdo em imagem e texto.</li>
+                                <li>Comunica o foco principal do site rapidamente.</li>
+                                <li>Funciona como primeira impressão visual.</li>
+                            </ul>
+
+                            <pre className="bg-gray-800 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto">
+                                {`export function HeroSplit() {
+  return (
+    <section className="grid md:grid-cols-2 gap-8 items-center py-16">
+      <div>
+        <h1 className="text-4xl font-bold">Domine Next.js de forma simples</h1>
+        <p className="mt-4 text-gray-600">
+          Aprenda padrões modernos, organização de pastas e componentização profissional.
+        </p>
+      </div>
+
+      <img
+        src="/hero-image.png"
+        alt="Ilustração do guia de Next.js"
+        className="rounded-xl"
+      />
+    </section>
+  );
+}`}
+                            </pre>
+                        </div>
+
+                        {/* CardLayout */}
+                        <div className="mt-8 space-y-3">
+                            <h4 className="text-lg font-medium flex items-center gap-2">
+                                <Grid size={16} /> CardLayout
+                            </h4>
+
+                            <p>
+                                O layout responsável pela organização espacial dos cards. Define grid, colunas,
+                                espaçamentos e responsividade. Ele é totalmente independente do conteúdo.
+                            </p>
+
+                            <ul className="list-disc pl-5">
+                                <li>Distribui elementos visualmente.</li>
+                                <li>Mantém consistência entre seções diferentes.</li>
+                                <li>Pode ser reaproveitado em qualquer página.</li>
+                            </ul>
+
+                            <pre className="bg-gray-800 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto">
+                                {`export function CardLayout({ children }) {
+  return (
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+      {children}
+    </div>
+  );
+}`}
+                            </pre>
+                        </div>
+
+                        {/* CardContent */}
+                        <div className="mt-8 space-y-3">
+                            <h4 className="text-lg font-medium flex items-center gap-2">
+                                <Component size={16} /> CardContent
+                            </h4>
+
+                            <p>
+                                O conteúdo interno do card: ícones, títulos, descrições e links. É aqui que
+                                você define a informação real, mantendo separado do layout externo.
+                            </p>
+
+                            <ul className="list-disc pl-5">
+                                <li>Isola a informação do restante da interface.</li>
+                                <li>Facilita a manutenção e troca de conteúdo.</li>
+                                <li>Evita duplicação e deixa o código limpo.</li>
+                            </ul>
+
+                            <pre className="bg-gray-800 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto">
+                                {`export function CardContent({ icon: Icon, title, description, href }) {
+  return (
+    <article className="p-5 rounded-xl border bg-white hover:shadow transition">
+      <Icon className="size-6 text-blue-600" />
+
+      <h3 className="font-semibold mt-3">{title}</h3>
+      <p className="text-gray-600 text-sm mt-1">{description}</p>
+
+      <a
+        href={href}
+        className="text-blue-600 text-sm font-medium mt-3 inline-block"
+      >
+        Ler mais →
+      </a>
+    </article>
+  );
+}`}
+                            </pre>
+                        </div>
+
+                        {/* Por que isso é tão bom */}
+                        <div className="mt-10">
+                            <h4 className="text-lg font-medium flex items-center gap-2">
+                                <CheckCircle size={16} /> Por que isso funciona tão bem?
+                            </h4>
+
+                            <p className="mt-2">
+                                Separar layout e conteúdo traz vantagens imediatas em qualquer projeto:
+                            </p>
+
+                            <ul className="list-disc pl-5 mt-2">
+                                <li>Uso correto do Next.js com componentização eficiente.</li>
+                                <li>Reutilização extrema — menos código e mais organização.</li>
+                                <li>Semântica limpa e acessível.</li>
+                                <li>Responsividade garantida pelo layout.</li>
+                                <li>Facilidade de manutenção e escalabilidade.</li>
+                                <li>SEO fortalecido por estrutura clara.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    {/* Seção 7 */}
+                    <section
+                        id="dependencias-essenciais"
+                        aria-labelledby="dependencias-next"
+                        className="bg-white/60 p-6 rounded-2xl border"
+                    >
+                        <h3
+                            id="dependencias-next"
+                            className="text-xl font-semibold flex items-center gap-2"
+                        >
+                            <Package size={18} /> Dependências essenciais para projetos Next.js
+                        </h3>
+
+                        <p>
+                            Antes de começar a desenvolver, é comum instalar algumas bibliotecas que
+                            aceleram o fluxo de trabalho. A lista abaixo reúne dependências usadas com
+                            frequência em projetos profissionais de Next.js.
+                        </p>
+
+                        <div className="mt-4 space-y-4">
+                            <pre className="bg-gray-800 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto">
+                                {`npx create-next-app@latest .
+npm install lucide-react
+npm install react-icons
+npm install react-hot-toast
+npm install axios
+npm install date-fns
+npm install monitor
+npm install prismjs
+npm install --save-dev @types/prismjs
+npm install framer-motion
+npm install chart.js
+npm install react-chartjs-2`}
+                            </pre>
+
+                            {/* Explicações */}
+                            <ul className="list-disc pl-5 space-y-2 text-sm">
+                                <li>
+                                    <strong>create-next-app</strong>: inicializa um projeto Next.js configurado com TypeScript, ESLint e estrutura padrão.
+                                </li>
+                                <li>
+                                    <strong>lucide-react</strong>: ícones modernos, leves e altamente customizáveis.
+                                </li>
+                                <li>
+                                    <strong>react-icons</strong>: coleção gigantesca de bibliotecas de ícones (FontAwesome, Feather, etc.).
+                                </li>
+                                <li>
+                                    <strong>react-hot-toast</strong>: sistema de notificações elegante e simples de usar.
+                                </li>
+                                <li>
+                                    <strong>axios</strong>: cliente HTTP para requisições mais seguras e tipadas.
+                                </li>
+                                <li>
+                                    <strong>date-fns</strong>: manipulação de datas de forma leve e modular.
+                                </li>
+                                <li>
+                                    <strong>monitor</strong>: monitoramento e logs em tempo real (quando compatível).
+                                </li>
+                                <li>
+                                    <strong>prismjs</strong>: destaque de código para páginas como blogs e documentações.
+                                </li>
+                                <li>
+                                    <strong>@types/prismjs</strong>: tipagem para uso do PrismJS com TypeScript.
+                                </li>
+                                <li>
+                                    <strong>framer-motion</strong>: animações fluidas e declarativas para React.
+                                </li>
+                                <li>
+                                    <strong>chart.js</strong>: gráficos profissionais, responsivos e ricos.
+                                </li>
+                                <li>
+                                    <strong>react-chartjs-2</strong>: integração direta entre React e Chart.js.
+                                </li>
+                            </ul>
+                        </div>
                     </section>
                 </main>
 
