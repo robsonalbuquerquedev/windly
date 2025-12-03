@@ -36,13 +36,12 @@ export default function NextjsEN() {
             </header>
 
             <InitialSetup
-                title="Initial Setup"
                 sections={[
                     { id: "efficient-folder-structure", label: "Efficient folder structure" },
                     { id: "reusable-layouts", label: "Reusable layouts" },
                     { id: "smart-componentization", label: "Smart componentization" },
                     { id: "development-flow", label: "Development flow (Git Flow)" },
-                    { id: "project-benefits", label: "Benefits of a well-structured project" },
+                    { id: "project-structure-benefits", label: "Benefits of a well-structured project" },
                     { id: "section-componentization-patterns", label: "Componentization patterns" },
                     { id: "essential-dependencies", label: "Essential dependencies" },
                 ]}
@@ -107,22 +106,55 @@ export default function NextjsEN() {
                         </h3>
 
                         <p>
-                            The <code>app/</code> folder allows you to create route-based layouts,
-                            making the interface much more modular. Components such as headers,
-                            sidebars and footers can be declared once and reused.
+                            The <code>app/</code> directory introduces one of the most powerful features in Next.js:
+                            the ability to define <strong>route-specific layouts</strong>. This approach makes the
+                            application's architecture far more modular, standardized, and easier to scale.
+                            Instead of replicating headers, sidebars, footers, or navigation structures across pages,
+                            these elements live in a single centralized location and are automatically applied
+                            to all dependent routes.
                         </p>
 
-                        <ol className="list-decimal pl-5">
-                            <li>Create a layout for each area of the site.</li>
-                            <li>Avoid duplicating visual structure.</li>
-                            <li>Centralize wrappers and fixed UI elements.</li>
+                        <p className="mt-3">
+                            Beyond reducing code duplication, layouts ensure visual consistency, streamline daily
+                            maintenance, and improve the overall user experience — since fixed interface sections
+                            remain stable during navigation. As a result, your application becomes more organized,
+                            predictable, and aligned with modern development best practices.
+                        </p>
+
+                        <p className="mt-3">
+                            Use layouts to structure major areas of the website, separate visual contexts, and
+                            create independent layers that may include anything from sidebars and internal menus
+                            to global wrappers, breadcrumbs, or section-specific behaviors.
+                        </p>
+
+                        <ol className="list-decimal pl-5 mt-4 space-y-1">
+                            <li>
+                                <strong>Create a layout for each logical area of the site.</strong> Sections like blogs, admin dashboards, or authenticated areas can have their own visual structures.
+                            </li>
+
+                            <li>
+                                <strong>Avoid duplicating visual structure.</strong> Whenever you notice repeated patterns across pages, move them into a shared layout.
+                            </li>
+
+                            <li>
+                                <strong>Centralize wrappers and fixed elements.</strong> Components such as containers, top bars, footers, and static columns belong inside
+                                the layout, leaving pages responsible only for their unique content.
+                            </li>
+
+                            <li>
+                                <strong>Use nested layouts when needed.</strong> They allow you to build complex sections where each level introduces its own visual layer.
+                            </li>
+
+                            <li>
+                                <strong>Standardize common behaviors.</strong> Meta data, theme context, breadcrumbs, and internal navigation can live inside the section’s layout.
+                            </li>
                         </ol>
                     </section>
 
                     {/* Section 3 */}
                     <section
                         id="smart-componentization"
-                        aria-labelledby="smart-componentization"
+                        aria-labelledby="componentization"
                         className="bg-white/60 p-6 rounded-2xl border"
                     >
                         <h3 id="componentization" className="text-xl font-semibold flex items-center gap-2">
@@ -130,15 +162,49 @@ export default function NextjsEN() {
                         </h3>
 
                         <p>
-                            Components should be small, clear and reusable. In Next.js, prioritize
-                            server components whenever possible—they are lighter and reduce the
-                            JavaScript sent to the client.
+                            Components should be small, objective, and highly reusable. In Next.js, this philosophy
+                            becomes even more powerful thanks to <strong>Server Components</strong>, which allow you to
+                            deliver lighter, faster, and more secure pages. By delegating most of the processing to the
+                            server, we reduce the amount of JavaScript sent to the client, improving performance and
+                            initial load times.
                         </p>
 
-                        <ul className="list-disc pl-5">
-                            <li>Prefer Server Components.</li>
-                            <li>Use Client Components only when required.</li>
-                            <li>Keep UI and logic clearly separated.</li>
+                        <p className="mt-3">
+                            Smart componentization also involves clearly separating responsibilities: visuals in the
+                            right place, logic in the right place, and interactivity only where it is truly necessary.
+                            This separation keeps the project clean, predictable, and easier to evolve, especially as
+                            the number of components grows.
+                        </p>
+
+                        <p className="mt-3">
+                            Use pure components for visual structures, build interfaces from small and independent
+                            units, and rely on Client Components only when there is direct interaction with the
+                            browser — such as events, controlled animations, local state, or DOM access.
+                        </p>
+
+                        <ul className="list-disc pl-5 mt-4 space-y-1">
+                            <li>
+                                <strong>Prefer Server Components.</strong> They reduce the payload sent to the client and improve performance with almost no extra work.
+                            </li>
+
+                            <li>
+                                <strong>Use Client Components only when necessary.</strong> State, forms, user events, and direct interface manipulation should be the exception,
+                                not the rule.
+                            </li>
+
+                            <li>
+                                <strong>Clearly separate UI and logic.</strong> Keep the presentation layer focused solely on visuals, moving calculations, validations,
+                                and data access into isolated functions or server components.
+                            </li>
+
+                            <li>
+                                <strong>Avoid oversized components.</strong> Whenever something starts to grow too much, break it down into smaller and more specific pieces.
+                            </li>
+
+                            <li>
+                                <strong>Reuse visual patterns.</strong> Creating small components such as buttons, cards, badges, and wrappers helps keep the interface
+                                consistent and standardized.
+                            </li>
                         </ul>
                     </section>
 
@@ -149,38 +215,127 @@ export default function NextjsEN() {
                         className="bg-white/60 p-6 rounded-2xl border"
                     >
                         <h3 id="git-flow" className="text-xl font-semibold flex items-center gap-2">
-                            <GitBranch size={18} /> Development workflow (Git Flow)
+                            <GitBranch size={18} /> Development Flow (Git Flow)
                         </h3>
 
                         <p>
-                            Structured projects follow a branch pattern to maintain stability:
+                            Well-structured projects follow a consistent branch pattern to ensure stability,
+                            organization, and safety throughout the development process. Git Flow is one of the
+                            most widely adopted models because it offers a clear workflow for creating new
+                            features, fixing bugs, and preparing releases without compromising what is already in production.
                         </p>
 
-                        <ul className="list-disc pl-5">
-                            <li><strong>main</strong>: stable version.</li>
-                            <li><strong>dev</strong>: development branch.</li>
-                            <li><strong>feature/*</strong>: new features.</li>
+                        <p className="mt-3">
+                            The main idea is to separate environments and assign each branch a specific purpose.
+                            This allows teams to work in parallel, review code more efficiently, and avoid
+                            unexpected conflicts during critical development stages. Below are the most common
+                            branches used in this workflow:
+                        </p>
+
+                        <ul className="list-disc pl-5 mt-4 space-y-1">
+                            <li>
+                                <strong>main</strong>:
+                                Contains the stable production-ready version of the project. Nothing is merged here
+                                without proper review and testing. It is the project's “safe point.”
+                            </li>
+
+                            <li>
+                                <strong>dev</strong>:
+                                The development environment, where new resources are integrated before moving on
+                                to more extensive testing. Everything currently in progress lives here.
+                            </li>
+
+                            <li>
+                                <strong>feature/*</strong>:
+                                Branches created for each new feature, improvement, or experiment. They keep
+                                development isolated until the work is ready to be merged into <code>dev</code>.
+                            </li>
+
+                            <li>
+                                <strong>hotfix/*</strong>:
+                                Used for urgent fixes that need to go directly into the production version.
+                                After the fix is applied, the branch is merged into both <code>main</code> and
+                                <code>dev</code> to keep everything synchronized.
+                            </li>
+
+                            <li>
+                                <strong>release/*</strong>:
+                                Created when the project is about to receive a new stable update. These branches
+                                allow final adjustments, reviews, and documentation before merging into <code>main</code>.
+                            </li>
                         </ul>
+
+                        <p className="mt-4">
+                            Following this workflow helps prevent complex merge conflicts, improves team
+                            communication, and creates a cleaner, more readable timeline in the repository.
+                            It is one of the most effective practices for keeping code quality high, especially
+                            in projects with multiple contributors.
+                        </p>
                     </section>
 
                     {/* Section 5 */}
                     <section
-                        id="project-benefits"
+                        id="project-structure-benefits"
                         aria-labelledby="benefits"
                         className="bg-white/60 p-6 rounded-2xl border"
                     >
                         <h3 id="benefits" className="text-xl font-semibold flex items-center gap-2">
-                            <Boxes size={18} /> Benefits of a well-structured project
+                            <Boxes size={18} /> Benefits of a Well-Structured Project
                         </h3>
 
-                        <p>Organizing your Next.js project provides direct advantages:</p>
+                        <p>
+                            Keeping your project structure organized brings practical and noticeable advantages to daily
+                            development. When each part of the system is in the right place, the workflow becomes more
+                            efficient, the team collaborates better, and the code becomes much easier to evolve over time.
+                        </p>
 
-                        <ul className="list-disc pl-5">
-                            <li>Easier maintenance.</li>
-                            <li>Cleaner components.</li>
-                            <li>Consistent layout.</li>
-                            <li>Better scalability.</li>
+                        <p className="mt-3">
+                            In Next.js applications, good organization helps with everything from page loading to component
+                            reuse and implementing new features. This reduces rework, prevents confusion, and gives the
+                            project a solid foundation to grow.
+                        </p>
+
+                        <ul className="list-disc pl-5 mt-4 space-y-1">
+                            <li>
+                                <strong>Easier maintenance:</strong> Locating files and understanding the purpose of each part becomes quick, enabling smooth
+                                fixes and improvements.
+                            </li>
+
+                            <li>
+                                <strong>Cleaner components:</strong> With clear responsibilities, each component does only what it needs to do, resulting in
+                                more readable, reusable, and easier-to-test code.
+                            </li>
+
+                            <li>
+                                <strong>Consistent layout:</strong> A solid structure encourages visual and behavioral patterns, ensuring the interface feels
+                                unified across the entire application.
+                            </li>
+
+                            <li>
+                                <strong>Better scalability:</strong> Organized projects grow without losing quality. You can add pages, modules, and new
+                                features without creating chaos or needing to refactor everything.
+                            </li>
+
+                            <li>
+                                <strong>Faster onboarding:</strong> New developers understand the architecture quickly, reducing adaptation time and boosting
+                                productivity.
+                            </li>
+
+                            <li>
+                                <strong>Fewer bugs and less rework:</strong> Structural clarity reduces mistakes caused by misplaced files, duplicated logic, or
+                                component conflicts.
+                            </li>
+
+                            <li>
+                                <strong>Improved performance and mental clarity:</strong> Working in a clean environment lowers cognitive load, increasing focus and enabling
+                                smarter decisions.
+                            </li>
                         </ul>
+
+                        <p className="mt-4">
+                            In the end, structure is the foundation of the project. The more solid it is, the more
+                            confidence you’ll have to evolve, scale, and maintain healthy code—even in complex applications.
+                        </p>
                     </section>
 
                     {/* Section 6 */}
