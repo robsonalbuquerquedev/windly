@@ -225,7 +225,7 @@ export default function TailwindPT() {
 
                         <p className="mt-3">
                             Separar estrutura, comportamento e estilo ajuda a reduzir acoplamento e evita a conhecida
-                            “bagunça de estilos” que cresce junto com o projeto. Em vez disso, cada parte da interface
+                            &quot;bagunça de estilos&quot; que cresce junto com o projeto. Em vez disso, cada parte da interface
                             passa a seguir um padrão de construção que facilita manutenção, testes, ajustes de layout e
                             até mesmo reescritas futuras.
                         </p>

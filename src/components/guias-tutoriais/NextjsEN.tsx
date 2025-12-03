@@ -68,22 +68,71 @@ export default function NextjsEN() {
                         </h2>
 
                         <p>
-                            Next.js works extremely well when your project structure is organized
-                            with purpose. Well-defined folders bring clarity and reduce coupling.
+                            A Next.js application becomes much easier to maintain when its folder structure is planned
+                            with intention. A clear organization reduces coupling, improves readability, and allows
+                            new features to be added without confusion or unnecessary rework.
                         </p>
 
-                        <ul className="list-disc pl-5">
-                            <li><strong>app/</strong>: routes, layouts and pages.</li>
-                            <li><strong>components/</strong>: shared components.</li>
-                            <li><strong>lib/</strong>: utility functions and business logic.</li>
-                            <li><strong>hooks/</strong>: custom hooks.</li>
-                            <li><strong>styles/</strong>: global styles.</li>
+                        <p className="mt-3">
+                            When each directory has a clear purpose, the team quickly understands where to place or
+                            find every part of the project. This prevents duplication, improves communication between
+                            developers, and keeps the code scalable as the system grows.
+                        </p>
+
+                        <ul className="list-disc pl-5 mt-4 space-y-2">
+                            <li>
+                                <strong>app/</strong>: concentrates routes, layouts, pages, segments, and all logic
+                                derived from the App Router. It is the heart of the application and defines how
+                                navigation is organized.
+                            </li>
+
+                            <li>
+                                <strong>components/</strong>: stores reusable and independent components, ensuring
+                                visual consistency and reducing duplication across the project.
+                            </li>
+
+                            <li>
+                                <strong>lib/</strong>: contains utility functions, validations, formatters, business
+                                logic modules, and integrations. Everything that represents pure logic and can be reused
+                                anywhere.
+                            </li>
+
+                            <li>
+                                <strong>hooks/</strong>: holds custom hooks that encapsulate reusable behaviors,
+                                abstracting details and keeping components smaller and easier to read.
+                            </li>
+
+                            <li>
+                                <strong>styles/</strong>: centralizes global styles, variables, and resets. Even with
+                                Tailwind, this directory remains useful for broad rules or global themes.
+                            </li>
+
+                            <li>
+                                <strong>config/</strong>: ideal for centralizing configurations such as constants,
+                                schemas, environment settings, and external integrations.
+                            </li>
+
+                            <li>
+                                <strong>services/</strong>: contains services such as API calls, database access
+                                (in server-side environments), or external communication logic.
+                            </li>
+
+                            <li>
+                                <strong>types/</strong>: repository for global types, interfaces, and shared contracts.
+                                Keeps TypeScript clean and organized.
+                            </li>
                         </ul>
 
-                        <figure className="mt-4 rounded-lg overflow-hidden">
+                        <p className="mt-4">
+                            Structuring your project this way ensures that each part of the application has a clear place,
+                            avoiding oversized folders or unclear responsibilities. This leads to faster development and
+                            reduces the risk of inconsistent decisions as the project evolves.
+                        </p>
+
+                        <figure className="mt-6 rounded-lg overflow-hidden">
                             <Image
                                 src="/images/next-structure.png"
-                                alt="Well-organized folder structure in Next.js"
+                                alt="Organized folder structure in Next.js"
                                 width={1024}
                                 height={576}
                                 className="w-full h-auto rounded-lg"
@@ -236,7 +285,7 @@ export default function NextjsEN() {
                             <li>
                                 <strong>main</strong>:
                                 Contains the stable production-ready version of the project. Nothing is merged here
-                                without proper review and testing. It is the project's “safe point.”
+                                without proper review and testing. It is the project's &quot;safe point.&quot;
                             </li>
 
                             <li>

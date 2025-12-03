@@ -68,19 +68,69 @@ export default function NextjsPT() {
                         </h2>
 
                         <p>
-                            Next.js funciona muito bem quando sua estrutura é organizada com propósito.
-                            Pastas bem definidas criam clareza e reduzem o acoplamento do projeto.
+                            Uma aplicação Next.js se torna muito mais fácil de manter quando sua estrutura de pastas
+                            é planejada com intenção. Uma organização clara reduz o acoplamento, melhora a legibilidade
+                            e permite que novas funcionalidades sejam adicionadas sem gerar confusão ou retrabalho.
                         </p>
 
-                        <ul className="list-disc pl-5">
-                            <li><strong>app/</strong>: rotas, layouts e páginas.</li>
-                            <li><strong>components/</strong>: componentes compartilhados.</li>
-                            <li><strong>lib/</strong>: funções utilitárias e módulos de negócio.</li>
-                            <li><strong>hooks/</strong>: hooks customizados.</li>
-                            <li><strong>styles/</strong>: estilos globais.</li>
+                        <p className="mt-3">
+                            Quando cada diretório tem uma função objetiva, o time entende rapidamente onde colocar ou
+                            buscar cada peça do projeto. Isso evita duplicações, melhora a comunicação entre
+                            desenvolvedores e mantém o código escalável mesmo à medida que o sistema cresce.
+                        </p>
+
+                        <ul className="list-disc pl-5 mt-4 space-y-2">
+                            <li>
+                                <strong>app/</strong>: concentra rotas, layouts, páginas, segmentos e toda a
+                                lógica derivada do App Router. É o coração da aplicação e define como a
+                                navegação é organizada.
+                            </li>
+
+                            <li>
+                                <strong>components/</strong>: guarda componentes reutilizáveis e independentes,
+                                permitindo consistência visual e reduzindo duplicações ao longo do projeto.
+                            </li>
+
+                            <li>
+                                <strong>lib/</strong>: contém funções utilitárias, validações, formatações,
+                                módulos de regra de negócio e integrações. Tudo que representa lógica pura
+                                e pode ser usado em qualquer lugar.
+                            </li>
+
+                            <li>
+                                <strong>hooks/</strong>: responsável por hooks customizados que encapsulam
+                                comportamentos reutilizáveis, abstraindo detalhes e tornando componentes menores
+                                e mais legíveis.
+                            </li>
+
+                            <li>
+                                <strong>styles/</strong>: concentra estilos globais, variáveis e resets. Mesmo
+                                com Tailwind, esse diretório continua útil para regras amplas ou temas globais.
+                            </li>
+
+                            <li>
+                                <strong>config/</strong>: ideal para centralizar configurações como
+                                constantes, schemas, ambientes e integrações externas.
+                            </li>
+
+                            <li>
+                                <strong>services/</strong>: onde ficam serviços como chamadas à API,
+                                acessos a banco de dados (em ambientes server-side) ou lógica de comunicação externa.
+                            </li>
+
+                            <li>
+                                <strong>types/</strong>: repositório para tipagens globais, interfaces e
+                                contratos compartilhados. Mantém o TypeScript limpo e organizado.
+                            </li>
                         </ul>
 
-                        <figure className="mt-4 rounded-lg overflow-hidden">
+                        <p className="mt-4">
+                            Ao estruturar seu projeto dessa forma, você garante que cada parte da aplicação tenha um
+                            lugar definido, evitando pastas gigantescas ou confusão sobre responsabilidades. Isso
+                            torna o desenvolvimento mais ágil e reduz o risco de decisões inconsistentes ao longo do tempo.
+                        </p>
+
+                        <figure className="mt-6 rounded-lg overflow-hidden">
                             <Image
                                 src="/images/next-structure.png"
                                 alt="Estrutura organizada de pastas no Next.js"
@@ -234,7 +284,7 @@ export default function NextjsPT() {
                             <li>
                                 <strong>main</strong>:
                                 Contém a versão estável e pronta para produção. Nada entra nela sem revisão e
-                                sem testes adequados. É o "ponto seguro" do projeto.
+                                sem testes adequados. É o &quot;ponto seguro&quot; do projeto.
                             </li>
 
                             <li>

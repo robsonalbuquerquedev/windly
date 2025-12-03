@@ -224,7 +224,7 @@ export default function TailwindEN() {
 
                         <p className="mt-3">
                             Separating structure, behavior, and style helps reduce coupling and prevents the
-                            infamous “style chaos” that grows as a project expands. Instead, every part of
+                            infamous &quot;style chaos&quot; that grows as a project expands. Instead, every part of
                             the interface follows a construction pattern that makes maintenance, testing,
                             layout adjustments, and even future rewrites much easier.
                         </p>
