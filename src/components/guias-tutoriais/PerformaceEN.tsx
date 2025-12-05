@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Sparkles, Cpu, Image as ImageIcon, Cloud, Zap } from "lucide-react";
+import InitialSetup from "@/components/InitialSetup";
 
 export default function PerformanceEN() {
     return (
@@ -34,6 +35,16 @@ export default function PerformanceEN() {
                 </div>
             </header>
 
+            <InitialSetup
+                sections={[
+                    { id: "why-performance-matters", label: "Why performance matters so much" },
+                    { id: "image-optimization", label: "Image Optimization" },
+                    { id: "reducing-javaScript", label: "Reducing JavaScript" },
+                    { id: "essential-metrics", label: "Core Web Vitals & Essential Metrics" },
+                    { id: "testing-e-continuous-monitoring", label: "Testing & Continuous Monitoring" },
+                ]}
+            />
+
             <motion.section
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -42,38 +53,83 @@ export default function PerformanceEN() {
                 aria-labelledby="performance-sections"
             >
                 <main className="lg:col-span-2 space-y-8 prose prose-slate max-w-none">
-                    <section aria-labelledby="why" className="bg-white/60 p-6 rounded-2xl border">
+
+                    {/* Section 1 */}
+                    <section id="why-performance-matters" aria-labelledby="why" className="bg-white/60 p-6 rounded-2xl border">
                         <h2 id="why" className="text-2xl font-bold">
                             Why performance matters so much
                         </h2>
+
                         <p>
-                            A fast website reduces bounce rate, improves SEO, increases time-on-page,
-                            and significantly boosts conversions. Performance is the foundation of any
-                            modern digital experience and impacts everything from first impressions
-                            to ad monetization.
+                            Performance is basically the time your website takes to respond to the user. When that response
+                            is fast, everything flows naturally: the visitor stays longer, navigates comfortably, and finds
+                            what they need without frustration. Fast websites drastically reduce bounce rates, improve search
+                            engine ranking, and increase both trust and conversion chances — whether it's a purchase, a signup,
+                            or simply continuing to browse.
                         </p>
-                        <p>
-                            In a competitive landscape where milliseconds matter, optimizing performance
-                            means creating a more stable, accessible, and reliable experience across all devices.
+
+                        <p className="mt-2">
+                            On top of that, speed has a direct impact on SEO. Google and other search engines evaluate metrics
+                            like LCP (Largest Contentful Paint), FID/INP, and CLS to understand whether the user experience is
+                            smooth. The faster and more stable these metrics are, the greater the chances of your content
+                            appearing at the top of search results. This means more organic traffic and more opportunities.
+                        </p>
+
+                        <p className="mt-2">
+                            In a highly competitive environment — especially on mobile devices, slow connections, and places
+                            with limited bandwidth — every millisecond matters. Poor performance harms even simple interactions,
+                            increases abandonment, and makes the user feel the website is &quot;heavy&quot; or poorly built. A well-optimized
+                            site, on the other hand, conveys professionalism, stability, and attention to user experience from the
+                            very first load.
+                        </p>
+
+                        <p className="mt-2">
+                            And it's not just about pleasing the user. Performance directly affects monetization, especially when
+                            ads are involved. Slow pages reduce impressions, decrease ad visibility, and negatively impact CPM
+                            value. Meanwhile, a fast site maximizes ad displays, improves campaign distribution, and increases
+                            potential earnings.
+                        </p>
+
+                        <p className="mt-2">
+                            Optimizing performance ultimately means building an inclusive, fast, and reliable experience for
+                            any device — from the simplest smartphone to the most powerful desktop.
                         </p>
                     </section>
 
-                    <section aria-labelledby="images" className="bg-white/60 p-6 rounded-2xl border">
+                    {/* Section 2 */}
+                    <section id="image-optimization" aria-labelledby="images" className="bg-white/60 p-6 rounded-2xl border">
                         <h3 id="images" className="text-xl font-semibold flex items-center gap-2">
                             <ImageIcon size={18} /> Image Optimization
                         </h3>
 
                         <p>
-                            Images account for much of a page’s total weight and directly affect load times,
-                            data usage, and rankings. Working with modern formats and smart loading drastically
-                            reduces bandwidth usage and improves Core Web Vitals.
+                            Images are, almost always, the largest files loaded on a webpage — which means they are also
+                            one of the main factors that can make a site feel fast or slow. When poorly optimized, they
+                            increase loading time, consume more mobile data, hurt essential metrics like LCP, and may even
+                            cause users to leave the page before seeing any meaningful content.
                         </p>
 
-                        <ul className="list-disc pl-5">
-                            <li>Prefer AVIF or WebP for photos and SVG for icons/illustrations.</li>
-                            <li>Use Next.js <code>Image</code> to serve only the required size.</li>
-                            <li>Enable lazy loading for off-screen elements.</li>
-                            <li>Compress files and remove unnecessary metadata.</li>
+                        <p className="mt-2">
+                            Working correctly with modern formats, intelligent resizing, and efficient compression
+                            completely transforms the user experience. Besides drastically reducing file size, it also
+                            improves visual stability, prevents layout shifts, and boosts Core Web Vitals scores. Sites
+                            that treat images with care are faster, lighter, and far better evaluated by search engines.
+                        </p>
+
+                        <p className="mt-2">
+                            Another important point is that optimization goes far beyond reducing size: it involves
+                            choosing the ideal format for each type of image, controlling quality, defining responsive
+                            dimensions, and loading only what actually appears on the screen. This set of practices makes
+                            loading smarter and more efficient, especially on mobile devices or slow network connections.
+                        </p>
+
+                        <ul className="list-disc pl-5 mt-2">
+                            <li>Prefer AVIF or WebP for photos and use SVG for icons, logos, and scalable illustrations.</li>
+                            <li>Use the Next.js <code>Image</code> component to automatically deliver the ideal size for each viewport.</li>
+                            <li>Enable lazy loading for elements outside the visible area, saving bandwidth and speeding up initial load.</li>
+                            <li>Compress images, adjust quality when needed, and remove metadata that only increases file size.</li>
+                            <li>Define explicit dimensions to avoid layout shifts and improve CLS.</li>
+                            <li>Use <code>srcset</code> and responsive images to deliver smaller files on smaller screens.</li>
                         </ul>
 
                         <figure className="mt-4 rounded-lg overflow-hidden">
@@ -86,68 +142,177 @@ export default function PerformanceEN() {
                             />
 
                             <figcaption className="text-sm text-gray-600 mt-2">
-                                Use modern formats and responsive sizes to improve loading.
+                                Modern formats, efficient compression, and responsive sizes are essential for fast and stable loading.
                             </figcaption>
                         </figure>
                     </section>
 
-                    <section aria-labelledby="js" className="bg-white/60 p-6 rounded-2xl border">
+                    {/* Section 3 */}
+                    <section id="reducing-javaScript" aria-labelledby="js" className="bg-white/60 p-6 rounded-2xl border">
                         <h3 id="js" className="text-xl font-semibold flex items-center gap-2">
                             <Zap size={18} /> Reducing JavaScript
                         </h3>
 
                         <p>
-                            JavaScript is one of the most expensive parts of loading, especially on low-end
-                            devices and unstable connections. Reducing JS sent to the client improves interaction
-                            times and reduces rendering blocks.
+                            JavaScript is one of the heaviest parts of a page’s loading cycle. Beyond downloading the file,
+                            the browser still needs to parse, interpret, and execute it — and these steps are especially
+                            costly on low-end mobile devices, unstable networks, and older hardware. The more JS you send,
+                            the longer it takes for the user to interact, the higher the chance of slowdowns, and the more
+                            time the interface spends blocked before becoming usable.
                         </p>
 
-                        <ol className="list-decimal pl-5">
-                            <li>Remove unnecessary dependencies.</li>
-                            <li>Use <code>dynamic()</code> for heavy components.</li>
-                            <li>Load only critical code upfront and lazy-load the rest.</li>
+                        <p className="mt-2">
+                            Reducing JavaScript doesn’t mean sacrificing functionality — it means delivering it intelligently.
+                            Many components ship far more code than they actually use, heavy libraries are imported
+                            unnecessarily, or simple behaviors could be handled with HTML and CSS alone. The real goal is
+                            finding the balance between capability and performance.
+                        </p>
+
+                        <ol className="list-decimal pl-5 mt-2 space-y-1">
+                            <li>
+                                <strong>Remove unnecessary dependencies.</strong> Large libraries for small tasks inflate the
+                                bundle for no reason. Often, a tiny utility or even native JavaScript functions are enough.
+                            </li>
+
+                            <li>
+                                <strong>Use <code>dynamic()</code> for dynamic imports.</strong> This technique allows you to
+                                split the bundle and load heavy components only when they’re truly needed — such as charts,
+                                maps, or text editors.
+                            </li>
+
+                            <li>
+                                <strong>Load only critical code upfront.</strong> Avoid overwhelming the user with a flood of
+                                scripts before the first paint. Use lazy loading, code splitting, and script prioritization to
+                                ensure that essential parts of the page become interactive as soon as possible.
+                            </li>
+
+                            <li>
+                                <strong>Prefer native interactions whenever possible.</strong> Features like
+                                <code>details/summary</code>, native form validation, and CSS-based animations can replace JS
+                                in many cases.
+                            </li>
+
+                            <li>
+                                <strong>Avoid unnecessary hydration.</strong> In modern frameworks, fully static components
+                                can be rendered on the server without sending extra JS to the client.
+                            </li>
                         </ol>
+
+                        <p className="mt-3">
+                            The less JavaScript the browser needs to process, the faster the user can interact with your page.
+                            Reducing, splitting, and loading only what’s essential drastically improves the perception of
+                            speed and makes the interface much smoother — especially on lower-end devices.
+                        </p>
                     </section>
 
-                    <section aria-labelledby="metrics" className="bg-white/60 p-6 rounded-2xl border">
+                    {/* Section 4 */}
+                    <section id="essential-metrics" aria-labelledby="metrics" className="bg-white/60 p-6 rounded-2xl border">
                         <h3 id="metrics" className="text-xl font-semibold">
                             Core Web Vitals & Essential Metrics
                         </h3>
 
                         <p>
-                            These metrics measure real user perception of speed and stability — directly
-                            affecting ranking, experience, and ad performance. Monitoring them is essential
-                            to ensure your site is truly fast.
+                            Core Web Vitals are a set of metrics created by Google to measure how users actually
+                            feel the loading speed, page responsiveness, and visual stability. They are not theoretical:
+                            they directly reflect the real usage experience across different devices, slow connections,
+                            and common day-to-day situations. A website may look &quot;light,&quot; but if these metrics are poor,
+                            users will experience slowness, lagging, or unstable layouts — and this affects ranking,
+                            conversions, and even monetization.
+                        </p>
+
+                        <p className="mt-2">
+                            Continuously monitoring these metrics is essential because they change as your content evolves.
+                            Adding an oversized image, including a heavy script, or modifying a component can directly impact
+                            these indicators. Even small details can make the experience less fluid, which is why keeping track
+                            of these values should be part of the development cycle.
+                        </p>
+
+                        <p className="mt-2">
+                            Google uses this data not only to understand technical performance but also to evaluate how easily
+                            the user can browse without frustration. Good Core Web Vitals mean the page loads fast, reacts fast,
+                            and keeps everything visually stable throughout the process — three fundamental pillars for any
+                            professional and competitive project.
                         </p>
 
                         <div className="grid sm:grid-cols-3 gap-4 mt-4">
                             <div className="p-4 bg-white rounded-lg border">
                                 <strong>LCP</strong>
-                                <p className="text-sm">Largest Contentful Paint — ideal ≤ 2.5s</p>
+                                <p className="text-sm">
+                                    Largest Contentful Paint — measures how long it takes for the main visible element of the page
+                                    to fully appear. Ideal ≤ 2.5s.
+                                </p>
+                                <p className="text-xs mt-1 text-gray-600">
+                                    Common improvements: optimize large images, use a CDN, preload fonts, and minimize
+                                    render-blocking resources.
+                                </p>
                             </div>
+
                             <div className="p-4 bg-white rounded-lg border">
                                 <strong>INP</strong>
-                                <p className="text-sm">Interaction to Next Paint — ideal ≤ 100ms</p>
+                                <p className="text-sm">
+                                    Interaction to Next Paint — measures the delay between a user interaction (click, tap, keystroke)
+                                    and the page’s visual response. Ideal ≤ 100ms.
+                                </p>
+                                <p className="text-xs mt-1 text-gray-600">
+                                    Common improvements: reduce JavaScript, avoid long tasks, use web workers, and split scripts.
+                                </p>
                             </div>
+
                             <div className="p-4 bg-white rounded-lg border">
                                 <strong>CLS</strong>
-                                <p className="text-sm">Cumulative Layout Shift — ideal ≤ 0.1</p>
+                                <p className="text-sm">
+                                    Cumulative Layout Shift — measures how much the page shifts or moves elements during loading.
+                                    Ideal ≤ 0.1.
+                                </p>
+                                <p className="text-xs mt-1 text-gray-600">
+                                    Common improvements: define fixed dimensions for images, ads, iframes, and avoid late-loading
+                                    elements without reserved space.
+                                </p>
                             </div>
                         </div>
+
+                        <p className="mt-4">
+                            The combination of these three metrics gives a very clear picture of how users perceive your page.
+                            When all of them remain within the ideal thresholds, navigation becomes smooth, pleasant, and reliable,
+                            increasing time on page, reducing bounce rate, and reinforcing credibility. In competitive environments,
+                            this is often the difference between users staying on your site or abandoning it within seconds.
+                        </p>
                     </section>
 
-                    <section aria-labelledby="testing" className="bg-white/60 p-6 rounded-2xl border">
+                    {/* Section 5 */}
+                    <section id="testing-e-continuous-monitoring" aria-labelledby="testing" className="bg-white/60 p-6 rounded-2xl border">
                         <h3 id="testing" className="text-xl font-semibold">Testing & Continuous Monitoring</h3>
 
                         <p>
-                            Use tools like Lighthouse, PageSpeed Insights, and WebPageTest to validate
-                            improvements and ensure your site maintains good performance over time.
-                            Always test on slow networks, throttled CPUs, and real devices to capture
-                            realistic behavior.
+                            Ensuring high performance is not a one-time event — it's an ongoing process. As the project grows,
+                            new components, scripts, images, and integrations are added, and each change can affect speed.
+                            That's why testing regularly is essential to identify bottlenecks before they impact the end user.
+                        </p>
+
+                        <p className="mt-2">
+                            Tools like Lighthouse, PageSpeed Insights, and WebPageTest allow you to measure site behavior in
+                            real-world scenarios, highlighting strengths, weaknesses, and clear improvement recommendations.
+                            They reveal network issues, excessive JavaScript, heavy images, accessibility problems, and even
+                            impacts on Core Web Vitals — all based on conditions that simulate everyday usage.
+                        </p>
+
+                        <p className="mt-2">
+                            It is also crucial to test under adverse conditions: slow connections, limited CPUs, and simpler
+                            devices. These contexts expose freezes, delayed interactions, and unstable animations that don't
+                            appear on powerful machines. Testing like this ensures the experience remains stable and consistent
+                            for all users, not just those with high-end devices.
+                        </p>
+
+                        <p className="mt-2">
+                            Another important point is continuous monitoring. Small changes in the frontend or backend can
+                            affect critical metrics over time. Monitoring solutions such as Vercel Analytics, Cloudflare Web
+                            Analytics, Datadog, or even custom scripts help track real visitor performance and detect drops
+                            before they cause damage.
                         </p>
 
                         <p className="mt-2 text-sm text-gray-700">
-                            Tip: creating a performance checklist per release helps keep improvements consistent.
+                            Tip: creating a performance checklist for every release keeps the team alert, prevents regressions,
+                            and turns optimization into a habit rather than an isolated effort.
                         </p>
                     </section>
                 </main>

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Accessibility, Eye, Keyboard, Users } from "lucide-react";
 import Image from "next/image";
+import InitialSetup from "@/components/InitialSetup";
 
 export default function Acessibilidade() {
     return (
@@ -34,6 +35,16 @@ export default function Acessibilidade() {
                 </div>
             </header>
 
+            <InitialSetup
+                sections={[
+                    { id: "acessibilidade-importa", label: "Por que acessibilidade importa" },
+                    { id: "navegacao-por-teclado", label: "Navegação por Teclado" },
+                    { id: "cores-contraste-e-legibilidade", label: "Cores, Contraste e Legibilidade" },
+                    { id: "uso-correto-de-aria", label: "Uso correto de ARIA" },
+                    { id: "testes-e-auditoria-continua", label: "Testes & Auditoria Contínua" },
+                ]}
+            />
+
             <motion.section
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -43,42 +54,105 @@ export default function Acessibilidade() {
             >
                 {/* Main Content */}
                 <main className="lg:col-span-2 space-y-8 prose prose-slate max-w-none">
-                    <section aria-labelledby="importance" className="bg-white/60 p-6 rounded-2xl border">
+
+                    <section id="acessibilidade-importa" aria-labelledby="importance" className="bg-white/60 p-6 rounded-2xl border">
                         <h2 id="importance" className="text-2xl font-bold">
                             Por que acessibilidade importa
                         </h2>
 
                         <p>
-                            A acessibilidade garante que qualquer pessoa — com ou sem deficiência —
-                            consiga usar, entender e navegar por uma interface. É uma prática que traz
-                            mais qualidade, inclusão, melhor ranqueamento e uma experiência mais fluida em
-                            dispositivos móveis e desktop.
+                            Acessibilidade é como abrir a porta da sua interface para todos. Assim como uma rampa não ajuda
+                            apenas pessoas com cadeira de rodas, um site acessível beneficia qualquer usuário — seja alguém
+                            com deficiência, alguém usando o celular com brilho reduzido no sol, ou até mesmo alguém com
+                            internet lenta. Quando cada elemento pode ser entendido e utilizado sem esforço, a experiência
+                            geral melhora drasticamente.
                         </p>
 
-                        <p>
-                            Além dos benefícios sociais, acessibilidade impacta diretamente SEO, métricas
-                            de engajamento e até mesmo a monetização com anúncios. Um site acessível mantém
-                            usuários por mais tempo e reduz barreiras de navegação.
+                        <p className="mt-2">
+                            Criar interfaces acessíveis significa considerar leitura, navegação, contraste, estrutura e
+                            clareza desde o início. Isso evita frustrações, amplia o público e torna o site mais acolhedor,
+                            intuitivo e fácil de usar em diferentes contextos e dispositivos.
+                        </p>
+
+                        <p className="mt-2">
+                            Além de promover inclusão, acessibilidade tem impacto direto em SEO e métricas de qualidade:
+                            buscadores compreendem melhor páginas bem estruturadas, usuários permanecem mais tempo quando
+                            conseguem interagir facilmente com o conteúdo, e a navegação fluida melhora até mesmo os
+                            resultados de monetização com anúncios. Um site acessível reduz barreiras, diminui desistências
+                            e aumenta conversões.
+                        </p>
+
+                        <p className="mt-2">
+                            No fim das contas, acessibilidade não é só um requisito técnico — é uma forma de respeito com
+                            o usuário e uma vantagem competitiva que transforma a experiência digital em algo realmente
+                            universal.
                         </p>
                     </section>
 
-                    <section aria-labelledby="keyboard" className="bg-white/60 p-6 rounded-2xl border">
+                    {/* Seção 2 */}
+                    <section id="navegacao-por-teclado" aria-labelledby="keyboard" className="bg-white/60 p-6 rounded-2xl border">
                         <h3 id="keyboard" className="text-xl font-semibold flex items-center gap-2">
                             <Keyboard size={18} /> Navegação por Teclado
                         </h3>
 
                         <p>
-                            Grande parte dos problemas de acessibilidade envolve navegação por teclado.
-                            Usuários com mobilidade reduzida dependem totalmente da tecla Tab para acessar
-                            elementos interativos.
+                            A navegação por teclado é um dos pilares mais importantes da acessibilidade. Muitos usuários
+                            com mobilidade reduzida, dificuldades motoras ou até mesmo profissionais avançados que preferem
+                            agilidade dependem inteiramente da tecla <strong>Tab</strong> para percorrer links, botões,
+                            formulários e outros elementos interativos. Se o site não respeita esse fluxo, ele simplesmente
+                            se torna inutilizável para parte do público.
                         </p>
 
-                        <ul className="list-disc pl-5">
-                            <li>Garanta ordem lógica no fluxo de foco.</li>
-                            <li>Sempre use <code>&lt;button&gt;</code> para botões — nunca <code>&lt;div&gt;</code>.</li>
-                            <li>Links precisam sempre de <code>href</code>.</li>
-                            <li>Evite esconder elementos focáveis com CSS.</li>
+                        <p className="mt-2">
+                            É essencial garantir que cada elemento seja alcançável, previsível e claramente destacado.
+                            Um foco lógico e visível não só facilita a navegação de quem precisa, como também melhora
+                            a experiência geral — especialmente em situações como telas pequenas, uso por teclado externo,
+                            navegação assistiva e até acessos em ambientes com baixa responsividade.
+                        </p>
+
+                        <ul className="list-disc pl-5 mt-3 space-y-1">
+                            <li>
+                                <strong>Garanta ordem lógica no fluxo de foco.</strong><br />
+                                O foco deve seguir a leitura natural da página, respeitando títulos, seções e elementos
+                                interativos na ordem esperada. Mudanças aleatórias de foco confundem e atrapalham.
+                            </li>
+
+                            <li>
+                                <strong>Sempre use <code>&lt;button&gt;</code> para botões — nunca <code>&lt;div&gt;</code>.</strong><br />
+                                Elementos sem semântica não recebem foco corretamente e dificultam o uso de teclado e
+                                tecnologias assistivas.
+                            </li>
+
+                            <li>
+                                <strong>Links precisam sempre de <code>href</code>.</strong><br />
+                                Sem ele, o link não entra no fluxo natural de navegação e não se comporta como um link real,
+                                prejudicando leitores de tela e o SEO.
+                            </li>
+
+                            <li>
+                                <strong>Evite esconder elementos focáveis com CSS.</strong><br />
+                                Se algo está no fluxo de foco mas invisível ao usuário, a navegação quebra. Sempre remova
+                                elementos interativos do foco quando estiverem ocultos.
+                            </li>
+
+                            <li>
+                                <strong>Crie estilos de foco visíveis.</strong><br />
+                                O foco não deve ser removido jamais. Destaques claros evitam perda de contexto e ajudam
+                                todos os perfis de usuários.
+                            </li>
+
+                            <li>
+                                <strong>Evite tabindex manual desnecessário.</strong><br />
+                                A ordem natural é quase sempre a mais acessível. Valores maiores que 0
+                                bagunçam o fluxo e criam navegação imprevisível.
+                            </li>
                         </ul>
+
+                        <p className="mt-3">
+                            Quando o teclado funciona bem, o site se torna mais inclusivo, mais profissional e muito mais
+                            fácil de navegar em diferentes cenários. Um bom fluxo de foco é sinal de qualidade — e buscadores
+                            também reconhecem isso através de métricas de engajamento.
+                        </p>
 
                         <figure className="mt-4 rounded-lg overflow-hidden">
                             <Image
@@ -95,51 +169,168 @@ export default function Acessibilidade() {
                         </figure>
                     </section>
 
-                    <section aria-labelledby="color" className="bg-white/60 p-6 rounded-2xl border">
+                    {/* Seção 3 */}
+                    <section id="cores-contraste-e-legibilidade" aria-labelledby="color" className="bg-white/60 p-6 rounded-2xl border">
                         <h3 id="color" className="text-xl font-semibold flex items-center gap-2">
                             <Eye size={18} /> Cores, Contraste e Legibilidade
                         </h3>
 
                         <p>
-                            Cerca de 8% dos homens têm algum grau de daltonismo. Garantir contraste adequado
-                            melhora a legibilidade e a compreensão para todos — inclusive em telas com brilho baixo.
+                            A escolha de cores e o contraste adequado influenciam diretamente a capacidade de qualquer
+                            pessoa compreender e interagir com uma interface. Cerca de 8% dos homens possuem algum grau
+                            de daltonismo, e em ambientes de luz intensa ou brilho baixo, até mesmo usuários sem deficiência
+                            visual enfrentam dificuldades. Por isso, garantir boa legibilidade não é apenas uma questão de
+                            estética — é funcionalidade, acessibilidade e usabilidade real.
                         </p>
 
-                        <ol className="list-decimal pl-5">
-                            <li>Mantenha contraste mínimo de 4.5:1 entre texto e fundo.</li>
-                            <li>Evite usar somente cores para transmitir informação.</li>
-                            <li>Garanta boa hierarquia visual usando tamanho, peso e espaçamento.</li>
+                        <p className="mt-2">
+                            Quando o contraste é fraco, o usuário precisa fazer esforço para ler e distinguir elementos,
+                            aumentando a fadiga visual e elevando as chances de erros e abandono da página. Por outro lado,
+                            um bom uso de cores traz conforto, clareza e fluxo natural, além de melhorar métricas de
+                            engajamento e até mesmo o SEO, já que buscadores conseguem interpretar melhor interfaces bem
+                            estruturadas.
+                        </p>
+
+                        <ol className="list-decimal pl-5 mt-3 space-y-2">
+                            <li>
+                                <strong>Mantenha contraste mínimo de 4.5:1 entre texto e fundo.</strong><br />
+                                Este é o padrão recomendado pelas WCAG para textos comuns. Para textos grandes, o mínimo é
+                                3:1. Ferramentas como Contrast Checker e a extensão do Axe ajudam a testar combinações.
+                            </li>
+
+                            <li>
+                                <strong>Evite usar somente cores para transmitir informação.</strong><br />
+                                Pessoas com daltonismo podem não distinguir verde de vermelho, por exemplo. Use indicadores
+                                adicionais como ícones, padrões, texto de apoio ou formatos diferentes.
+                            </li>
+
+                            <li>
+                                <strong>Garanta boa hierarquia visual usando tamanho, peso e espaçamento.</strong><br />
+                                A hierarquia organiza o olhar do usuário, reduz dúvidas e facilita a navegação. Cabeçalhos,
+                                subtítulos, cards e botões devem ter proporções claras e consistentes.
+                            </li>
+
+                            <li>
+                                <strong>Cuidado com texto sobre imagens.</strong><br />
+                                Sempre use sobreposições (overlays), sombras sutis ou caixas semiopacas para manter a leitura
+                                confortável mesmo em fundos complexos.
+                            </li>
+
+                            <li>
+                                <strong>Use cores com propósito, não apenas por estética.</strong><br />
+                                Cores transmitem emoções, direcionam atenção e ajudam a criar caminhos visuais eficientes.
+                                Uma paleta bem pensada evita ruído visual e melhora a experiência global.
+                            </li>
                         </ol>
+
+                        <p className="mt-3 text-sm text-gray-700">
+                            Dica: teste seu design em modo claro e escuro — diferenças de contraste ficam ainda mais evidentes
+                            nesses cenários.
+                        </p>
                     </section>
 
-                    <section aria-labelledby="aria" className="bg-white/60 p-6 rounded-2xl border">
+                    {/* Seção 4 */}
+                    <section id="uso-correto-de-aria" aria-labelledby="aria" className="bg-white/60 p-6 rounded-2xl border">
                         <h3 id="aria" className="text-xl font-semibold">Uso correto de ARIA</h3>
 
                         <p>
-                            ARIA foi feita para complementar HTML, não substituir. Use quando o elemento
-                            nativo não for suficiente — nunca para recriar componentes básicos.
+                            A especificação ARIA existe para preencher lacunas do HTML — não para substituí-lo. Muitos
+                            desenvolvedores iniciantes tentam resolver problemas de acessibilidade adicionando <code>role</code> para tudo, mas isso costuma gerar mais confusão do que solução. A regra
+                            fundamental é simples: se o HTML já oferece um elemento nativo que faz o trabalho, ele sempre
+                            será mais acessível do que qualquer alternativa construída manualmente.
                         </p>
 
-                        <ul className="list-disc pl-5">
-                            <li>Prefira elementos semânticos sempre que possível.</li>
-                            <li>Evite roles desnecessárias: <code>role="button"</code> raramente é necessário.</li>
+                        <p className="mt-2">
+                            ARIA deve ser usada com intenção, especialmente em componentes interativos que não possuem
+                            equivalentes diretos em HTML, como menus complexos, tabs, carrosséis e listas dinamicamente
+                            atualizadas. O uso correto ajuda tecnologias assistivas, como leitores de tela, a interpretar
+                            estados, hierarquias e relações entre elementos — garantindo uma navegação clara,
+                            previsível e sem surpresas.
+                        </p>
+
+                        <ul className="list-disc pl-5 mt-3 space-y-2">
                             <li>
-                                Use atributos como <code>aria-expanded</code> e <code>aria-controls</code> em
-                                componentes colapsáveis.
+                                <strong>Prefira elementos semânticos sempre que possível.</strong><br />
+                                Tags como <code>&lt;button&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code> e <code>&lt;ul&gt;</code> carregam significado próprio para leitores
+                                de tela. Isso reduz a necessidade de ARIA e evita redundância.
+                            </li>
+
+                            <li>
+                                <strong>Evite roles desnecessárias: <code>role=&quot;button&quot;</code> quase nunca deve ser usado.</strong><br />
+                                Se algo deve agir como botão, use um <code>&lt;button&gt;</code> real. Criar um botão com <code>&lt;div&gt;</code> ou <code>&lt;span&gt;</code> força você a implementar acessibilidade
+                                manualmente (foco via teclado, eventos Enter/Espaço, estados ARIA…), aumentando a chance de erros.
+                            </li>
+
+                            <li>
+                                <strong>Use atributos como <code>aria-expanded</code>, <code>aria-controls</code> e <code>aria-hidden</code> em componentes colapsáveis.</strong><br />
+                                Esses atributos informam ao leitor de tela se uma seção está aberta, fechada ou oculta.
+                                Isso é essencial em accordions, dropdowns, menus móveis e tooltips.
+                            </li>
+
+                            <li>
+                                <strong>Garanta que ARIA esteja sincronizada com o estado visual.</strong><br />
+                                Se algo aparece visualmente aberto, mas o <code>aria-expanded</code> continua marcado como <code>false</code>, a experiência auditiva fica quebrada, causando confusão e navegação imprecisa.
+                            </li>
+
+                            <li>
+                                <strong>Evite adicionar ARIA em excesso.</strong><br />
+                                A recomendação oficial é: &quot;Não use ARIA se você não sabe exatamente por que está usando.&quot;
+                                ARIA mal aplicada pode tornar a interface menos acessível do que não usar nada.
                             </li>
                         </ul>
+
+                        <p className="mt-3 text-sm text-gray-700">
+                            Dica: consulte sempre o padrão &quot;ARIA Authoring Practices&quot; — ele mostra modelos prontos de
+                            comportamento esperado para cada tipo de componente.
+                        </p>
                     </section>
 
-                    <section aria-labelledby="test" className="bg-white/60 p-6 rounded-2xl border">
+                    {/* Seção 5 */}
+                    <section id="testes-e-auditoria-continua" aria-labelledby="test" className="bg-white/60 p-6 rounded-2xl border">
                         <h3 id="test" className="text-xl font-semibold">Testes & Auditoria Contínua</h3>
 
                         <p>
-                            Ferramentas como Lighthouse, Axe DevTools e WAVE ajudam a validar se sua interface
-                            está realmente acessível. Testar com leitor de tela e navegação por teclado é fundamental.
+                            Acessibilidade não é algo que se faz apenas uma vez — é um processo contínuo. Ferramentas como
+                            Lighthouse, Axe DevTools e WAVE ajudam a identificar rapidamente problemas comuns, como baixo
+                            contraste, elementos sem rótulos, hierarquia incorreta ou navegação inconsistente. Essas
+                            auditorias automáticas não substituem testes humanos, mas são excelentes para manter um padrão
+                            mínimo de qualidade durante o desenvolvimento.
                         </p>
 
-                        <p className="mt-2 text-sm text-gray-700">
-                            Dica: mantenha uma checklist de acessibilidade no processo de revisão de código.
+                        <p className="mt-2">
+                            Além das ferramentas, é essencial realizar testes reais: navegar com teclado usando apenas as
+                            teclas <code>Tab</code>, <code>Shift + Tab</code>, <code>Enter</code> e <code>Space</code>,
+                            simular leitores de tela, verificar comportamento em temas claro e escuro, e garantir que
+                            elementos dinâmicos informem corretamente seus estados. Pequenas inconsistências que passam
+                            despercebidas visualmente podem impactar profundamente usuários que dependem das tecnologias
+                            assistivas.
+                        </p>
+
+                        <p className="mt-2">
+                            Outra prática importante é incorporar testes de acessibilidade no fluxo de CI/CD. Linters,
+                            verificações automatizadas e coverage de acessibilidade ajudam a evitar regressões,
+                            garantindo que novas funcionalidades não introduzam problemas. Equipes que adotam auditoria
+                            contínua reduzem drasticamente retrabalho e aumentam a confiabilidade da interface.
+                        </p>
+
+                        <ul className="list-disc pl-5 mt-3 space-y-2">
+                            <li>
+                                Valide headings, estrutura e semântica a cada deploy.
+                            </li>
+                            <li>
+                                Teste comportamento de foco, ordem do tab e estados interativos.
+                            </li>
+                            <li>
+                                Documente erros recorrentes para evitar que se repitam.
+                            </li>
+                            <li>
+                                Sempre revise cores e contraste quando alterar estilos globais.
+                            </li>
+                        </ul>
+
+                        <p className="mt-3 text-sm text-gray-700">
+                            Dica: mantenha uma checklist de acessibilidade no processo de revisão de código. Ela ajuda a
+                            reforçar boas práticas e padronizar a qualidade entre todos os membros da equipe.
                         </p>
                     </section>
                 </main>

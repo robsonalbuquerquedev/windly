@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Search, BarChart2, Target, Link as LinkIcon, TrendingUp } from "lucide-react";
+import InitialSetup from "@/components/InitialSetup";
 
 export default function SeoEN() {
     return (
@@ -34,6 +35,16 @@ export default function SeoEN() {
                 </div>
             </header>
 
+            <InitialSetup
+                sections={[
+                    { id: "seo-works-in-practice", label: "How SEO Works in Practice" },
+                    { id: "semantics-and-structure", label: "Semantics and Structure" },
+                    { id: "content-aligned", label: "Content Aligned With Search Intent" },
+                    { id: "technical-optimization", label: "Technical Optimization" },
+                    { id: "authority-e-link-building", label: "Authority & Link Building" },
+                ]}
+            />
+
             <motion.section
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -43,40 +54,115 @@ export default function SeoEN() {
             >
                 {/* Main Content */}
                 <main className="lg:col-span-2 space-y-8 prose prose-slate max-w-none">
-                    <section aria-labelledby="intro" className="bg-white/60 p-6 rounded-2xl border">
+
+                    {/* Section 1 */}
+                    <section id="seo-works-in-practice" aria-labelledby="intro" className="bg-white/60 p-6 rounded-2xl border">
                         <h2 id="intro" className="text-2xl font-bold">
-                            How SEO works in practice
+                            How SEO Works in Practice
                         </h2>
 
                         <p>
-                            SEO is not only about keywords — it's a combination of user experience,
-                            content quality, semantics, performance, accessibility, and authority.
-                            The more your site matches the user's intent, the better it performs.
+                            SEO is not just about choosing the right keywords — it is, in fact, a combination of factors
+                            that work together to help search engines understand the quality, purpose, and relevance of
+                            your page. Elements such as user experience, semantics, accessibility, speed, content
+                            architecture, and external authority form the foundation of modern SEO. The clearer and more
+                            complete the experience you offer to visitors, the better your site performs in search results.
                         </p>
 
-                        <p>
-                            The secret is understanding how search engines interpret your page: structure,
-                            context, hierarchy, relationship between elements, and clarity of information.
+                        <p className="mt-2">
+                            In practical terms, search engines evaluate how the page behaves, how it is structured,
+                            how the content matches the user’s intent, and whether navigation is intuitive. They look at
+                            everything from heading organization to how internal links connect, as well as readability,
+                            scanability, and the overall clarity of information.
+                        </p>
+
+                        <p className="mt-2">
+                            Beyond that, the algorithm tries to predict whether the content truly solves the user’s
+                            problem. To do this, it observes signals such as engagement, time on page, return visits,
+                            readability, thematic consistency, and even the level of authority demonstrated by other
+                            sites that reference your content.
+                        </p>
+
+                        <p className="mt-2">
+                            When the structure is semantic, logical, and well-organized, the search engine gains a much
+                            clearer understanding of the purpose of each part of the page: what is a title, what is a
+                            section, what constitutes the main content, which elements support the message, and how
+                            everything connects within the main topic. This makes ranking easier and increases the
+                            relevance of your page for related searches.
+                        </p>
+
+                        <p className="mt-2">
+                            In short: SEO works when your site genuinely helps the user. The clearer, more accessible,
+                            organized, fast, and useful your content is, the more search engines reward your page.
+                            SEO is, above all, the alignment between user intent and the value you deliver.
                         </p>
                     </section>
 
-                    <section aria-labelledby="semantic" className="bg-white/60 p-6 rounded-2xl border">
+                    {/* Section 2 */}
+                    <section id="semantics-and-structure" aria-labelledby="semantic" className="bg-white/60 p-6 rounded-2xl border">
                         <h3 id="semantic" className="text-xl font-semibold flex items-center gap-2">
-                            <Search size={18} /> Semantics & Structure
+                            <Search size={18} /> Semantics and Structure
                         </h3>
 
                         <p>
-                            A well-structured page makes understanding easier for both search engines and
-                            people. Using semantic tags improves content readability and automatically
-                            enhances accessibility.
+                            The foundation of high-quality HTML lies in its structure. A well-organized page not only
+                            helps search engines understand the content more clearly but also improves readability,
+                            accessibility, and overall user experience. When every element is placed correctly and
+                            used with the proper purpose, the entire ecosystem of the page becomes more predictable,
+                            functional, and clear.
                         </p>
 
-                        <ul className="list-disc pl-5">
-                            <li>Use only one <code>&lt;h1&gt;</code> per page.</li>
-                            <li>Follow clear hierarchy with <code>h2</code>, <code>h3</code>, and so on.</li>
-                            <li>Use <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;header&gt;</code> when appropriate.</li>
-                            <li>Avoid large blocks of text without division.</li>
+                        <p className="mt-2">
+                            Semantics adds a layer of meaning that search engines can interpret to understand context,
+                            importance, and the relationship between different parts of the content. It's like providing
+                            a mental map of what is essential, complementary, navigational, or informational — and this
+                            directly reflects in better SEO performance, improved scan-ability, and greater inclusion.
+                        </p>
+
+                        <ul className="list-disc pl-5 space-y-1 mt-3">
+                            <li>
+                                <strong>Use only one <code>&lt;h1&gt;</code> per page.</strong><br />
+                                It represents the main theme and serves as a reference point for search engines and
+                                screen readers. Multiple <code>h1</code> elements can harm the hierarchy and confuse
+                                the algorithm.
+                            </li>
+
+                            <li>
+                                <strong>Keep a clear hierarchy of headings (<code>h2</code>, <code>h3</code>, etc.).</strong><br />
+                                This creates a logical structure of sections and subsections, allowing search engines
+                                to understand the order of importance and the narrative flow of the content.
+                            </li>
+
+                            <li>
+                                <strong>Use appropriate semantic elements.</strong><br />
+                                Tags such as <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;header&gt;</code>, and <code>&lt;footer&gt;</code> help organize content blocks and make the experience clearer for any assistive
+                                technology — while also improving algorithm interpretation.
+                            </li>
+
+                            <li>
+                                <strong>Avoid huge blocks of text.</strong><br />
+                                Very long paragraphs harm readability and make scanning more difficult. Break content
+                                into smaller, objective, and visually lighter pieces.
+                            </li>
+
+                            <li>
+                                <strong>Give context with descriptions, titles, and grouping.</strong><br />
+                                Good naming and good division make understanding easier for both humans and search
+                                engines, reinforcing the intention of each block.
+                            </li>
+
+                            <li>
+                                <strong>Maintain consistency in page structure.</strong><br />
+                                Repeating patterns of headings, sections, and information order across different pages
+                                improves predictability and creates a more cohesive experience.
+                            </li>
                         </ul>
+
+                        <p className="mt-3">
+                            When HTML is semantic, navigation becomes more natural, reading more fluid, and search
+                            engines gain a clearer view of the content architecture. This strengthens ranking and
+                            significantly improves accessibility.
+                        </p>
 
                         <figure className="mt-4 rounded-lg overflow-hidden">
                             <Image
@@ -88,59 +174,167 @@ export default function SeoEN() {
                             />
 
                             <figcaption className="text-sm text-gray-600 mt-2">
-                                A clear structure helps search engines understand your content and improves
-                                navigation for all users.
+                                A good semantic structure allows search engines and users to navigate more easily,
+                                interpreting each part of the page with clarity.
                             </figcaption>
                         </figure>
                     </section>
 
-                    <section aria-labelledby="content-section" className="bg-white/60 p-6 rounded-2xl border">
-                        <h3 id="content-section" className="text-xl font-semibold flex items-center gap-2">
-                            <Target size={18} /> Content with search intent
+                    {/* Section 3 */}
+                    <section id="content-aligned" aria-labelledby="content" className="bg-white/60 p-6 rounded-2xl border">
+                        <h3 id="content" className="text-xl font-semibold flex items-center gap-2">
+                            <Target size={18} /> Content Aligned With Search Intent
                         </h3>
 
                         <p>
-                            Every search has a purpose. When your content answers exactly what the user
-                            expects, engagement increases — and search engines reward your page.
+                            Every search begins with a purpose: someone wants to understand something, solve a problem,
+                            compare options, buy a product, or simply confirm a piece of information. When your content
+                            matches exactly what the user expects — and goes beyond the basics — it becomes extremely
+                            valuable. This increases dwell time, reduces bounce rate, and sends strong positive signals
+                            to search engines that your page truly delivers what it promises.
                         </p>
 
-                        <ol className="list-decimal pl-5">
-                            <li>Identify real questions users ask.</li>
-                            <li>Deliver clear answers early.</li>
-                            <li>Expand with examples, guides, or lists.</li>
+                        <p className="mt-2">
+                            Creating content aligned with search intent is not just about answering questions; it's about
+                            anticipating what the user wants to feel, know, validate, or decide. A page that delivers
+                            clarity, structure, and depth builds instant trust and is rewarded by algorithms that
+                            prioritize real relevance.
+                        </p>
+
+                        <ol className="list-decimal pl-5 space-y-2 mt-3">
+                            <li>
+                                <strong>Identify real questions users ask.</strong><br />
+                                Research related terms, Google autocomplete, common forum discussions, video comments,
+                                and social media posts. The more you understand the user's natural language, the easier it
+                                becomes to create content that speaks directly to them — in the right tone and level of
+                                detail.
+                            </li>
+
+                            <li>
+                                <strong>Provide clear answers right at the beginning.</strong><br />
+                                The opening lines should immediately show the user they're in the right place. Summarize
+                                the main answer quickly, without unnecessary fluff, and then expand further. This improves
+                                engagement and increases the chances of earning rich snippets, such as Google’s
+                                well-known featured snippet.
+                            </li>
+
+                            <li>
+                                <strong>Go deeper with examples, comparisons, lists, and practical guides.</strong><br />
+                                After answering the core question, expand with helpful details: steps, demonstrations,
+                                analogies, real cases, alternatives, and best practices. Rich content reinforces
+                                authority, improves understanding, and keeps the visitor on the page longer — another
+                                positive signal for search engines.
+                            </li>
                         </ol>
+
+                        <p className="mt-3">
+                            When you respect user intent, provide clarity, and deliver real value, your content becomes
+                            naturally more competitive and tends to rise in the rankings — even in highly competitive
+                            niches. This is one of the strongest foundations of modern SEO.
+                        </p>
                     </section>
 
-                    <section aria-labelledby="technical" className="bg-white/60 p-6 rounded-2xl border">
+                    {/* Section 4 */}
+                    <section id="technical-optimization" aria-labelledby="technical" className="bg-white/60 p-6 rounded-2xl border">
                         <h3 id="technical" className="text-xl font-semibold flex items-center gap-2">
                             <BarChart2 size={18} /> Technical Optimization
                         </h3>
 
                         <p>
-                            Technical SEO is the foundation. Even with great content, a slow or poorly
-                            structured page loses rankings quickly.
+                            Technical optimization is the foundation that supports the entire SEO strategy. Even with
+                            high-quality, highly relevant content, technical issues can compromise user experience,
+                            hinder crawler understanding, and ultimately harm your rankings. It is the invisible side
+                            of SEO — but absolutely essential.
                         </p>
 
-                        <ul className="list-disc pl-5">
-                            <li>Use metadata correctly (title, description and OG tags).</li>
-                            <li>Optimize images with <code>next/image</code>.</li>
-                            <li>Reduce unnecessary CSS and JS.</li>
-                            <li>Avoid CLS and layout shifts.</li>
+                        <p className="mt-2">
+                            When a website is fast, stable, well-structured, and properly configured, it creates the
+                            ideal environment for both users and algorithms to understand, navigate, and value the
+                            content. Slow, heavy, or disorganized pages suffer natural penalties because they degrade
+                            usability, increase loading time, and generate frustration.
+                        </p>
+
+                        <ul className="list-disc pl-5 space-y-2 mt-3">
+                            <li>
+                                <strong>Use metadata correctly (title, description, canonical, and OG tags).</strong><br />
+                                Well-configured tags help search engines interpret the page’s context, prevent duplicate
+                                content issues, improve social media previews, and increase CTR on search results. Small
+                                details like these make a significant impact.
+                            </li>
+
+                            <li>
+                                <strong>Optimize images with <code>next/image</code>.</strong><br />
+                                Next.js’s native image component applies compression, lazy loading, modern formats like
+                                WebP, and automatic size adjustments. This drastically reduces total page weight and
+                                improves LCP (Largest Contentful Paint), one of the most important Core Web Vitals metrics.
+                            </li>
+
+                            <li>
+                                <strong>Reduce unnecessary CSS and JS.</strong><br />
+                                Dead code, heavy libraries, unused styles, and redundant scripts increase loading time
+                                and harm performance. Use tree-shaking, dynamic imports, style cleanup, and lightweight
+                                dependencies whenever possible.
+                            </li>
+
+                            <li>
+                                <strong>Avoid CLS and layout shifting.</strong><br />
+                                Unexpected layout movement frustrates users and worsens CLS (Cumulative Layout Shift).
+                                Always define width and height for images, reserve space for ads, and optimize font
+                                loading to prevent visual jumps across the page.
+                            </li>
+
+                            <li>
+                                <strong>Implement caching and server optimizations.</strong><br />
+                                CDNs, page caching, GZIP/Brotli compression, and optimized headers help deliver content
+                                faster while reducing server load. This boosts both SEO and overall performance.
+                            </li>
+
+                            <li>
+                                <strong>Ensure clean and accessible HTML.</strong><br />
+                                Accessibility and SEO go hand in hand. A well-structured, semantic, and easy-to-navigate
+                                HTML improves crawler understanding and supports assistive technologies.
+                            </li>
                         </ul>
+
+                        <p className="mt-3">
+                            When technical work is well executed, the website gains speed, stability, and clarity.
+                            This creates the perfect foundation for your content to shine and for search engines to
+                            recognize the page as a reliable, efficient, high-quality experience — worthy of the best
+                            ranking positions.
+                        </p>
                     </section>
 
-                    <section aria-labelledby="links" className="bg-white/60 p-6 rounded-2xl border">
+                    {/* Section 5 */}
+                    <section id="authority-e-link-building" aria-labelledby="links" className="bg-white/60 p-6 rounded-2xl border">
                         <h3 id="links" className="text-xl font-semibold flex items-center gap-2">
                             <LinkIcon size={18} /> Authority & Link Building
                         </h3>
 
                         <p>
-                            Links are votes of trust. When your site receives relevant and reliable links,
-                            your authority increases — and so does your ranking.
+                            Links work like public recommendations: when other websites point to yours,
+                            they’re telling search engines that your content is trustworthy, valuable,
+                            and deserves visibility. The more these “votes” come from strong, relevant,
+                            and well-established domains, the higher your overall authority becomes.
                         </p>
 
+                        <p className="mt-2">
+                            Building authority doesn’t happen overnight. It involves partnerships,
+                            smart content distribution, presence on websites within your niche, and
+                            ongoing strategies to be mentioned naturally—always avoiding artificial
+                            practices that may result in penalties.
+                        </p>
+
+                        <ul className="list-disc pl-5 mt-3">
+                            <li>Seek links from websites with topics similar to yours (relevance is everything).</li>
+                            <li>Create content that becomes a reference, increasing chances of natural backlinks.</li>
+                            <li>Use guest posts strategically and without excess.</li>
+                            <li>Avoid excessive link exchanges—search engines detect artificial patterns.</li>
+                            <li>Monitor your backlink profile using tools like Search Console and Ahrefs.</li>
+                        </ul>
+
                         <p className="mt-2 text-sm text-gray-700">
-                            Tip: well-organized internal links provide context and reduce bounce rate.
+                            Tip: a well-structured internal linking strategy strengthens key pages,
+                            distributes authority across the site, and improves the user experience.
                         </p>
                     </section>
                 </main>
