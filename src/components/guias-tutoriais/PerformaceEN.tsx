@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Sparkles, Cpu, Image as ImageIcon, Cloud, Zap } from "lucide-react";
 import InitialSetup from "@/components/InitialSetup";
+import Link from "next/link";
 
 export default function PerformanceEN() {
     return (
@@ -203,6 +204,22 @@ export default function PerformanceEN() {
                             Reducing, splitting, and loading only what’s essential drastically improves the perception of
                             speed and makes the interface much smoother — especially on lower-end devices.
                         </p>
+
+                        <p className="mt-4 text-sm text-black/70">
+                            If you're still taking your first steps with JavaScript and want to learn the language in a
+                            clear and straightforward way — without overload, confusion, or unnecessary complexity — there
+                            is a complete manual that teaches everything from the ground up. It helps you understand just
+                            enough to write less code, avoid heavy dependencies, and make smarter decisions on the
+                            front-end.
+                            <a
+                                href="https://go.hotmart.com/M103302039W?dp=1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ml-1 underline hover:text-black transition"
+                            >
+                                Check out the complete guide here.
+                            </a>
+                        </p>
                     </section>
 
                     {/* Section 4 */}
@@ -340,9 +357,9 @@ export default function PerformanceEN() {
                     <nav className="bg-white/60 p-4 rounded-2xl border" aria-label="related-guides">
                         <h4 className="font-semibold">Related Guides</h4>
                         <ul className="mt-3 space-y-2 text-sm">
-                            <li><a href="/en/guides-tutorials/seo" className="underline">SEO Fundamentals</a></li>
-                            <li><a href="/en/guides-tutorials/accessibility" className="underline">Web Accessibility</a></li>
-                            <li><a href="/en/guides-tutorials/tailwind" className="underline">Tailwind Patterns</a></li>
+                            <li><Link href="/en/guides-tutorials/seo" className="underline">SEO Fundamentals</Link></li>
+                            <li><Link href="/en/guides-tutorials/accessibility" className="underline">Web Accessibility</Link></li>
+                            <li><Link href="/en/guides-tutorials/tailwind" className="underline">Tailwind Patterns</Link></li>
                         </ul>
                     </nav>
                 </aside>

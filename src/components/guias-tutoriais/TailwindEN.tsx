@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Sparkles, Palette, Layers, Zap, Boxes, Code, } from "lucide-react";
 import InitialSetup from "@/components/InitialSetup";
+import Link from "next/link";
 
 export default function TailwindEN() {
     return (
@@ -415,19 +416,19 @@ export default function TailwindEN() {
                         <h4 className="font-semibold">Related Guides</h4>
                         <ul className="mt-3 space-y-2 text-sm">
                             <li>
-                                <a href="/en/guides-tutorials/nextjs" className="underline">
+                                <Link href="/en/guides-tutorials/nextjs" className="underline">
                                     Next.js best practices
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/en/guides-tutorials/semantic-html" className="underline">
+                                <Link href="/en/guides-tutorials/semantic-html" className="underline">
                                     Semantic HTML
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/en/guides-tutorials/seo" className="underline">
+                                <Link href="/en/guides-tutorials/seo" className="underline">
                                     SEO in practice
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </nav>

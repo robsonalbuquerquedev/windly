@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FolderTree, Layers, GitBranch, Component, Boxes, Workflow, LayoutTemplate, Grid, CheckCircle, Package } from "lucide-react";
 import InitialSetup from "@/components/InitialSetup";
+import Link from "next/link";
 
 export default function NextjsEN() {
     return (
@@ -319,6 +320,35 @@ export default function NextjsEN() {
                             communication, and creates a cleaner, more readable timeline in the repository.
                             It is one of the most effective practices for keeping code quality high, especially
                             in projects with multiple contributors.
+                        </p>
+
+                        <p className="mt-4 text-sm text-black/70">
+                            For those who want to deepen their daily workflow with Git and GitHub, there is a simple and
+                            straightforward material that shows, in practice, how to apply these concepts without
+                            complication. It works very well as a complement for anyone organizing larger projects or
+                            looking to improve their development flow.
+                            <a
+                                href="https://go.hotmart.com/Y103300869V"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ml-1 underline hover:text-black transition"
+                            >
+                                Check out the “Git in Action” eBook.
+                            </a>
+                        </p>
+
+                        <p className="mt-3 text-sm text-black/70">
+                            And if the goal is to follow a more complete path — understanding everything from the basics to
+                            a real workflow with examples and best practices applied in everyday work — there is also a
+                            course that explores all of this in more detail.
+                            <a
+                                href="https://go.hotmart.com/T103301411T"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ml-1 underline hover:text-black transition"
+                            >
+                                See the “Understand Git” course.
+                            </a>
                         </p>
                     </section>
 
@@ -643,19 +673,19 @@ npm install react-chartjs-2`}
                         <h4 className="font-semibold">Related Guides</h4>
                         <ul className="mt-3 space-y-2 text-sm">
                             <li>
-                                <a href="/en/guides-tutorials/semantic-html" className="underline">
+                                <Link href="/en/guides-tutorials/semantic-html" className="underline">
                                     Semantic HTML
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/en/guides-tutorials/seo" className="underline">
+                                <Link href="/en/guides-tutorials/seo" className="underline">
                                     Practical SEO
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/en/guides-tutorials/accessibility" className="underline">
+                                <Link href="/en/guides-tutorials/accessibility" className="underline">
                                     Web Accessibility
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </nav>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Sparkles, Cpu, Image as ImageIcon, Cloud, Zap } from "lucide-react";
 import InitialSetup from "@/components/InitialSetup";
+import Link from "next/link";
 
 export default function PerformancePT() {
     return (
@@ -208,6 +209,22 @@ export default function PerformancePT() {
                             de velocidade e torna a interface muito mais fluida, especialmente em dispositivos de menor
                             desempenho.
                         </p>
+
+                        <p className="mt-4 text-sm text-black/70">
+                            Se você ainda está nos primeiros passos com JavaScript e quer aprender a linguagem de um jeito
+                            claro e direto — sem excesso, sem confusão e com foco no que realmente importa — existe um
+                            manual completo que explica tudo do zero, desde a base até a prática. Ele ajuda você a
+                            entender o suficiente para escrever menos código, evitar dependências desnecessárias e tomar
+                            decisões mais inteligentes no front-end.
+                            <a
+                                href="https://go.hotmart.com/M103302039W?dp=1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ml-1 underline hover:text-black transition"
+                            >
+                                Conheça o guia completo aqui.
+                            </a>
+                        </p>
                     </section>
 
                     {/* Seção 4 */}
@@ -346,9 +363,9 @@ export default function PerformancePT() {
                     <nav className="bg-white/60 p-4 rounded-2xl border" aria-label="related-guides">
                         <h4 className="font-semibold">Guias Relacionados</h4>
                         <ul className="mt-3 space-y-2 text-sm">
-                            <li><a href="/pt/guias-tutoriais/seo" className="underline">Fundamentos de SEO</a></li>
-                            <li><a href="/pt/guias-tutoriais/acessibilidade" className="underline">Acessibilidade Web</a></li>
-                            <li><a href="/pt/guias-tutoriais/tailwind" className="underline">Padrões com Tailwind</a></li>
+                            <li><Link href="/pt/guias-tutoriais/seo" className="underline">Fundamentos de SEO</Link></li>
+                            <li><Link href="/pt/guias-tutoriais/acessibilidade" className="underline">Acessibilidade Web</Link></li>
+                            <li><Link href="/pt/guias-tutoriais/tailwind" className="underline">Padrões com Tailwind</Link></li>
                         </ul>
                     </nav>
                 </aside>

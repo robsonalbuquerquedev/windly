@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Layers, Landmark, Blocks, Accessibility, Shapes, Link as LinkIcon, } from "lucide-react";
 import InitialSetup from "@/components/InitialSetup";
+import Link from "next/link";
 
 export default function SemanticHtml() {
     return (
@@ -95,8 +96,21 @@ export default function SemanticHtml() {
                             accessibility, SEO, organization, and the overall professional quality of any web
                             application.
                         </p>
-                    </section>
 
+                        <p className="mt-4 text-sm text-black/70">
+                            If you're starting your journey in web development and want to learn in a practical way how HTML,
+                            CSS, and JavaScript come together to create modern interfaces, there is a complete course that serves
+                            as the perfect starting point to master these fundamentals:
+                            <a
+                                href="https://go.hotmart.com/C103301757L?dp=1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ml-1 underline hover:text-black transition"
+                            >
+                                Check out the course “Front-end Web Development: Master the Foundations of Interactive Web!”.
+                            </a>
+                        </p>
+                    </section>
 
                     {/* Section 2 */}
                     <section id="clear-and-well-organized-structure" aria-labelledby="structure" className="bg-white/60 p-6 rounded-2xl border">
@@ -165,6 +179,19 @@ export default function SemanticHtml() {
                                 Visual example showing how semantic HTML organizes and defines the main areas of a modern page.
                             </figcaption>
                         </figure>
+
+                        <p className="mt-4 text-sm text-black/70">
+                            If you're starting in front-end development and want a solid foundation in structure, organization, and best practices,
+                            there's a straightforward e-book that clearly explains these essential principles:
+                            <a
+                                href="https://go.hotmart.com/C103301650S?dp=1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ml-1 underline hover:text-black transition"
+                            >
+                                Check out the eBook “Decoding the Front-end”.
+                            </a>
+                        </p>
                     </section>
 
                     {/* Section 3 */}
@@ -327,6 +354,21 @@ export default function SemanticHtml() {
                             The clearer, more coherent, and more logical the structure is, the stronger your ranking
                             potential becomes. Semantics is not just organization — it is SEO strategy.
                         </p>
+
+                        <p className="mt-4 text-sm text-black/70">
+                            If you're still taking your first steps in building well-structured pages and want to learn how
+                            to apply HTML, CSS, and JavaScript to create professional websites with attention to SEO, there
+                            is a course that dives deep into exactly these fundamentals. It shows, in practice, how to
+                            organize your code, structure your content, and build a solid foundation for real projects.
+                            <a
+                                href="https://go.hotmart.com/G103301873E"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ml-1 underline hover:text-black transition"
+                            >
+                                See more details here.
+                            </a>
+                        </p>
                     </section>
                 </main>
 
@@ -357,19 +399,19 @@ export default function SemanticHtml() {
                         <h4 className="font-semibold">Related Guides</h4>
                         <ul className="mt-3 space-y-2 text-sm">
                             <li>
-                                <a href="/en/guides-tutorials/accessibility" className="underline">
+                                <Link href="/en/guides-tutorials/accessibility" className="underline">
                                     Web Accessibility
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/en/guides-tutorials/seo" className="underline">
+                                <Link href="/en/guides-tutorials/seo" className="underline">
                                     SEO in Practice
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/en/guides-tutorials/performance" className="underline">
+                                <Link href="/en/guides-tutorials/performance" className="underline">
                                     Front-end Performance
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </nav>

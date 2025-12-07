@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Search, BarChart2, Target, Link as LinkIcon, TrendingUp } from "lucide-react";
 import InitialSetup from "@/components/InitialSetup";
+import Link from "next/link";
 
 export default function SeoEN() {
     return (
@@ -178,6 +179,21 @@ export default function SeoEN() {
                                 interpreting each part of the page with clarity.
                             </figcaption>
                         </figure>
+
+                        <p className="mt-4 text-sm text-black/70">
+                            If you’re taking your first steps and want to learn in a practical way how to structure pages with
+                            HTML and CSS—building clear, organized, and scalable layouts—there’s a course that focuses exactly
+                            on these essential foundations. It teaches, step by step, how to turn basic concepts into real,
+                            well-structured web pages.
+                            <a
+                                href="https://go.hotmart.com/B103301958J?dp=1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ml-1 underline hover:text-black transition"
+                            >
+                                Check out the “From Zero to HTML & CSS for Website Creation” course.
+                            </a>
+                        </p>
                     </section>
 
                     {/* Section 3 */}
@@ -366,19 +382,19 @@ export default function SeoEN() {
                         <h4 className="font-semibold">Related Guides</h4>
                         <ul className="mt-3 space-y-2 text-sm">
                             <li>
-                                <a href="/en/guides-tutorials/accessibility" className="underline">
+                                <Link href="/en/guides-tutorials/accessibility" className="underline">
                                     Web Accessibility
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/en/guides-tutorials/performance" className="underline">
+                                <Link href="/en/guides-tutorials/performance" className="underline">
                                     Front-end Performance
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/en/guides-tutorials/tailwind" className="underline">
+                                <Link href="/en/guides-tutorials/tailwind" className="underline">
                                     Tailwind Organization
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </nav>

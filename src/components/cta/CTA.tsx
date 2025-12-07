@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 
 interface CTAProps {
@@ -52,24 +51,25 @@ export default function CTA({ title, description, href, image }: CTAProps) {
                     {description}
                 </p>
 
-                <Link
+                <a
                     href={href}
-                    target="blank"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="
-            inline-block
-            mt-4
-            px-6 py-3
-            bg-indigo-600
-            text-white
-            font-semibold
-            rounded-xl
-            shadow
-            hover:bg-indigo-700
-            transition-all
-          "
+        inline-block
+        mt-4
+        px-6 py-3
+        bg-indigo-600
+        text-white
+        font-semibold
+        rounded-xl
+        shadow
+        hover:bg-indigo-700
+        transition-all
+    "
                 >
                     Quero saber mais →
-                </Link>
+                </a>
                 <p className="text-xs text-gray-500 mt-2">
                     Link afiliado, conforme nossas políticas.
                 </p>

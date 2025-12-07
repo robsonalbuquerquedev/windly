@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Layers, Landmark, Blocks, Accessibility, Shapes, Link as LinkIcon } from "lucide-react";
 import InitialSetup from "@/components/InitialSetup";
+import Link from "next/link";
 
 export default function HtmlSemantico() {
     return (
@@ -94,6 +95,20 @@ export default function HtmlSemantico() {
                             Em resumo, HTML semântico não é apenas uma boa prática — é um alicerce essencial para
                             acessibilidade, SEO, organização e qualidade profissional de qualquer aplicação web.
                         </p>
+
+                        <p className="mt-4 text-sm text-black/70">
+                            Se você está começando no universo do desenvolvimento web e quer aprender de forma prática como HTML,
+                            CSS e JavaScript se conectam para criar interfaces modernas, existe um curso completo que serve como
+                            ponto de partida ideal para dominar essas bases:
+                            <a
+                                href="https://go.hotmart.com/C103301757L?dp=1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ml-1 underline hover:text-black transition"
+                            >
+                                Conheça o curso “Desenvolvimento Web Front-end: Domine as Bases da Web Interativa!”.
+                            </a>
+                        </p>
                     </section>
 
                     {/* Seção 2 */}
@@ -163,6 +178,19 @@ export default function HtmlSemantico() {
                                 Exemplo visual de como o HTML semântico organiza e define as áreas principais de uma página moderna.
                             </figcaption>
                         </figure>
+
+                        <p className="mt-4 text-sm text-black/70">
+                            Se você está começando no front-end e quer uma base sólida sobre estrutura, organização e boas práticas,
+                            existe um e-book direto ao ponto que ajuda a entender esses pilares de forma clara:
+                            <a
+                                href="https://go.hotmart.com/C103301650S?dp=1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ml-1 underline hover:text-black transition"
+                            >
+                                Conheça o e-book “Decodificando o Front-end”.
+                            </a>
+                        </p>
                     </section>
 
                     {/* Seção 3 */}
@@ -326,6 +354,21 @@ export default function HtmlSemantico() {
                             Quanto mais clara, coerente e lógica for a estrutura, mais forte seu potencial de ranqueamento.
                             Semântica não é apenas organização — é estratégia de SEO.
                         </p>
+
+                        <p className="mt-4 text-sm text-black/70">
+                            Se você ainda está dando os primeiros passos na criação de páginas bem estruturadas e quer
+                            aprender como aplicar HTML, CSS e JavaScript para montar sites profissionais com atenção ao SEO,
+                            existe um curso que aprofunda exatamente esses fundamentos. Ele mostra, na prática, como
+                            organizar o código, estruturar o conteúdo e construir uma base sólida para projetos reais.
+                            <a
+                                href="https://go.hotmart.com/G103301873E"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ml-1 underline hover:text-black transition"
+                            >
+                                Veja mais detalhes aqui.
+                            </a>
+                        </p>
                     </section>
                 </main>
 
@@ -356,19 +399,19 @@ export default function HtmlSemantico() {
                         <h4 className="font-semibold">Guias Relacionados</h4>
                         <ul className="mt-3 space-y-2 text-sm">
                             <li>
-                                <a href="/pt/guias-tutoriais/acessibilidade" className="underline">
+                                <Link href="/pt/guias-tutoriais/acessibilidade" className="underline">
                                     Acessibilidade Web
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/pt/guias-tutoriais/seo" className="underline">
+                                <Link href="/pt/guias-tutoriais/seo" className="underline">
                                     SEO na Prática
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/pt/guias-tutoriais/performance" className="underline">
+                                <Link href="/pt/guias-tutoriais/performance" className="underline">
                                     Performance Front-end
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </nav>

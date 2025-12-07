@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FolderTree, Layers, GitBranch, Component, Boxes, Workflow, LayoutTemplate, Grid, CheckCircle, Package } from "lucide-react";
 import InitialSetup from "@/components/InitialSetup";
+import Link from "next/link";
 
 export default function NextjsPT() {
     return (
@@ -317,6 +318,35 @@ export default function NextjsPT() {
                             Trabalhar com esse fluxo evita conflitos complexos, melhora a comunicação entre times e
                             cria uma linha do tempo mais organizada e legível no repositório. É uma das práticas mais
                             eficazes para manter a qualidade do código mesmo quando muitas pessoas colaboram ao mesmo tempo.
+                        </p>
+
+                        <p className="mt-4 text-sm text-black/70">
+                            Para quem deseja aprofundar a organização do dia a dia com Git e GitHub, existe um material
+                            simples e direto que mostra na prática como aplicar esses conceitos sem complicação. Ele funciona
+                            muito bem como complemento para quem está estruturando projetos maiores ou quer melhorar o fluxo
+                            de trabalho.
+                            <a
+                                href="https://go.hotmart.com/Y103300869V"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ml-1 underline hover:text-black transition"
+                            >
+                                Conheça o eBook “Git em Ação”.
+                            </a>
+                        </p>
+
+                        <p className="mt-3 text-sm text-black/70">
+                            Agora, se a ideia é seguir um caminho mais completo — entendendo desde os fundamentos até um fluxo
+                            real de trabalho com exemplos e boas práticas aplicadas no dia a dia — existe também um curso que
+                            aprofunda tudo isso com mais calma.
+                            <a
+                                href="https://go.hotmart.com/T103301411T"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ml-1 underline hover:text-black transition"
+                            >
+                                Veja o curso “Entenda Git”.
+                            </a>
                         </p>
                     </section>
 
@@ -638,19 +668,19 @@ npm install react-chartjs-2`}
                         <h4 className="font-semibold">Guias Relacionados</h4>
                         <ul className="mt-3 space-y-2 text-sm">
                             <li>
-                                <a href="/pt/guias-tutoriais/html-semantico" className="underline">
+                                <Link href="/pt/guias-tutoriais/html-semantico" className="underline">
                                     HTML Semântico
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/pt/guias-tutoriais/seo" className="underline">
+                                <Link href="/pt/guias-tutoriais/seo" className="underline">
                                     SEO na Prática
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/pt/guias-tutoriais/acessibilidade" className="underline">
+                                <Link href="/pt/guias-tutoriais/acessibilidade" className="underline">
                                     Acessibilidade Web
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </nav>

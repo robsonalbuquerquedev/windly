@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Accessibility, Eye, Keyboard, Users } from "lucide-react";
 import Image from "next/image";
 import InitialSetup from "@/components/InitialSetup";
+import Link from "next/link";
 
 export default function Acessibilidade() {
     return (
@@ -167,6 +168,21 @@ export default function Acessibilidade() {
                                 Destaque visual de foco ajuda todos os usuários, principalmente quem depende de navegação por teclado.
                             </figcaption>
                         </figure>
+
+                        <p className="mt-4 text-sm text-black/70">
+                            Se você está montando o seu setup e quer um teclado que realmente eleve sua experiência —
+                            seja para programar, estudar ou criar — existe um modelo que combina conforto,
+                            precisão e durabilidade. É a escolha ideal para quem passa horas no computador
+                            e quer evitar dores, ganhar produtividade e ainda deixar a mesa mais bonita.
+                            <a
+                                href="https://amzn.to/4rGIe61"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ml-1 underline hover:text-black transition"
+                            >
+                                Ver detalhes do teclado.
+                            </a>
+                        </p>
                     </section>
 
                     {/* Seção 3 */}
@@ -359,9 +375,9 @@ export default function Acessibilidade() {
                     <nav className="bg-white/60 p-4 rounded-2xl border" aria-label="related-guides">
                         <h4 className="font-semibold">Guias Relacionados</h4>
                         <ul className="mt-3 space-y-2 text-sm">
-                            <li><a href="/pt/guias-tutoriais/performance" className="underline">Performance Front-end</a></li>
-                            <li><a href="/pt/guias-tutoriais/seo" className="underline">Fundamentos de SEO</a></li>
-                            <li><a href="/pt/guias-tutoriais/tailwind" className="underline">Padrões com Tailwind</a></li>
+                            <li><Link href="/pt/guias-tutoriais/performance" className="underline">Performance Front-end</Link></li>
+                            <li><Link href="/pt/guias-tutoriais/seo" className="underline">Fundamentos de SEO</Link></li>
+                            <li><Link href="/pt/guias-tutoriais/tailwind" className="underline">Padrões com Tailwind</Link></li>
                         </ul>
                     </nav>
                 </aside>

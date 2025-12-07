@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Accessibility as AccessibilityIcon, Eye, Keyboard, Users } from "lucide-react";
 import Image from "next/image";
 import InitialSetup from "@/components/InitialSetup";
+import Link from "next/link";
 
 export default function Accessibility() {
     return (
@@ -166,6 +167,23 @@ export default function Accessibility() {
                                 A visible focus indicator helps every user, especially those who rely on keyboard navigation.
                             </figcaption>
                         </figure>
+
+                        {/* Recommended keyboard CTA */}
+                        <p className="mt-4 text-sm text-black/70">
+                            If you're building your workspace and want a keyboard that truly enhances your experience —
+                            whether for coding, studying, or creating — there's a model that delivers comfort,
+                            precision, and long-lasting durability. It's the perfect choice for anyone who spends
+                            hours at the computer and wants to avoid strain, boost productivity, and upgrade
+                            the overall look of the desk.
+                            <a
+                                href="https://amzn.to/4rGIe61"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ml-1 underline hover:text-black transition"
+                            >
+                                See keyboard details.
+                            </a>
+                        </p>
                     </section>
 
                     {/* Section 3 */}
@@ -360,9 +378,9 @@ export default function Accessibility() {
                     <nav className="bg-white/60 p-4 rounded-2xl border" aria-label="related-guides">
                         <h4 className="font-semibold">Related Guides</h4>
                         <ul className="mt-3 space-y-2 text-sm">
-                            <li><a href="/en/guides-tutorials/performance" className="underline">Front-end Performance</a></li>
-                            <li><a href="/en/guides-tutorials/seo" className="underline">SEO Fundamentals</a></li>
-                            <li><a href="/en/guides-tutorials/tailwind" className="underline">Tailwind Patterns</a></li>
+                            <li><Link href="/en/guides-tutorials/performance" className="underline">Front-end Performance</Link></li>
+                            <li><Link href="/en/guides-tutorials/seo" className="underline">SEO Fundamentals</Link></li>
+                            <li><Link href="/en/guides-tutorials/tailwind" className="underline">Tailwind Patterns</Link></li>
                         </ul>
                     </nav>
                 </aside>

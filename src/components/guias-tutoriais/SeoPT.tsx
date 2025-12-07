@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Search, BarChart2, Target, Link as LinkIcon, TrendingUp } from "lucide-react";
 import InitialSetup from "@/components/InitialSetup";
+import Link from "next/link";
 
 export default function Seo() {
     return (
@@ -176,6 +177,21 @@ export default function Seo() {
                                 interpretando cada parte da página com clareza.
                             </figcaption>
                         </figure>
+
+                        <p className="mt-4 text-sm text-black/70">
+                            Se você ainda está nos primeiros passos e quer aprender na prática como estruturar páginas com
+                            HTML e CSS de forma clara, organizada e preparada para crescer, existe um material que aprofunda
+                            exatamente esses fundamentos essenciais. Ele mostra, de maneira orientada, como transformar
+                            conceitos básicos em páginas reais e bem estruturadas.
+                            <a
+                                href="https://go.hotmart.com/B103301958J?dp=1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ml-1 underline hover:text-black transition"
+                            >
+                                Explore o curso “Do zero ao HTML e CSS na criação de websites”.
+                            </a>
+                        </p>
                     </section>
 
                     {/* Seção 3 */}
@@ -365,19 +381,19 @@ export default function Seo() {
                         <h4 className="font-semibold">Guias Relacionados</h4>
                         <ul className="mt-3 space-y-2 text-sm">
                             <li>
-                                <a href="/pt/guias-tutoriais/acessibilidade" className="underline">
+                                <Link href="/pt/guias-tutoriais/acessibilidade" className="underline">
                                     Acessibilidade Web
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/pt/guias-tutoriais/performance" className="underline">
+                                <Link href="/pt/guias-tutoriais/performance" className="underline">
                                     Performance Front-end
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/pt/guias-tutoriais/tailwind" className="underline">
+                                <Link href="/pt/guias-tutoriais/tailwind" className="underline">
                                     Organização no Tailwind
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </nav>
