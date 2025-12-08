@@ -48,20 +48,31 @@ export default function ErrosSemanticaHtml() {
                     className="space-y-6"
                 >
                     <p>
-                        Apesar de parecer apenas um detalhe técnico, a semântica HTML define o verdadeiro
-                        significado de cada parte da sua página. Ela ajuda o navegador, o Google e tecnologias assistivas
-                        a entenderem o conteúdo — e isso afeta diretamente acessibilidade, SEO e até a manutenção do código.
+                        Mesmo parecendo apenas um detalhe técnico, a semântica HTML é o que dá <strong>significado real</strong> a cada parte da sua página. Ela orienta navegadores, mecanismos de busca e tecnologias assistivas a
+                        entenderem a estrutura do conteúdo — e isso influencia diretamente acessibilidade, SEO, leitura por
+                        crawlers, interpretação de contexto e até a experiência de quem desenvolve e mantém o projeto.
                     </p>
 
                     <p>
-                        O problema é que iniciantes acabam repetindo padrões confusos, usando divs para tudo e
-                        ignorando tags essenciais. Isso gera páginas desestruturadas, difíceis de navegar e mal avaliadas
-                        por mecanismos de busca.
+                        Quando a semântica é ignorada, surgem problemas invisíveis no início, mas devastadores ao longo do tempo.
+                        Muitos iniciantes acabam criando verdadeiras &quot;sopas de div,&quot; misturam headings fora de ordem, deixam de usar
+                        tags fundamentais como <strong>main</strong>, <strong>nav</strong>, <strong>article</strong> e <strong>section</strong>, ou então utilizam essas mesmas tags apenas para fins visuais — sem considerar sua
+                        função estrutural. Isso gera páginas confusas tanto para usuários quanto para ferramentas de rastreamento,
+                        reduz a qualidade de indexação e compromete a acessibilidade.
                     </p>
 
                     <p>
-                        Neste artigo, você vai aprender de forma clara os erros mais comuns e como corrigi-los com
-                        semântica moderna e consciente.
+                        Além disso, elementos como listas, tabelas e figuras são frequentemente ignorados ou usados de forma
+                        inadequada, o que prejudica clareza, dificulta a compreensão do conteúdo e elimina oportunidades de construir
+                        blocos com significado semântico forte. Pequenas escolhas erradas acumulam impacto até que a página inteira
+                        se torne difícil de navegar, difícil de manter e mal avaliada por buscadores.
+                    </p>
+
+                    <p>
+                        Neste artigo, você vai aprender — de forma simples, direta e sem complicação — quais são os erros mais
+                        comuns cometidos por quem está começando e como corrigi-los com semântica moderna, consciente e estratégica.
+                        Vamos analisar cada falha em detalhes e mostrar como transformar páginas frágeis e confusas em estruturas
+                        limpas, claras e bem organizadas.
                     </p>
                 </motion.section>
 
@@ -120,7 +131,7 @@ export default function ErrosSemanticaHtml() {
                     </h2>
 
                     <p>
-                        Headings criam a hierarquia lógica da página. Quando você “pula níveis”, leitores de tela
+                        Headings criam a hierarquia lógica da página. Quando você &quot;pula níveis&quot;, leitores de tela
                         e motores de busca interpretam que o conteúdo está quebrado.
                     </p>
 
@@ -184,7 +195,7 @@ export default function ErrosSemanticaHtml() {
                     className="space-y-8"
                 >
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                        ❌ 4. Usar section apenas para "dividir visualmente"
+                        ❌ 4. Usar section apenas para &quot;dividir visualmente&quot;
                     </h2>
 
                     <p>
@@ -264,14 +275,30 @@ export default function ErrosSemanticaHtml() {
                     </h2>
 
                     <p>
-                        A semântica HTML é uma das formas mais eficientes de melhorar SEO, acessibilidade e organização
-                        do seu código. Pequenas mudanças no uso das tags trazem grandes resultados e impactam diretamente
-                        na forma como usuários e motores de busca interpretam sua aplicação.
+                        A semântica HTML funciona como o mapa oficial da sua aplicação. Quando cada elemento é nomeado e estruturado
+                        corretamente, usuários, navegadores e ferramentas de busca conseguem entender o conteúdo com muito mais
+                        facilidade. Esse entendimento claro gera benefícios imediatos em SEO, acessibilidade, indexação e até na
+                        manutenção do próprio código.
                     </p>
 
                     <p>
-                        Quanto mais você domina semântica, mais profissionais e acessíveis se tornam suas páginas —
-                        e maiores as chances de destaque em SEO e aprovação em plataformas como Adsence.
+                        Aplicar semântica não é apenas uma questão técnica — é uma decisão estratégica. Tags bem escolhidas ajudam
+                        crawlers a identificar prioridades, permitem que leitores de tela interpretem o conteúdo com precisão e tornam
+                        a navegação muito mais lógica. O resultado? Páginas mais profissionais, inclusivas e preparadas para escalar.
+                    </p>
+
+                    <p>
+                        Além disso, quanto mais você domina a semântica, maior é sua capacidade de construir layouts claros, reduzir
+                        dependência de código desnecessário e evitar o famoso &quot;div soup.&quot; Isso impacta diretamente a performance,
+                        facilita revisões e colabora para que sua aplicação seja vista com bons olhos por mecanismos de análise
+                        como o Google, o Search Console e plataformas de monetização, incluindo Adsence.
+                    </p>
+
+                    <p>
+                        Em resumo: investir tempo em estudar e aplicar semântica é investir na qualidade geral do seu projeto.
+                        Pode parecer um detalhe pequeno, mas é justamente esse tipo de detalhe que separa um código amador de um
+                        código profissional — e abre portas para melhores resultados, melhores posições nos buscadores e uma
+                        experiência mais sólida para todos que acessam o seu site.
                     </p>
                 </motion.section>
 

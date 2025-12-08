@@ -51,16 +51,32 @@ export default function ResponsivenessTailwindContent() {
                     </div>
                 </motion.header>
 
-                {/* MOBILE FIRST */}
-                <motion.section className="space-y-6">
+                {/* MOBILE FIRST - ENGLISH */}
+                <motion.section className="space-y-8">
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-300 to-sky-300 bg-clip-text text-transparent">
-                        📱 Mobile First as a Philosophy
+                        📱 Mobile First as a philosophy
                     </h2>
 
                     <p>
-                        In Tailwind, everything begins with mobile. That's the default size.
-                        From there, you scale the layout as the screen grows.
-                        This keeps everything consistent, predictable, and easy to maintain.
+                        In Tailwind, the starting point is always mobile. This means that, by default,
+                        any class you apply will be used on the smallest screen sizes.
+                        From there, you simply add modifiers so the layout expands as the screen
+                        becomes larger. This way of thinking prevents layout breaks, creates natural
+                        fluidity across different devices, and reduces CSS complexity.
+                    </p>
+
+                    <p>
+                        The biggest advantage of this philosophy is that you never need to &quot;think backwards.&quot; You don’t design for huge screens first and then try to squeeze everything into
+                        a phone layout. Instead, you build the essential parts — clean and straightforward.
+                        Then you add only what is necessary for medium, large, and extra-large screens,
+                        ensuring clarity and predictability in your code.
+                    </p>
+
+                    <p>
+                        That’s why, when writing classes like <strong>md:</strong> or <strong>lg:</strong>,
+                        you’re essentially saying: &quot;keep the mobile style as the base and change it only
+                        when the screen gets larger.&quot; The result? More stable layouts, a consistent
+                        experience, and code that is much easier to maintain and evolve.
                     </p>
 
                     <motion.pre className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto">
@@ -71,11 +87,17 @@ export default function ResponsivenessTailwindContent() {
                         </code>
                     </motion.pre>
 
-                    <ul className="list-disc list-inside space-y-1">
-                        <li><strong>p-4</strong>: base (mobile)</li>
-                        <li><strong>md:p-8</strong>: medium screens</li>
-                        <li><strong>lg:p-12</strong>: large desktops</li>
+                    <ul className="list-disc list-inside space-y-2">
+                        <li><strong>p-4</strong>: default style (mobile)</li>
+                        <li><strong>md:p-8</strong>: applied only on medium screens and up</li>
+                        <li><strong>lg:p-12</strong>: applied only on large screens and wider</li>
                     </ul>
+
+                    <p>
+                        You can use this approach for anything: grids, spacing, typography, and even
+                        colors. With Mobile First, each step of expanding the layout is conscious
+                        and controlled — bringing clarity and preventing conflicting styles.
+                    </p>
                 </motion.section>
 
                 {/* RESPONSIVE ZONES */}
@@ -144,23 +166,64 @@ export default function ResponsivenessTailwindContent() {
                 </motion.section>
 
                 {/* BEST PRACTICES */}
-                <motion.section className="space-y-6">
+                <motion.section className="space-y-8">
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">
                         🎯 What Really Matters in Modern Responsiveness
                     </h2>
 
                     <p>
-                        Being responsive is not just “fitting on the screen” —
-                        it’s about visual balance, rhythm, hierarchy,
-                        and comfortable reading.
+                        Being responsive goes far beyond simply &quot;fitting on the screen.&quot; It’s about ensuring
+                        that every element has room to breathe, stays well-organized, and offers comfortable
+                        readability on any device. Responsiveness is about visual balance, rhythm between
+                        elements, clear hierarchy, and smart adaptation as space expands or shrinks.
                     </p>
 
-                    <ul className="list-disc list-inside space-y-1">
-                        <li>Proportional typographic scales</li>
-                        <li>Consistent spacing logic</li>
-                        <li>Avoid duplicating unnecessary styles</li>
-                        <li>Expanding is better than breaking the layout</li>
+                    <p>
+                        A good responsive design takes care of proportions, respects component scales,
+                        and prioritizes fluidity. Instead of manually adjusting everything for each screen,
+                        the idea is to create consistent rules that naturally work across various sizes.
+                        This reduces rework, avoids style conflicts, and keeps the visual identity coherent.
+                    </p>
+
+                    <p>
+                        In other words, modern responsiveness is not about patching the layout when it
+                        breaks — it’s about designing from the start so it can grow gracefully.
+                        The more predictable and modular the design, the easier it becomes to evolve
+                        the interface without compromising user experience.
+                    </p>
+
+                    <ul className="list-disc list-inside space-y-2">
+                        <li>
+                            <strong>Proportional typographic scales:</strong> fonts that grow progressively
+                            keep reading comfortable and prevent text from looking huge on mobile or tiny
+                            on desktop.
+                        </li>
+
+                        <li>
+                            <strong>Consistent spacing logic:</strong> using a clear spacing system avoids
+                            cramped or unbalanced layouts, creating visual rhythm between sections and
+                            components.
+                        </li>
+
+                        <li>
+                            <strong>Avoid duplicating unnecessary styles:</strong> the simpler the CSS,
+                            the easier it is to maintain. Reuse classes, rely on the mobile base, and
+                            override only what is essential.
+                        </li>
+
+                        <li>
+                            <strong>Expand rather than fix:</strong> think about how the layout grows,
+                            not how it &quot;breaks.&quot; It’s more efficient to define how each part expands
+                            than to create patches for when something goes out of place.
+                        </li>
                     </ul>
+
+                    <p>
+                        By combining these practices, you build interfaces that are more stable, flexible,
+                        and intuitive — ready for any resolution, whether a simple smartphone or an
+                        ultrawide monitor. Responsiveness becomes less of a technical challenge and more
+                        of a natural extension of the design.
+                    </p>
                 </motion.section>
 
                 {/* FULL EXAMPLE */}
@@ -207,18 +270,40 @@ export default function ResponsivenessTailwindContent() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.7 }}
-                    className="space-y-6 border-t pt-6"
+                    className="space-y-8 border-t pt-6"
                 >
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-300 to-sky-300 bg-clip-text text-transparent">
                         🏁 Conclusion
                     </h2>
 
                     <p>
-                        Responsiveness is about people — their habits, screens, and rhythms.
-                        With Tailwind, this process becomes light, fast, and intuitive.
-                        When you combine good organization, typography,
-                        and micro-animations, you create interfaces that feel pleasant
-                        on any device.
+                        Responsiveness is not just a technique — it's a way of understanding the user.
+                        Each person has their own rhythm, their own device, and their own way of browsing.
+                        When we embrace this idea, we begin building interfaces that adapt to real life,
+                        offering visual comfort, smooth transitions, and predictable behavior across all screens.
+                    </p>
+
+                    <p>
+                        With Tailwind, this process becomes simpler and more natural. The mobile-first
+                        philosophy, the ease of creating harmonic scales, and the clarity in class
+                        organization allow you to craft layouts that expand gracefully as the available
+                        space grows. This reduces decision fatigue, prevents rework, and keeps the focus
+                        on the user's experience.
+                    </p>
+
+                    <p>
+                        When you combine solid spacing practices, well-planned typography, and subtle
+                        micro-animations, you get an interface that not only works but also feels
+                        carefully crafted. The user perceives that every part was designed to support
+                        their way of navigating — whether they're on a phone while moving or on a large
+                        desktop screen at home.
+                    </p>
+
+                    <p>
+                        In short: modern responsiveness is about creating experiences that adapt to
+                        people — not forcing people to adapt to the interface. With the right tools
+                        and attention to detail, you build products that are more human, accessible,
+                        and pleasant to use in any context.
                     </p>
                 </motion.section>
 

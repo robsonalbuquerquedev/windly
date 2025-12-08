@@ -48,17 +48,34 @@ export default function ArquiteturaProjetoContent() {
                     className="space-y-6"
                 >
                     <p>
-                        Construir um projeto moderno sem uma boa arquitetura é como montar um prédio sem planta: ele até
-                        pode ficar de pé, mas qualquer reforma vira uma dor de cabeça. Em desenvolvimento, a arquitetura
-                        organiza o fluxo do código, define padrões e torna a manutenção previsível, mesmo quando o projeto
-                        cresce.
+                        Construir um projeto moderno sem uma boa arquitetura é como erguer um prédio sem uma planta clara:
+                        ele até pode parecer estável no começo, mas qualquer expansão, ajuste ou reparo vira um pesadelo.
+                        No desenvolvimento de software, a arquitetura define o caminho que o código segue, organiza o fluxo
+                        das funcionalidades e cria uma base previsível para que o projeto continue saudável conforme cresce
+                        em tamanho, complexidade e colaboradores.
                     </p>
 
                     <p>
-                        Neste artigo, vamos mergulhar em como criar uma arquitetura sólida, modular e escalável para projetos
-                        reais, usando princípios aplicados em produção. Aqui você encontrará desde organização por
-                        responsabilidades, estrutura de pastas, padrões adotados por empresas, e exemplos completos
-                        aplicados em projetos Next.js.
+                        Uma arquitetura bem pensada elimina improvisos, reduz decisões desconexas e evita que o código vire
+                        uma massa confusa de arquivos espalhados. Ela orienta como componentes devem se comunicar, como regras
+                        de negócio são centralizadas, como dados transitam entre camadas e como cada parte do sistema deve —
+                        e não deve — se relacionar. Isso é essencial para manter o projeto flexível, escalável e pronto para
+                        receber novas funcionalidades sem causar efeitos colaterais imprevisíveis.
+                    </p>
+
+                    <p>
+                        Ao longo deste artigo, vamos explorar como construir uma arquitetura moderna e realmente útil para
+                        projetos do mundo real. Você vai aprender desde os princípios fundamentais usados em produção até
+                        padrões amplamente adotados em empresas, como organização por responsabilidades, estruturas modulares,
+                        separação por domínio e aplicação de camadas (UI, Domain e Infra). Além disso, veremos exemplos
+                        práticos aplicados em projetos Next.js, mostrando como essas ideias funcionam na vida real — e não
+                        apenas na teoria.
+                    </p>
+
+                    <p>
+                        Nosso objetivo é transformar a forma como você pensa e projeta seus aplicativos. Ao final, você terá
+                        uma visão clara de como organizar melhor seu código, reduzir retrabalho, facilitar manutenção e criar
+                        projetos preparados para crescer com segurança, consistência e elegância.
                     </p>
                 </motion.section>
 
@@ -74,18 +91,39 @@ export default function ArquiteturaProjetoContent() {
                     </h2>
 
                     <p>
-                        Arquitetura não é só estética. Ela é uma bússola que guia como o código nasce, cresce e permanece
-                        saudável ao longo do tempo. Em times, ela reduz atrito entre desenvolvedores, facilita onboarding e
-                        evita decisões aleatórias que geram código acoplado e difícil de estender.
+                        Arquitetura não é sobre enfeitar o código — é sobre dar direção. Ela funciona como o mapa que
+                        orienta cada decisão do projeto, desde a estrutura de pastas até como os componentes se comunicam,
+                        como dados circulam e como o time evolui o código no futuro. Quando bem planejada, evita o caos,
+                        reduz divergências e cria uma base sólida para que o projeto cresça com segurança e sem dores de cabeça.
+                    </p>
+
+                    <p>
+                        Em equipes, uma boa arquitetura elimina suposições, padroniza decisões e diminui o tempo que novos
+                        desenvolvedores levam para entender o sistema. Em projetos solo, ela evita retrabalhos, organiza fluxos
+                        complexos e impede que o código vire uma colcha de retalhos difícil de interpretar depois de alguns meses.
+                    </p>
+
+                    <p>
+                        Com uma arquitetura consistente, as funcionalidades fluem de forma previsível, bugs ficam mais fáceis de
+                        rastrear e cada parte do sistema sabe exatamente o que deve — e o que não deve — fazer. O resultado é
+                        um produto mais rápido, mais estável e muito mais fácil de manter.
                     </p>
 
                     <ul className="list-disc pl-6 space-y-2">
-                        <li>Facilita manutenção e escalabilidade.</li>
-                        <li>Reduz retrabalho e duplicação de código.</li>
-                        <li>Melhora a clareza entre camadas e responsabilidades.</li>
-                        <li>Permite a criação de componentes e módulos independentes.</li>
-                        <li>Ajuda no SEO, performance, cache e organização da UI.</li>
+                        <li>Facilita manutenção, evolução contínua e escalabilidade real.</li>
+                        <li>Reduz retrabalho, elimina duplicações e melhora a consistência.</li>
+                        <li>Clarifica fronteiras entre camadas, domínios e responsabilidades.</li>
+                        <li>Permite criar módulos, hooks, serviços e componentes verdadeiramente independentes.</li>
+                        <li>Melhora performance, organização da UI, controle de cache e até SEO.</li>
+                        <li>Aumenta a vida útil do projeto e diminui o custo de mudanças futuras.</li>
+                        <li>Ajuda o time a tomar decisões mais rápidas e alinhadas com os mesmos princípios.</li>
                     </ul>
+
+                    <p>
+                        No fim das contas, arquitetura é sobre sustentabilidade. É construir hoje pensando no amanhã —
+                        criando um ambiente onde o projeto não só funciona, mas também evolui com elegância e sem fricção,
+                        seja com uma pessoa codando ou com uma equipe inteira colaborando.
+                    </p>
                 </motion.section>
 
                 {/* Estruturas e padrões modernos */}
@@ -223,13 +261,38 @@ export async function loginService(credentials) {
                     </h2>
 
                     <p>
-                        Arquitetura não é um luxo: é a fundação de todo projeto que pretende crescer sem virar uma bagunça.
-                        Ao adotar organização modular, camadas independentes, padronização e separação por domínios, você
-                        cria sistemas escaláveis, fáceis de manter e prontos para produção.
+                        Arquitetura não é um detalhe opcional, nem um luxo reservado a projetos gigantes. Ela é a base que
+                        permite que qualquer aplicação — pequena, média ou grande — cresça com consistência, segurança e
+                        previsibilidade. Sem uma estrutura clara, cada nova funcionalidade introduz riscos; cada ajuste
+                        vira um processo demorado; e o código se torna cada vez mais difícil de entender, testar e manter.
                     </p>
 
                     <p>
-                        Use a arquitetura como bússola. Seu código — e seu futuro — agradecem.
+                        Ao aplicar princípios sólidos como modularização, separação por responsabilidades, padrões bem
+                        definidos, camadas independentes e organização orientada a domínio, você transforma seu projeto em
+                        um ecossistema sustentável. Isso reduz retrabalho, facilita escalabilidade, diminui acoplamento,
+                        melhora performance e torna seu código muito mais preparado para lidar com mudanças — desde as
+                        pequenas correções até grandes evoluções estruturais.
+                    </p>
+
+                    <p>
+                        Uma boa arquitetura também cria alinhamento entre membros do time, acelera onboarding,
+                        diminui divergências técnicas e evita interpretações diferentes do mesmo problema.
+                        Além disso, quando bem aplicada, ela melhora diretamente fatores como caching, SSR,
+                        rotas, carregamento, organização da UI e até SEO em projetos modernos, especialmente em
+                        frameworks como Next.js.
+                    </p>
+
+                    <p>
+                        Se existe uma verdade universal no desenvolvimento é esta: projetos estruturados de forma
+                        inteligente sobrevivem e evoluem; projetos improvisados acumulam dívidas e travam. Escolher
+                        uma arquitetura consistente é uma decisão estratégica que afeta o presente, o futuro e até
+                        a longevidade do código.
+                    </p>
+
+                    <p>
+                        Use a arquitetura como bússola. Ela mantém o projeto no rumo certo hoje — e salva você de
+                        dores de cabeça amanhã.
                     </p>
                 </motion.section>
 

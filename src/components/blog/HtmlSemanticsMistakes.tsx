@@ -47,21 +47,30 @@ export default function HtmlSemanticsMistakes() {
                     className="space-y-6"
                 >
                     <p>
-                        Although it may seem like a small technical detail, HTML semantics define
-                        the true meaning of each part of your page. It helps the browser, Google,
-                        and assistive technologies understand the content — and this directly
-                        affects accessibility, SEO, and even code maintenance.
+                        Even though it may seem like just a technical detail, HTML semantics is what gives <strong>real meaning</strong> to every part of your page. It guides browsers, search engines, and assistive
+                        technologies to understand the structure of your content — directly influencing accessibility, SEO,
+                        crawler interpretation, contextual understanding, and even the experience of developers maintaining the project.
                     </p>
 
                     <p>
-                        The problem is that beginners often repeat confusing patterns, use divs
-                        for everything, and ignore essential tags. This results in unstructured
-                        pages that are hard to navigate and poorly evaluated by search engines.
+                        When semantics is ignored, problems appear quietly at first but become damaging over time. Many beginners
+                        end up creating real &quot;div soups,&quot; mix heading levels out of order, skip essential tags like
+                        <strong> main</strong>, <strong>nav</strong>, <strong>article</strong>, and <strong>section</strong>, or use
+                        these tags only for visual purposes — without considering their structural role. This results in pages that
+                        are confusing for users and crawlers, lowering indexing quality and harming accessibility.
                     </p>
 
                     <p>
-                        In this article, you'll learn clearly the most common mistakes and how to
-                        fix them using modern and meaningful semantics.
+                        In addition, elements such as lists, tables, and figures are often ignored or used incorrectly, which reduces
+                        clarity, makes content harder to understand, and removes opportunities to build meaningful semantic blocks.
+                        Small mistakes accumulate over time until the entire page becomes hard to navigate, difficult to maintain,
+                        and poorly evaluated by search engines.
+                    </p>
+
+                    <p>
+                        In this article, you will learn — in a simple and straightforward way — the most common mistakes made by
+                        beginners and how to fix them using modern, conscious, and strategic semantics. We will break down each flaw
+                        and show how to transform fragile and confusing pages into clean, clear, and well-structured layouts.
                     </p>
                 </motion.section>
 
@@ -120,7 +129,7 @@ export default function HtmlSemanticsMistakes() {
                     </h2>
 
                     <p>
-                        Headings create the logical hierarchy of the page. When you “skip levels,”
+                        Headings create the logical hierarchy of the page. When you &quot;skip levels,&quot;
                         screen readers and search engines interpret that the structure is broken.
                     </p>
 
@@ -128,14 +137,14 @@ export default function HtmlSemanticsMistakes() {
                         <h3 className="text-2xl font-semibold">How many beginners do it:</h3>
 
                         <motion.pre className="p-4 rounded-xl bg-black/30 border border-white/10 overflow-x-auto text-sm">
-{`<h1>Main title</h1>
+                            {`<h1>Main title</h1>
 <h4>Important subsection</h4>`}
                         </motion.pre>
 
                         <h3 className="text-2xl font-semibold">How it should be:</h3>
 
                         <motion.pre className="p-4 rounded-xl bg-black/30 border border-white/10 overflow-x-auto text-sm">
-{`<h1>Main title</h1>
+                            {`<h1>Main title</h1>
 <h2>Important subsection</h2>`}
                         </motion.pre>
                     </div>
@@ -166,7 +175,7 @@ export default function HtmlSemanticsMistakes() {
                         </ul>
 
                         <motion.pre className="p-4 rounded-xl bg-black/30 border border-white/10 overflow-x-auto text-sm">
-{`<!-- RIGHT -->
+                            {`<!-- RIGHT -->
 <main>
   <article>
     <h1>Complete guide to HTML semantics</h1>
@@ -184,7 +193,7 @@ export default function HtmlSemanticsMistakes() {
                     className="space-y-8"
                 >
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                        ❌ 4. Using section just to “visually divide” content
+                        ❌ 4. Using section just to &quot;visually divide&quot; content
                     </h2>
 
                     <p>
@@ -194,14 +203,14 @@ export default function HtmlSemanticsMistakes() {
 
                     <div className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm shadow-lg space-y-6">
                         <motion.pre className="p-4 rounded-xl bg-black/30 border border-white/10 overflow-x-auto text-sm">
-{`<!-- WRONG -->
+                            {`<!-- WRONG -->
 <section class="mb-10">
   <div>Random text without a title</div>
 </section>`}
                         </motion.pre>
 
                         <motion.pre className="p-4 rounded-xl bg-black/30 border border-white/10 overflow-x-auto text-sm">
-{`<!-- RIGHT -->
+                            {`<!-- RIGHT -->
 <section>
   <h2>About the project</h2>
   <p>This block has real meaning.</p>
@@ -233,12 +242,12 @@ export default function HtmlSemanticsMistakes() {
                     </ul>
 
                     <motion.pre className="p-4 rounded-xl bg-black/30 border border-white/10 overflow-x-auto text-sm">
-{`<!-- WRONG -->
+                        {`<!-- WRONG -->
 <img src="/banner.png">`}
                     </motion.pre>
 
                     <motion.pre className="p-4 rounded-xl bg-black/30 border border-white/10 overflow-x-auto text-sm">
-{`<!-- RIGHT -->
+                        {`<!-- RIGHT -->
 <img src="/banner.png" alt="Promotional banner for XPTO event">`}
                     </motion.pre>
                 </motion.section>
@@ -255,15 +264,29 @@ export default function HtmlSemanticsMistakes() {
                     </h2>
 
                     <p>
-                        HTML semantics are one of the most effective ways to improve SEO,
-                        accessibility, and code organization. Small improvements can create
-                        meaningful impact on how users and search engines understand your page.
+                        HTML semantics works as the official map of your application. When each element is properly named and structured,
+                        users, browsers, and search engines can understand the content far more easily. This clearer interpretation
+                        generates immediate benefits for SEO, accessibility, indexing, and even long-term code maintenance.
                     </p>
 
                     <p>
-                        The more you master semantics, the more professional, accessible, and
-                        optimized your pages become — increasing your chances of ranking well
-                        and succeeding with platforms like AdSense.
+                        Applying semantics is not just a technical decision — it's a strategic one. Well-chosen tags help crawlers
+                        identify priorities, allow screen readers to interpret content accurately, and make navigation more logical.
+                        The result? More professional, inclusive pages that are ready to scale.
+                    </p>
+
+                    <p>
+                        In addition, the more you master semantics, the better your ability to build clean layouts, reduce unnecessary
+                        code, and avoid the notorious &quot;div soup.&quot; This directly impacts performance, simplifies reviews, and helps your
+                        application be seen positively by analysis tools such as Google Search Console and monetization platforms
+                        including AdSense.
+                    </p>
+
+                    <p>
+                        In summary: investing time in learning and applying semantics is investing in the overall quality of your
+                        project. It may look like a small detail, but it’s exactly the kind of detail that separates amateur code from
+                        professional code — opening doors to better results, higher rankings, and a more solid experience for everyone
+                        who visits your website.
                     </p>
                 </motion.section>
 

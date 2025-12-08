@@ -48,21 +48,38 @@ export default function ProjectArchitectureContent() {
                     className="space-y-6"
                 >
                     <p>
-                        Building a modern project without a good architecture is like constructing a
-                        building without blueprints: it might stand, but any renovation becomes a
-                        headache. In development, architecture organizes the project flow, defines
-                        patterns, and keeps maintenance predictable even as the project grows.
+                        Building a modern project without a solid architecture is like constructing a building without
+                        a clear blueprint: it might stand at first, but any expansion, adjustment, or renovation quickly
+                        becomes a nightmare. In software development, architecture defines the path your code follows,
+                        organizes how features flow, and creates a predictable foundation that keeps the project healthy
+                        as it grows in size, complexity, and contributors.
                     </p>
 
                     <p>
-                        In this article, we dive into how to create a solid, modular, and scalable
-                        architecture for real-world projects. You’ll learn about folder structure,
-                        responsibility separation, company-adopted standards, and complete examples
-                        applied in Next.js projects.
+                        A well-designed architecture eliminates guesswork, reduces scattered decisions, and prevents your
+                        codebase from turning into a messy collection of disconnected files. It guides how components should
+                        communicate, how business logic is centralized, how data moves between layers, and how each part of
+                        the system should — and should not — interact. This is essential to keeping the project flexible,
+                        scalable, and ready to receive new features without causing unpredictable side effects.
+                    </p>
+
+                    <p>
+                        Throughout this article, we’ll explore how to build a modern and truly effective architecture for
+                        real-world projects. You’ll learn everything from the fundamental principles used in production to
+                        widely adopted patterns in companies — such as responsibility-based organization, modular folder
+                        structures, domain separation, and layered architecture (UI, Domain, and Infra). We’ll also walk
+                        through practical examples applied to Next.js projects, showing how these ideas work in real life
+                        — not just in theory.
+                    </p>
+
+                    <p>
+                        Our goal is to reshape the way you think about and design your applications. By the end, you’ll
+                        have a clear understanding of how to structure your code, reduce rework, simplify maintenance,
+                        and create projects that are ready to grow with safety, consistency, and elegance.
                     </p>
                 </motion.section>
 
-                {/* Why architecture matters */}
+                {/* Why project architecture matters */}
                 <motion.section
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -70,23 +87,43 @@ export default function ProjectArchitectureContent() {
                     className="space-y-6"
                 >
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-300 to-sky-300 bg-clip-text text-transparent">
-                        🧠 Why project architecture matters
+                        🧠 Why does project architecture matter?
                     </h2>
 
                     <p>
-                        Architecture is not just aesthetics. It’s the compass that guides how the
-                        code is created, grows, and stays healthy over time. In teams, it reduces
-                        friction between developers, speeds up onboarding, and avoids random
-                        decisions that lead to tightly coupled, hard-to-extend code.
+                        Architecture isn’t about decorating code — it’s about giving direction. It works as the map that
+                        guides every decision in the project, from folder structure to how components communicate,
+                        how data flows, and how the team evolves the code over time. When well planned, it prevents chaos,
+                        reduces unnecessary friction, and builds a solid foundation for the project to grow safely and without headaches.
+                    </p>
+
+                    <p>
+                        In teams, good architecture removes guesswork, standardizes decisions, and shortens the time new
+                        developers need to understand the system. In solo projects, it prevents rework, organizes complex flows,
+                        and keeps the code from turning into a patchwork that becomes impossible to understand after a few months.
+                    </p>
+
+                    <p>
+                        With a consistent architecture, features evolve predictably, bugs become easier to track, and each part
+                        of the system knows exactly what it should — and shouldn’t — do. The result is a faster, more stable,
+                        and far easier-to-maintain product.
                     </p>
 
                     <ul className="list-disc pl-6 space-y-2">
-                        <li>Facilitates maintenance and scalability.</li>
-                        <li>Reduces rework and duplicated code.</li>
-                        <li>Improves clarity between layers and responsibilities.</li>
-                        <li>Enables independent modules and components.</li>
-                        <li>Helps with SEO, performance, caching, and UI organization.</li>
+                        <li>Makes maintenance, continuous evolution, and real scalability easier.</li>
+                        <li>Reduces rework, eliminates duplication, and improves consistency.</li>
+                        <li>Clarifies boundaries between layers, domains, and responsibilities.</li>
+                        <li>Enables the creation of truly independent modules, hooks, services, and components.</li>
+                        <li>Improves performance, UI organization, caching strategy, and even SEO.</li>
+                        <li>Extends the lifespan of the project and lowers the cost of future changes.</li>
+                        <li>Helps teams make faster decisions aligned with the same principles.</li>
                     </ul>
+
+                    <p>
+                        At the end of the day, architecture is about sustainability. It’s building today with tomorrow in mind —
+                        creating an environment where the project not only works, but evolves with elegance and without friction,
+                        whether maintained by a single developer or a full team.
+                    </p>
                 </motion.section>
 
                 {/* Modern structures */}
@@ -217,13 +254,37 @@ export async function loginService(credentials) {
                     </h2>
 
                     <p>
-                        Architecture is not a luxury — it’s the foundation of every project that
-                        intends to grow without becoming a mess. By adopting modular organization,
-                        independent layers, standardization, and domain separation, you build
-                        scalable, maintainable, production-ready systems.
+                        Architecture is not an optional detail or a luxury reserved for huge projects. It is the foundation
+                        that allows any application — small, medium, or large — to grow with consistency, safety, and
+                        predictability. Without a clear structure, every new feature introduces risks; every adjustment
+                        becomes a slow process; and the code gradually becomes harder to understand, test, and maintain.
                     </p>
 
-                    <p>Use architecture as your compass. Your code — and your future — will thank you.</p>
+                    <p>
+                        By applying solid principles such as modularization, separation of responsibilities, well-defined
+                        patterns, independent layers, and domain-oriented organization, you transform your project into a
+                        sustainable ecosystem. This reduces rework, improves scalability, decreases coupling, enhances
+                        performance, and prepares the code to handle changes — from small fixes to major structural
+                        evolutions.
+                    </p>
+
+                    <p>
+                        Good architecture also creates alignment among team members, speeds up onboarding,
+                        reduces technical disagreements, and avoids different interpretations of the same problem.
+                        Additionally, when properly applied, it directly improves areas such as caching, SSR, routing,
+                        loading, UI organization, and even SEO in modern projects, especially in frameworks like Next.js.
+                    </p>
+
+                    <p>
+                        If there is one universal truth in development, it is this: well-structured projects survive and evolve;
+                        improvised ones accumulate debt and eventually stall. Choosing a consistent architecture is a
+                        strategic decision that impacts the present, the future, and the longevity of your code.
+                    </p>
+
+                    <p>
+                        Use architecture as your compass. It keeps the project on the right path today — and saves you
+                        from headaches tomorrow.
+                    </p>
                 </motion.section>
 
                 {/* Navigation */}

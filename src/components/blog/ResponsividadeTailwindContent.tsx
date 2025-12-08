@@ -50,20 +50,34 @@ export default function ResponsividadeTailwindContent() {
                 </motion.header>
 
                 {/* MOBILE FIRST */}
-                <motion.section className="space-y-6">
+                <motion.section className="space-y-8">
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-300 to-sky-300 bg-clip-text text-transparent">
                         📱 Mobile First como filosofia
                     </h2>
 
                     <p>
-                        Tudo no Tailwind nasce para o mobile. Esse é o tamanho padrão.
-                        A partir dele, aumentamos o layout conforme a tela cresce.
-                        Isso deixa tudo mais consistente, previsível e fácil de manter.
+                        Em Tailwind, o ponto de partida é sempre o mobile. Isso significa que, por padrão,
+                        qualquer classe que você aplicar será usada nos menores tamanhos de tela.
+                        Depois disso, você só adiciona modificadores para que o layout cresça conforme
+                        o espaço aumenta. Essa forma de pensar evita quebra de layout, cria fluidez
+                        natural entre diferentes dispositivos e reduz a complexidade do CSS.
                     </p>
 
-                    <motion.pre
-                        className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto"
-                    >
+                    <p>
+                        O grande benefício dessa filosofia é que você nunca precisa &quot;pensar ao contrário.&quot; Você não cria primeiro para telas enormes para só depois tentar encaixar tudo no
+                        celular. Em vez disso, você constrói o essencial, limpo e direto. Depois,
+                        adiciona apenas o que for necessário para telas médias, grandes e extragrandes —
+                        garantindo ordem e previsibilidade no código.
+                    </p>
+
+                    <p>
+                        Por isso, ao escrever classes como <strong>md:</strong> ou <strong>lg:</strong>,
+                        você está dizendo: &quot;mantenha o estilo mobile como base e altere apenas quando
+                        a tela for maior.&quot; O resultado? Layouts mais estáveis, uma experiência consistente
+                        e um código muito mais fácil de manter e evoluir.
+                    </p>
+
+                    <motion.pre className="rounded-xl p-4 bg-black/30 border border-white/10 overflow-x-auto">
                         <code className="language-html text-sm">
                             {`<div className="p-4 md:p-8 lg:p-12 bg-blue-500 text-white">
   Responsive content
@@ -71,11 +85,17 @@ export default function ResponsividadeTailwindContent() {
                         </code>
                     </motion.pre>
 
-                    <ul className="list-disc list-inside space-y-1">
-                        <li><strong>p-4</strong>: base (mobile)</li>
-                        <li><strong>md:p-8</strong>: telas médias</li>
-                        <li><strong>lg:p-12</strong>: desktops grandes</li>
+                    <ul className="list-disc list-inside space-y-2">
+                        <li><strong>p-4</strong>: estilo padrão (mobile)</li>
+                        <li><strong>md:p-8</strong>: aplicado somente em telas médias ou maiores</li>
+                        <li><strong>lg:p-12</strong>: aplicado apenas quando a tela já é bem ampla</li>
                     </ul>
+
+                    <p>
+                        Você pode aplicar isso em qualquer coisa: grids, espaçamentos, tipografia e até
+                        cores. Com o Mobile First, cada etapa de ampliação do layout é consciente e
+                        controlada — o que traz clareza e evita estilos conflitantes.
+                    </p>
                 </motion.section>
 
                 {/* ZONAS RESPONSIVAS */}
@@ -146,22 +166,65 @@ export default function ResponsividadeTailwindContent() {
                 </motion.section>
 
                 {/* BOAS PRÁTICAS */}
-                <motion.section className="space-y-6">
+                <motion.section className="space-y-8">
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">
                         🎯 O que realmente importa na responsividade moderna
                     </h2>
 
                     <p>
-                        Ser responsivo não é apenas “caber na tela”.
-                        É sobre equilíbrio visual, ritmo, hierarquia e leitura confortável.
+                        Ser responsivo vai muito além de simplesmente &quot;caber na tela.&quot; É garantir que cada
+                        elemento respire, se organize bem e ofereça uma leitura confortável em qualquer
+                        dispositivo. Responsividade é sobre equilíbrio visual, ritmo entre elementos,
+                        hierarquia clara e adaptação inteligente conforme o espaço aumenta ou diminui.
                     </p>
 
-                    <ul className="list-disc list-inside space-y-1">
-                        <li>Escalas tipográficas proporcionais</li>
-                        <li>Espaçamento com lógica consistente</li>
-                        <li>Evite duplicar estilos desnecessariamente</li>
-                        <li>Expandir é melhor do que quebrar o layout</li>
+                    <p>
+                        Um bom design responsivo cuida das proporções, respeita a escala dos componentes
+                        e prioriza a fluidez. Em vez de tentar ajustar tudo manualmente para cada tela,
+                        a ideia é criar regras consistentes que funcionam naturalmente em vários tamanhos.
+                        Isso reduz retrabalho, evita conflitos entre estilos e mantém a identidade visual
+                        sempre coerente.
+                    </p>
+
+                    <p>
+                        Em outras palavras: responsividade moderna não se resume a remendar o layout
+                        quando ele quebra — mas sim a projetar desde o início para que ele cresça
+                        com elegância. Quanto mais previsível e modular o design, mais fácil será
+                        evoluir a interface sem comprometer a experiência do usuário.
+                    </p>
+
+                    <ul className="list-disc list-inside space-y-2">
+                        <li>
+                            <strong>Escalas tipográficas proporcionais:</strong> fontes que aumentam de
+                            forma progressiva mantêm a leitura agradável e evitam que textos pareçam
+                            enormes no mobile ou minúsculos no desktop.
+                        </li>
+
+                        <li>
+                            <strong>Espaçamento com lógica consistente:</strong> usar um sistema de spacing
+                            claro evita layouts apertados ou desbalanceados, criando ritmo visual entre
+                            seções e componentes.
+                        </li>
+
+                        <li>
+                            <strong>Evite duplicar estilos desnecessariamente:</strong> quanto mais
+                            simples o CSS, mais fácil manter. Reaproveite classes, confie na base mobile
+                            e sobrescreva apenas o essencial.
+                        </li>
+
+                        <li>
+                            <strong>Expandir é melhor do que quebrar:</strong> pense em como o layout
+                            cresce, e não em como ele &quot;desmonta.&quot; É mais eficiente definir como cada
+                            parte se amplia do que criar remendos para quando algo sai do lugar.
+                        </li>
                     </ul>
+
+                    <p>
+                        Ao unir essas práticas, você cria interfaces mais estáveis, flexíveis
+                        e intuitivas — prontas para qualquer resolução, seja um celular simples
+                        ou um monitor ultrawide. Responsividade deixa de ser um desafio técnico
+                        e passa a ser uma extensão natural do design.
+                    </p>
                 </motion.section>
 
                 {/* EXEMPLO COMPLETO */}
@@ -214,20 +277,44 @@ export default function ResponsividadeTailwindContent() {
                 />
 
                 {/* CONCLUSÃO */}
-                <motion.section initial={{ opacity: 0 }}
+                <motion.section
+                    initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.7 }}
-                    className="space-y-6 border-t pt-6">
-
+                    className="space-y-8 border-t pt-6"
+                >
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-300 to-sky-300 bg-clip-text text-transparent">
                         🏁 Conclusão
                     </h2>
 
                     <p>
-                        Responsividade é sobre pessoas: seus ritmos, telas e hábitos.
-                        Com Tailwind, esse processo fica leve, rápido e intuitivo.
-                        Quando você une boa organização, tipografia e microanimações,
-                        cria interfaces agradáveis de navegar em qualquer dispositivo.
+                        Responsividade não é apenas uma técnica — é uma forma de enxergar o usuário.
+                        Cada pessoa tem um ritmo, um dispositivo diferente e um jeito próprio de navegar.
+                        Quando entendemos isso, passamos a construir interfaces que se moldam à vida
+                        real, oferecendo conforto visual, fluidez e previsibilidade em qualquer tela.
+                    </p>
+
+                    <p>
+                        Com Tailwind, esse caminho se torna mais simples e natural. A filosofia mobile
+                        first, a facilidade de criar escalas harmônicas e a clareza na organização das
+                        classes permitem que você desenvolva layouts que crescem com elegância à medida
+                        que o espaço aumenta. Isso reduz o peso das decisões, evita retrabalho
+                        e mantém o foco na experiência do usuário.
+                    </p>
+
+                    <p>
+                        Quando você combina boas práticas de espaçamento, tipografia bem planejada e
+                        microanimações sutis, o resultado é uma interface que não apenas funciona,
+                        mas que também transmite cuidado. O usuário sente que cada parte foi pensada
+                        para acolher sua forma de navegar, seja no celular em movimento ou no monitor
+                        grande de casa.
+                    </p>
+
+                    <p>
+                        Em resumo: responsividade moderna é sobre criar experiências que se ajustam
+                        às pessoas — e não forçar as pessoas a se ajustarem à interface. Com as
+                        ferramentas certas e um olhar atento para detalhes, você constrói produtos
+                        mais humanos, acessíveis e agradáveis de usar em qualquer contexto.
                     </p>
                 </motion.section>
 

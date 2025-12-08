@@ -48,15 +48,31 @@ export default function SeoNextjsTailwindContentPT() {
                     className="space-y-6"
                 >
                     <p>
-                        Quando pensamos em SEO, muitas vezes lembramos apenas de palavras-chave e títulos bem escritos.
-                        Mas no mundo moderno, especialmente usando Next.js, grande parte do SEO eficiente nasce da
-                        estrutura correta do código — e é aqui que entram metadata, semântica e até Tailwind.
+                        Quando pensamos em SEO, normalmente lembramos de palavras-chave, títulos chamativos e boas
+                        descrições. Porém, no cenário atual — principalmente ao trabalhar com Next.js — a base do SEO
+                        eficiente está muito mais ligada à forma como a sua página é construída. Isso inclui estrutura,
+                        semântica, organização visual e o uso inteligente de recursos nativos como metadata e blocos
+                        de informação estruturada.
                     </p>
 
                     <p>
-                        Neste artigo, você vai entender como montar páginas otimizadas, rápidas e rastreáveis usando o
-                        poder do App Router, tags semânticas alinhadas com Tailwind e blocos organizados de JSON-LD
-                        para impulsionar o ranqueamento da sua aplicação.
+                        Com o App Router, você deixa de focar apenas no conteúdo e passa a ter controle fino sobre como
+                        cada detalhe técnico é entregue aos motores de busca. Quando combinamos isso com marcação
+                        semântica correta, integração com Tailwind e padrões como JSON-LD, a página não só fica mais
+                        fácil de rastrear, mas também ganha contexto — algo essencial para conquistar resultados
+                        enriquecidos nos buscadores.
+                    </p>
+
+                    <p>
+                        Ao longo deste artigo, você vai aprender a configurar metadata do jeito certo, implementar informações estruturadas para aumentar as chances de rich results, aplicar semântica moderna mesmo usando utilitários do Tailwind e, no final, montar um exemplo completo que mostra tudo isso funcionando em uma página real.
+                    </p>
+
+                    <p>
+                        SEO deixou de ser apenas uma questão de &quot;escrever bem.&quot; Hoje, ele é profundamente influenciado
+                        pela arquitetura da sua aplicação, pela forma como o Next.js prepara o HTML para o crawler e
+                        até pela maneira que seus componentes são organizados. Quando todas essas camadas trabalham
+                        juntas, sua aplicação ganha velocidade, precisão no ranqueamento e uma estrutura forte o
+                        suficiente para crescer de forma saudável.
                     </p>
                 </motion.section>
 
@@ -72,17 +88,34 @@ export default function SeoNextjsTailwindContentPT() {
                     </h2>
 
                     <p>
-                        Diferente de SPAs tradicionais, Next.js trabalha com renderização híbrida. Isso significa que
-                        você tem mais controle sobre como cada página é entregue ao Google, aumentando a precisão com
-                        que seus dados são rastreados.
+                        Diferente das SPAs tradicionais, onde grande parte do conteúdo só existe depois que o JavaScript carrega,
+                        o Next.js trabalha com um modelo de <strong>renderização híbrida</strong>. Isso significa que você pode
+                        decidir como cada página chega ao navegador — totalmente montada no servidor, pré-gerada ou renderizada
+                        sob demanda. Na prática, essa flexibilidade aumenta muito a precisão com que o Google interpreta
+                        suas páginas e melhora a forma como elas são indexadas.
+                    </p>
+
+                    <p>
+                        Em vez de depender totalmente do cliente para montar o conteúdo, o Next.js entrega páginas com HTML real
+                        desde o início. Isso reduz ambiguidades para crawlers, melhora a performance percebida e ajuda o buscador
+                        a entender com mais clareza a estrutura do seu site. Além disso, você ganha controle direto sobre metadados,
+                        rotas, layouts persistentes e dados estruturados, criando uma base sólida para um SEO mais estratégico.
                     </p>
 
                     <ul className="list-disc pl-6 space-y-2">
-                        <li>Renderização no servidor facilita a leitura por crawlers;</li>
-                        <li>Layouts persistentes evitam downloads desnecessários;</li>
-                        <li>Metadata unificada melhora consistência entre páginas;</li>
-                        <li>Integração direta com JSON-LD e microdados.</li>
+                        <li><strong>Renderização no servidor</strong> facilita o trabalho dos crawlers e entrega HTML pronto para indexação.</li>
+                        <li><strong>Layouts persistentes</strong> reduzem downloads repetidos e fortalecem a consistência estrutural do site.</li>
+                        <li><strong>Metadata centralizada</strong> evita divergências entre páginas e garante informações claras para mecanismos de busca.</li>
+                        <li><strong>Suporte direto a JSON-LD e microdados</strong>, permitindo enriquecer páginas com dados estruturados de forma simples.</li>
+                        <li><strong>Controle sobre roteamento e segmentação</strong>, ajudando a criar URLs limpas, semânticas e eficientes para SEO.</li>
+                        <li><strong>Melhor experiência de performance</strong>, que impacta diretamente no ranqueamento, principalmente em Core Web Vitals.</li>
                     </ul>
+
+                    <p>
+                        Quando combinamos renderização inteligente com metadados bem definidos e dados estruturados,
+                        o Next.js se destaca como uma das ferramentas mais completas para SEO moderno — especialmente em
+                        projetos que exigem flexibilidade, desempenho e escalabilidade.
+                    </p>
                 </motion.section>
 
                 {/* BOAS PRÁTICAS DE METADATA */}
@@ -215,13 +248,36 @@ export default function SeoNextjsTailwindContentPT() {
                     </h2>
 
                     <p>
-                        SEO em Next.js não é só sobre performance: é sobre comunicar de forma clara com humanos e
-                        mecanismos de busca. Com metadata bem estruturada, JSON-LD e semântica aplicada com Tailwind,
-                        você cria páginas preparadas para disputar as primeiras posições.
+                        SEO em Next.js vai muito além de otimizar velocidade: é sobre construir páginas que sejam
+                        fáceis de entender tanto para pessoas quanto para crawlers. Quando você combina metadata
+                        bem estruturada, JSON-LD organizado e semântica aplicada com Tailwind, cria uma base sólida
+                        que guia os buscadores com precisão e oferece ao usuário uma experiência mais clara,
+                        previsível e intuitiva.
                     </p>
 
                     <p>
-                        Use cada camada a seu favor para construir aplicações bonitas, rápidas e encontráveis.
+                        Cada detalhe importa. A forma como o HTML chega ao crawler, como o conteúdo é descrito nas
+                        metadata e como sua hierarquia visual é construída influenciam diretamente no ranqueamento.
+                        Páginas bem estruturadas têm mais chances de ganhar rich results, manter consistência entre
+                        seções e transmitir autoridade — mesmo em projetos menores.
+                    </p>
+
+                    <p>
+                        Ao aplicar essas camadas de forma consciente, você transforma seu projeto em algo que não só
+                        funciona, mas se destaca. A busca entende melhor o propósito da página, o usuário navega com
+                        mais conforto e o desenvolvimento se torna mais organizado e escalável. Isso cria um ciclo
+                        positivo de qualidade para toda a aplicação.
+                    </p>
+
+                    <p>
+                        Aproveite os recursos nativos do Next.js, use a semântica ao seu favor e trate o SEO como
+                        parte da arquitetura — não como um adendo final. O resultado é um site bonito, rápido,
+                        tecnicamente competente e, acima de tudo, fácil de ser encontrado.
+                    </p>
+
+                    <p>
+                        Continue refinando sua abordagem, testando melhorias e explorando o potencial do App Router.
+                        O futuro do seu SEO começa nas pequenas escolhas que você faz em cada componente.
                     </p>
                 </motion.section>
 

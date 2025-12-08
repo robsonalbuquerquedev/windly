@@ -49,16 +49,35 @@ export default function ClassnameNaPraticaContent() {
                     className="space-y-6"
                 >
                     <p>
-                        Quando começamos a construir páginas reais com Tailwind, uma das primeiras dúvidas é:
-                        "Como organizar minhas classes sem virar uma sopa de palavras?". Tailwind é poderoso, mas se
-                        não soubermos estruturar, o código rapidamente perde legibilidade.
+                        Ao começar a construir interfaces reais com Tailwind, uma dúvida aparece rapidamente:
+                        &quot;Existe uma maneira clara de organizar todas essas classes?&quot; É normal sentir que o <strong>className</strong> cresce rápido demais e perde a legibilidade, especialmente quando o layout
+                        evolui ou quando surgem variações de estado, responsividade e estilos condicionais.
                     </p>
 
                     <p>
-                        Neste artigo, vamos explorar como estruturar <strong>className</strong> de maneira limpa e
-                        moderna, seguindo boas práticas que realmente funcionam em projetos profissionais. Além disso,
-                        você verá exemplos reais de organização, animações com Framer Motion e tags semânticas que ajudam
-                        tanto no SEO quanto na experiência do usuário.
+                        A boa notícia é que organizar classes não precisa ser complicado. Com algumas técnicas simples e
+                        consistentes, é possível manter seu código limpo, previsível e fácil de evoluir — mesmo em páginas
+                        mais complexas. Pequenos ajustes de organização tornam a leitura mais fluida, evitam repetições
+                        desnecessárias e ajudam você a enxergar padrões que fortalecem o projeto como um todo.
+                    </p>
+
+                    <p>
+                        Neste conteúdo, você vai aprender três abordagens práticas que realmente fazem diferença no dia a dia:
+                        <strong> agrupar classes por responsabilidade visual</strong> para ter blocos intuitivos,
+                        <strong> usar condicionais com libraries como clsx</strong> para lidar com estados sem bagunça,
+                        e <strong> transformar padrões repetidos em componentes reutilizáveis</strong> que mantêm seu layout escalável.
+                    </p>
+
+                    <p>
+                        Para complementar, no final da página há um <strong>exemplo aplicado</strong> que mostra essas técnicas
+                        funcionando juntas em um componente real — da organização das classes até a estrutura final que você
+                        pode usar como referência nos seus próprios projetos.
+                    </p>
+
+                    <p>
+                        Se organizar suas classes sempre pareceu uma tarefa cansativa ou confusa, este guia vai te ajudar a
+                        construir um método sólido e fácil de aplicar, deixando o Tailwind ainda mais confortável, produtivo
+                        e prazeroso de usar.
                     </p>
                 </motion.section>
 
@@ -69,19 +88,32 @@ export default function ClassnameNaPraticaContent() {
                     transition={{ delay: 0.4 }}
                     className="space-y-6"
                 >
-                    <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-300 to-sky-300 bg-clip-text text-transparent">🧠 Por que organizar o className importa?</h2>
+                    <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-300 to-sky-300 bg-clip-text text-transparent">
+                        🧠 Por que organizar o className importa?
+                    </h2>
 
                     <p>
-                        Em projetos pequenos, é fácil acreditar que organização é opcional. Entretanto, quando a página
-                        começa a crescer, cada minuto perdido tentando entender classes bagunçadas se transforma em
-                        problemas de manutenção e retrabalho.
+                        Em projetos pequenos, pode até parecer que manter as classes em ordem é um cuidado exagerado.
+                        Porém, à medida que o aplicativo cresce, cada bloco de código mal estruturado se transforma em
+                        tempo perdido tentando entender o que cada classe faz, por que está ali ou como se relaciona
+                        com o restante da interface. Essa perda de tempo vira retrabalho, aumenta a chance de bugs
+                        visuais e afeta diretamente a evolução do projeto.
+                    </p>
+
+                    <p>
+                        Quando o código está claro e bem organizado, o desenvolvedor trabalha com mais segurança,
+                        toma decisões rápidas e evita inconsistências. E em times, essa organização se torna ainda
+                        mais importante: ela define um padrão visual previsível, facilita colaboração e reduz o choque
+                        ao receber código de outra pessoa.
                     </p>
 
                     <ul className="list-disc pl-6 space-y-2">
-                        <li>Código mais limpo e fácil de manter;</li>
-                        <li>Redução de classes repetidas desnecessariamente;</li>
-                        <li>Melhor experiência de onboarding para novos desenvolvedores;</li>
-                        <li>Alta compatibilidade com patterns modernos como componentes reutilizáveis.</li>
+                        <li>Facilita a leitura e manutenção do código, mesmo meses depois.</li>
+                        <li>Evita a criação de classes duplicadas que aumentam o peso e a complexidade do markup.</li>
+                        <li>Melhora o onboarding de novos desenvolvedores ao oferecer uma estrutura padronizada.</li>
+                        <li>Garante maior consistência ao trabalhar com padrões modernos, como design systems e componentes reutilizáveis.</li>
+                        <li>Aumenta a previsibilidade visual, reduzindo conflitos entre estilos e comportamentos.</li>
+                        <li>Torna refatorações futuras mais rápidas, seguras e menos cansativas.</li>
                     </ul>
                 </motion.section>
 
@@ -98,7 +130,7 @@ export default function ClassnameNaPraticaContent() {
                     <div className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm shadow-lg space-y-6">
                         <h3 className="text-2xl font-semibold">1. Agrupe por responsabilidade visual</h3>
                         <p>
-                            Uma técnica extremamente útil é ordenar classes por "categorias": layout, espaçamento,
+                            Uma técnica extremamente útil é ordenar classes por &quot;categorias:&quot; layout, espaçamento,
                             tipografia, cores, e assim por diante. Isso cria um padrão visual claro.
                         </p>
 
@@ -199,12 +231,34 @@ const buttonClass = clsx(
                     </h2>
 
                     <p>
-                        Organizar classes não é frescura — é um passo essencial para criar interfaces profissionais,
-                        modernas e escaláveis. Ao seguir essas técnicas, seu código ganha clareza, seu layout ganha vida
-                        e sua performance como desenvolvedor cresce.
+                        Organizar classes não é apenas um detalhe estético — é um compromisso com a clareza, a manutenção e a
+                        evolução constante do seu projeto. Quando você estrutura o <strong>className</strong> com intenção, cada
+                        componente se torna mais fácil de entender, modificar e reaproveitar. O resultado é um código que trabalha
+                        a seu favor, e não contra você.
                     </p>
 
-                    <p>Use Tailwind a seu favor. Deixe a bagunça para trás, abrace a elegância.</p>
+                    <p>
+                        Ao aplicar técnicas como agrupar por responsabilidade visual, usar condicionais inteligentes e transformar
+                        padrões em componentes reutilizáveis, você cria interfaces que crescem de forma saudável. Isso evita
+                        retrabalho, elimina ruído visual e fortalece a base do seu design system — mesmo que você ainda não tenha
+                        um oficialmente.
+                    </p>
+
+                    <p>
+                        Esse tipo de cuidado também se reflete na experiência final do usuário. Um layout organizado, previsível e
+                        consistente transmite confiança, reduz atritos e ajuda o usuário a entender sua interface sem esforço.
+                        Pequenos detalhes têm impacto real no todo.
+                    </p>
+
+                    <p>
+                        Em resumo: organização transforma o caos em fluidez. Ela te permite focar no que importa — criar experiências
+                        mais humanas, bonitas e estáveis. Use o Tailwind como uma ferramenta de liberdade, não como uma fábrica de
+                        bagunça. Quando você domina o método, a elegância vem naturalmente.
+                    </p>
+
+                    <p>
+                        Continue experimentando, aprimorando e refinando. Seu código — e seus futuros projetos — agradecem.
+                    </p>
                 </motion.section>
 
                 {/* NAVEGAÇÃO ENTRE ARTIGOS */}
