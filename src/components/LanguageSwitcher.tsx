@@ -48,7 +48,7 @@ export default function LanguageSwitcher() {
                 className="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all cursor-pointer"
             >
                 <img
-                    src={isPT ? "/flags/br.svg" : "/flags/us.svg"}
+                    src={isPT ? "/flags/us.svg" : "/flags/br.svg"}
                     alt={isPT ? "Português (Brasil)" : "English (United States)"}
                     className="w-5 h-5 rounded-sm shadow"
                 />
