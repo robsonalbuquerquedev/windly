@@ -41,9 +41,9 @@ const projects = [
     {
         title: "Robson Dev Portfolio",
         description:
-            "Portfolio created with Vue.js, SaaS and JavaScript. One of the first projects that helped build the foundation of Windly.",
-        url: "https://robson-dev-portfolio.vercel.app",
-        img: "/projects/portfolio.png",
+            "Portfolio built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.",
+        url: "https://robson-next-portfolio.vercel.app/",
+        img: "/projects/portfoliodev.png",
     },
 ];
 
